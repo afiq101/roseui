@@ -1,0 +1,18 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+  .icon-btn {
+    @apply flex
+            items-center
+            justify-center
+            
+            hover:bg-slate-200
+            dark:hover:bg-slate-700
+            transition-colors
+            duration-300;
+  }
+}
