@@ -5,6 +5,7 @@
       dark:bg-slate-800 dark:text-white
       rounded-md
       transition-all
+      mb-5
       duration-300
       shadow-md shadow-slate-200
       dark:shadow-slate-900

@@ -1,12 +1,12 @@
 <template>
   <div v-highlight>
-    <pre class="language-html">
-        <code>
-         &lt;template&gt;
-          asdasd
-         &lt;/template&gt;
-        </code>
-      </pre>
+    <perfect-scrollbar style="height: 300px">
+      <pre class="shadow-none" :class="`language-${code ? code : 'html'}`">
+            <code>
+              <slot></slot>
+            </code>
+          </pre>
+    </perfect-scrollbar>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   props: {
     code: {
       type: String,
-      default: "",
+      default: "html",
     },
   },
   setup() {

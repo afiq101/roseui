@@ -40,7 +40,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: "info",
+      default: "primary",
     },
     dismissible: {
       type: Boolean,

@@ -24,69 +24,79 @@
       </div>
     </div>
     <div v-if="menuItem" class="flex flex-col justify-between mt-6">
-      <div v-for="(item, index) in menuItem" :key="index">
-        <div class="text-left font-normal text-xs mx-6 mt-5 mb-2">
-          <h2 class="uppercase text-rose-500">
-            {{ item.header }}
-          </h2>
-          <p class="text-gray-500">
-            {{ item.description }}
-          </p>
-        </div>
-        <ul class="navigation-menu">
-          <li
-            class="navigation-item"
-            v-for="(item2, index2) in item.child"
-            :key="index2"
-          >
-            <a
-              class="flex items-center px-4 py-3 mx-3 rounded-lg cursor-pointer"
-              :class="activeMenu(item2.route.name)"
-              @click="
-                item2.child === undefined || item2.child.length === 0
-                  ? navigateMenu(item2.route)
-                  : toggleMenuContentOpened(
-                      index2 + (index == 0 ? index : index + 1),
-                      $event
-                    )
-              "
+      <perfect-scrollbar class="max-h-screen">
+        <div v-for="(item, index) in menuItem" :key="index">
+          <div class="text-left font-normal text-xs mx-6 mt-5 mb-2">
+            <h2 class="uppercase text-rose-500">
+              {{ item.header }}
+            </h2>
+            <p class="text-gray-500">
+              {{ item.description }}
+            </p>
+          </div>
+          <ul class="navigation-menu">
+            <li
+              class="navigation-item"
+              v-for="(item2, index2) in item.child"
+              :key="index2"
             >
-              <vue-feather
-                v-if="item2.ficon"
-                :type="item2.ficon"
-                size="18"
-              ></vue-feather>
-              <vue-feather v-else type="circle" size="18"></vue-feather>
-              <span class="mx-3 font-normal">{{ item2.title }}</span>
-              <vue-feather
-                v-if="item2.child && item2.child.length > 0"
-                class="ml-auto"
-                type="chevron-right"
-                size="18"
-              ></vue-feather>
-            </a>
-            <ul class="menu-content hide transition-all duration-300">
-              <li v-for="(item3, index3) in item2.child" :key="index3">
-                <a
-                  class="
-                    flex
-                    items-center
-                    px-4
-                    py-3
-                    mx-3
-                    rounded-lg
-                    cursor-pointer
-                  "
-                  :class="activeMenu(item3.route.name)"
-                  @click="!item3.child ? navigateMenu(item3.route) : ''"
-                >
-                  <span class="mx-4 font-normal">{{ item3.title }}</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+              <a
+                class="
+                  flex
+                  items-center
+                  px-4
+                  py-3
+                  mx-3
+                  rounded-lg
+                  cursor-pointer
+                "
+                :class="activeMenu(item2.route.name)"
+                @click="
+                  item2.child === undefined || item2.child.length === 0
+                    ? navigateMenu(item2.route)
+                    : toggleMenuContentOpened(
+                        index2 + (index == 0 ? index : index + 1),
+                        $event
+                      )
+                "
+              >
+                <vue-feather
+                  v-if="item2.ficon"
+                  :type="item2.ficon"
+                  size="18"
+                ></vue-feather>
+                <vue-feather v-else type="circle" size="18"></vue-feather>
+                <span class="mx-3 font-normal">{{ item2.title }}</span>
+                <vue-feather
+                  v-if="item2.child && item2.child.length > 0"
+                  class="ml-auto"
+                  type="chevron-right"
+                  size="18"
+                ></vue-feather>
+              </a>
+              <ul class="menu-content hide transition-all duration-300">
+                <li v-for="(item3, index3) in item2.child" :key="index3">
+                  <a
+                    class="
+                      flex
+                      items-center
+                      px-4
+                      py-3
+                      mx-3
+                      rounded-lg
+                      cursor-pointer
+                    "
+                    :class="activeMenu(item3.route.name)"
+                    @click="!item3.child ? navigateMenu(item3.route) : ''"
+                  >
+                    <span class="mx-4 font-normal">{{ item3.title }}</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </perfect-scrollbar>
     </div>
   </div>
 </template>

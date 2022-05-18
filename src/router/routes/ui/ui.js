@@ -1,8 +1,8 @@
 export default [
   {
     path: "/ui/text",
-    name: "ui-text",
-    component: () => import("@/views/ui/Text.vue"),
+    name: "font",
+    component: () => import("@/views/ui/Font.vue"),
     meta: {
       title: "Text",
       breadcrumb: [
@@ -12,7 +12,7 @@ export default [
         },
         {
           title: "Text",
-          route: { name: "ui-text" },
+          route: { name: "font" },
         },
       ],
     },

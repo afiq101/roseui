@@ -20,7 +20,7 @@ export default [
     {
         path: "/component/badges",
         name: "component-badges",
-        component: () => import("@/views/ui/Text.vue"),
+        component: () => import("@/views/ui/component/Badges.vue"),
         meta: {
           title: "Badges",
           breadcrumb: [

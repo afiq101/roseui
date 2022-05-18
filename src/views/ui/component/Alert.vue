@@ -3,41 +3,51 @@
     <rs-breadcrumb />
     <rs-card>
       <template #header>
-        <div class="flex item-center">
-          <h3 class="flex-grow">Default</h3>
-          <div class="flex-shrink-0">
-            <button>Show Code</button>
-          </div>
-        </div>
+        <h3>Default Alert</h3>
       </template>
       <template #body>
         <p class="mb-2">Use the <code>rs-alert</code> to show alert.</p>
-        <rs-alert class="mb-4">Hi, this is an info alert!</rs-alert>
-        <rs-alert type="primary" class="mb-4">
-          Hi, this is an primary alert!
-        </rs-alert>
-        <rs-alert type="success" class="mb-4">
-          Hi, this is an success alert!
-        </rs-alert>
-        <rs-alert type="warning" class="mb-4">
-          Hi, this is an warning alert!
-        </rs-alert>
-        <rs-alert type="danger" class="mb-4">
-          Hi, this is an danger alert!
-        </rs-alert>
-        <div v-highlight>
-          <pre class="language-html">
+        <rs-alert type="primary" class="mb-4">Hi, this is an primary alert!</rs-alert>
+        <rs-alert type="info" class="mb-4">Hi, this is an info alert!</rs-alert>
+        <rs-alert type="success" class="mb-4">Hi, this is an success alert!</rs-alert>
+        <rs-alert type="warning" class="mb-4">Hi, this is an warning alert!</rs-alert>
+        <rs-alert type="danger" class="mb-4">Hi, this is an danger alert!</rs-alert>
+        <button
+          class="text-sm border border-slate-200 py-1 px-3 rounded-md"
+          @click="showCode ? (showCode = false) : (showCode = true)"
+        >
+          Show Code
+        </button>
+        <transition name="fade">
+          <div v-if="showCode" v-highlight>
+            <perfect-scrollbar style="height: 300px">
+              <pre class="language-html shadow-none">
             <code>
               &lt;template&gt; 
-              
+                &lt;rs-alert type="primary"&gt;Hi, this is an primary alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="info"&gt;Hi, this is an info alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="success"&gt;Hi, this is an success alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="warning"&gt;Hi, this is an warning alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="danger"&gt;Hi, this is an danger alert!&lt;/rs-alert&gt;
               &lt;/template&gt;
 
               &lt;script&gt; 
                 import RsAlert from "@/components/Alert.vue";
+
+                export default {
+                  components: {
+                    RsAlert,
+                  },
+                  setup() {
+                    return {};
+                  },
+                };
               &lt;/script&gt;
             </code>
           </pre>
-        </div>
+            </perfect-scrollbar>
+          </div>
+        </transition>
       </template>
     </rs-card>
   </rs-layout>
@@ -54,8 +64,10 @@ export default {
   },
   setup() {
     const showCode = ref(false);
-    console.log(showCode);
-    return {};
+    // console.log(showCode);
+    return {
+      showCode,
+    };
   },
 };
 </script>

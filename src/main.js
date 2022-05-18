@@ -21,7 +21,7 @@ import "vue3-country-flag-icon/dist/CountryFlag.css";
 import "floating-vue/dist/style.css";
 import "./assets/style/tailwind.css";
 import "./assets/style/scss/index.scss";
-import "vue-code-highlight/themes/duotone-sea.css";
+import "vue-code-highlight/themes/prism-okaidia.css";
 import "vue-code-highlight/themes/window.css";
 
 const app = createApp(App);

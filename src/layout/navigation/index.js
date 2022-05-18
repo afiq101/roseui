@@ -34,9 +34,9 @@ export default [
     description: "Component for the ui",
     child: [
       {
-        title: "Text",
-        route: { name: "ui-text" },
-        ficon: "",
+        title: "Font",
+        route: { name: "font" },
+        ficon: "at-sign",
       },
       {
         title: "Colors",
@@ -70,6 +70,25 @@ export default [
           {
             title: "Advance",
             route: { name: "form-advance" },
+          },
+        ],
+      },
+      {
+        title: "Chart",
+        route: { name: "chart" },
+        ficon: "pie-chart",
+        child: [
+          {
+            title: "Chartjs",
+            route: { name: "chart-chartjs" },
+          },
+          {
+            title: "Apex Chart",
+            route: { name: "chart-apex" },
+          },
+          {
+            title: "Chartist",
+            route: { name: "chart-chartist" },
           },
         ],
       },
