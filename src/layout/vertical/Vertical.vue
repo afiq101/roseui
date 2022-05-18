@@ -1,7 +1,7 @@
 <template>
   <rs-header @toggleMenu="toggleMenuOpened"></rs-header>
   <rs-side-menu></rs-side-menu>
-  <div v-if="$slots.default" class="content-page transition-all duration-300">
+  <div class="content-page transition-all duration-300">
     <slot />
   </div>
   <rs-footer></rs-footer>

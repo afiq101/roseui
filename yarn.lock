@@ -6417,6 +6417,11 @@ pretty-error@^4.0.0:
     lodash "^4.17.20"
     renderkid "^3.0.0"
 
+prism-es6@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/prism-es6/-/prism-es6-1.2.0.tgz#ead4e0d7809fefc36b9636f1ea4b2cebad074e63"
+  integrity sha512-A8JV9G2zKM8PWksT7YJcmnaWtYO6C9hSfxM/xv0RxB2aNc8rjv30WakzIw1gWyqLi2eiqquo2KmS7orxqlm+yg==
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -7767,6 +7772,14 @@ vue-cli-plugin-tailwind@^3.0.0:
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-tailwind/-/vue-cli-plugin-tailwind-3.0.0.tgz#2436e781e919acab9539934549999baf33e0a099"
   integrity sha512-bUWjfwGtJCeBU7pL4lD86RC+HsJAmAlYqr8e65NGC3q/ZBzC9KQs1Iy/vTyfDTnB7ZJm3huB+1a/m+17fdMZ8A==
 
+vue-code-highlight@^0.7.8:
+  version "0.7.8"
+  resolved "https://registry.yarnpkg.com/vue-code-highlight/-/vue-code-highlight-0.7.8.tgz#04f8e0c1c17edd52f7c769dd19dda1d2d928bc90"
+  integrity sha512-jMt1W0DGisNZ3B2TASFCPLEswohVrwImX+TxzMIZINZyAUUNZ1Xth3soJw1xepTsMgxkIkhsmN/xVNpiI3bU4g==
+  dependencies:
+    prism-es6 "^1.2.0"
+    vue "^2.5.16"
+
 vue-country-flag-next@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/vue-country-flag-next/-/vue-country-flag-next-2.3.2.tgz#c35d283f83b7631be414c720391a8363991557c2"
@@ -7886,7 +7899,7 @@ vue@3, vue@^3.0.0-beta.1:
     "@vue/server-renderer" "3.2.33"
     "@vue/shared" "3.2.33"
 
-vue@^2.6.11:
+vue@^2.5.16, vue@^2.6.11:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
   integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==

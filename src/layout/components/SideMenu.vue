@@ -4,6 +4,7 @@
       vertical-menu
       bg-white
       dark:bg-slate-800
+      text-base
       h-screen
       fixed
       w-64
@@ -45,7 +46,8 @@
                 item2.child === undefined || item2.child.length === 0
                   ? navigateMenu(item2.route)
                   : toggleMenuContentOpened(
-                      index2 + (index == 0 ? index : index + 1)
+                      index2 + (index == 0 ? index : index + 1),
+                      $event
                     )
               "
             >
@@ -66,10 +68,17 @@
             <ul class="menu-content hide transition-all duration-300">
               <li v-for="(item3, index3) in item2.child" :key="index3">
                 <a
-                  class="flex items-center px-4 py-3 mx-3 rounded-lg"
+                  class="
+                    flex
+                    items-center
+                    px-4
+                    py-3
+                    mx-3
+                    rounded-lg
+                    cursor-pointer
+                  "
                   :class="activeMenu(item3.route.name)"
                   @click="!item3.child ? navigateMenu(item3.route) : ''"
-                  href="#"
                 >
                   <span class="mx-4 font-normal">{{ item3.title }}</span>
                 </a>
@@ -83,7 +92,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Menu from "@/layout/navigation";
 import router from "@/router";
 // import layout from "@/store/layout";
@@ -93,8 +102,17 @@ export default {
   setup() {
     const menuCount = ref(0);
     const menuItem = Menu;
-    // console.log(menuItem);
 
+    onMounted(() => {
+      const el = document.querySelector(".active-menu");
+      try {
+        el.closest(".menu-content").classList.remove("hide");
+      } catch (e) {
+        return;
+      }
+    });
+
+    // Navigate to route
     function navigateMenu(route) {
       try {
         router.push(route);
@@ -104,22 +122,26 @@ export default {
     }
 
     // Toggle show and hide menu content
-    function toggleMenuContentOpened(i) {
+    function toggleMenuContentOpened(i, event) {
       const el = document.getElementsByClassName(`menu-content`);
 
       // Close all menu content
       Object.keys(el).forEach(function (key) {
-        if (key == i) el[key].classList.toggle("hide");
-        else el[key].classList.add("hide");
+        if (key == i) {
+          event.target.parentNode.classList.toggle("menu-opened");
+          el[key].classList.toggle("hide");
+        } else el[key].classList.add("hide");
       });
     }
 
+    // Active menu
     function activeMenu(routeName) {
       return router.currentRoute.value.name == routeName
         ? ` shadow-lg
             shadow-rose-500/30
             text-white
-            bg-rose-400`
+            bg-rose-400
+            active-menu`
         : `hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors
             duration-300`;
     }
