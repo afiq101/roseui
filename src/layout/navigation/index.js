@@ -15,15 +15,14 @@ export default [
         ficon: "book-open",
         child: [
           {
-            title: "eCommerce",
+            title: "Error 404",
             route: {
-              name: "dashboard-ecommerce",
-              params: { type: "ecommerce" },
+              name: "error-404",
             },
           },
           {
-            title: "Analytics",
-            route: { name: "dashboard-analytics" },
+            title: "Error 504",
+            route: { name: "error-504" },
           },
         ],
       },
@@ -34,8 +33,8 @@ export default [
     description: "Component for the ui",
     child: [
       {
-        title: "Font",
-        route: { name: "font" },
+        title: "Typography",
+        route: { name: "typography" },
         ficon: "at-sign",
       },
       {
@@ -79,16 +78,12 @@ export default [
         ficon: "pie-chart",
         child: [
           {
-            title: "Chartjs",
-            route: { name: "chart-chartjs" },
-          },
-          {
             title: "Apex Chart",
             route: { name: "chart-apex" },
           },
           {
-            title: "Chartist",
-            route: { name: "chart-chartist" },
+            title: "Chartjs",
+            route: { name: "chart-chartjs" },
           },
         ],
       },

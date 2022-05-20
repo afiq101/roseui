@@ -23,7 +23,7 @@
             class="icon-btn h-10 w-10 rounded-full"
             @click="toggleMenuOpened"
           >
-            <vue-feather type="menu" stroke="gray"></vue-feather></button
+            <vue-feather type="menu" mb-2></vue-feather></button
         ></span>
       </div>
       <div class="flex" v-else>
@@ -89,15 +89,11 @@
           class="icon-btn h-10 w-10 rounded-full"
           @click="dark ? (dark = false) : (dark = true)"
         >
-          <vue-feather v-if="!dark" type="moon" stroke="gray"></vue-feather>
-          <vue-feather v-else type="sun" stroke="gray"></vue-feather>
+          <vue-feather v-if="!dark" type="moon" mb-2></vue-feather>
+          <vue-feather v-else type="sun" mb-2></vue-feather>
         </button>
         <button class="icon-btn h-10 w-10 rounded-full">
-          <vue-feather
-            @click="toggleSearch"
-            type="search"
-            stroke="gray"
-          ></vue-feather>
+          <vue-feather @click="toggleSearch" type="search" mb-2></vue-feather>
         </button>
         <VTooltip>
           <template #popper> 10 unread notification </template>
@@ -108,13 +104,13 @@
             <span
               class="w-3 h-3 absolute top-1 right-2 rounded-full bg-rose-400"
             ></span>
-            <vue-feather type="bell" stroke="gray"></vue-feather>
+            <vue-feather type="bell" mb-2></vue-feather>
           </button>
         </VTooltip>
         <SDropdown align="left" name="notification">
           <ul class="header-dropdown w-full md:w-80">
             <li class="d-head flex items-center justify-between py-2 px-4">
-              <h3 class="font-semibold">Notification</h3>
+              <span class="font-semibold">Notification</span>
               <div
                 class="
                   flex
@@ -129,7 +125,9 @@
             </li>
             <perfect-scrollbar>
               <li>
-                <h3 class="bg-slate-100 dark:bg-slate-700 py-2 px-4">Today</h3>
+                <div class="bg-slate-100 dark:bg-slate-700 py-2 px-4">
+                  Today
+                </div>
                 <a class="py-2 px-4 block">
                   <div class="flex items-center">
                     <vue-feather
@@ -175,16 +173,16 @@
             v-if="isDesktop"
             class="grid grid-cols-1 text-left ml-3 flex-none"
           >
-            <h3 class="font-semibold text-sm truncate w-24">
+            <p class="font-semibold text-sm truncate w-24 mb-0">
               afiqiskandar2022
-            </h3>
-            <p class="font-medium text-xs truncate w-24">RM 10,000.00</p>
+            </p>
+            <span class="font-medium text-xs truncate w-24">RM 10,000.00</span>
           </div>
           <vue-feather
             v-if="isDesktop"
             class="ml-3"
             type="chevron-down"
-            stroke="gray"
+            mb-2
             size="18"
           ></vue-feather>
         </button>
@@ -287,7 +285,7 @@
       right-0
     "
   >
-    <vue-feather type="search" stroke="gray" size="18"></vue-feather>
+    <vue-feather type="search" mb-2 size="18"></vue-feather>
     <input
       id="header-search"
       type="text"

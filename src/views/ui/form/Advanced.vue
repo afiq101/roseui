@@ -9,7 +9,7 @@
 import RsCard from "@/components/Card.vue";
 
 export default {
-  name: "basic-component",
+  name: "form-advanced",
   components: {
     RsCard,
   },

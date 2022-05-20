@@ -3,15 +3,15 @@
     <rs-breadcrumb />
     <rs-card>
       <template #header>
-        <h3>Default Alert</h3>
+        <h5>Default Alert</h5>
       </template>
       <template #body>
         <p class="mb-2">Use the <code>rs-alert</code> to show alert.</p>
-        <rs-alert type="primary" class="mb-4">Hi, this is an primary alert!</rs-alert>
+        <rs-alert type="primary" class="mb-4">Hi, this is a primary alert!</rs-alert>
         <rs-alert type="info" class="mb-4">Hi, this is an info alert!</rs-alert>
-        <rs-alert type="success" class="mb-4">Hi, this is an success alert!</rs-alert>
-        <rs-alert type="warning" class="mb-4">Hi, this is an warning alert!</rs-alert>
-        <rs-alert type="danger" class="mb-4">Hi, this is an danger alert!</rs-alert>
+        <rs-alert type="success" class="mb-4">Hi, this is a success alert!</rs-alert>
+        <rs-alert type="warning" class="mb-4">Hi, this is a warning alert!</rs-alert>
+        <rs-alert type="danger" class="mb-4">Hi, this is a danger alert!</rs-alert>
         <button
           class="text-sm border border-slate-200 py-1 px-3 rounded-md"
           @click="showCode ? (showCode = false) : (showCode = true)"
@@ -24,11 +24,11 @@
               <pre class="language-html shadow-none">
             <code>
               &lt;template&gt; 
-                &lt;rs-alert type="primary"&gt;Hi, this is an primary alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="primary"&gt;Hi, this is a primary alert!&lt;/rs-alert&gt;
                 &lt;rs-alert type="info"&gt;Hi, this is an info alert!&lt;/rs-alert&gt;
-                &lt;rs-alert type="success"&gt;Hi, this is an success alert!&lt;/rs-alert&gt;
-                &lt;rs-alert type="warning"&gt;Hi, this is an warning alert!&lt;/rs-alert&gt;
-                &lt;rs-alert type="danger"&gt;Hi, this is an danger alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="success"&gt;Hi, this is a success alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="warning"&gt;Hi, this is a warning alert!&lt;/rs-alert&gt;
+                &lt;rs-alert type="danger"&gt;Hi, this is a danger alert!&lt;/rs-alert&gt;
               &lt;/template&gt;
 
               &lt;script&gt; 

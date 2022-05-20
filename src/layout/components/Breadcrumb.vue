@@ -3,7 +3,7 @@
     v-if="breadcrumb && title"
     class="flex items-stretch justify-between pb-5"
   >
-    <h2 class="text-xl font-medium">{{ title }}</h2>
+    <span class="text-xl font-medium">{{ title }}</span>
     <div v-if="breadcrumb && breadcrumb.length != 0">
       <span
         v-for="(item, index) in breadcrumb"

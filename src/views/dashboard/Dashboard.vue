@@ -1,5 +1,5 @@
 <template>
-  <rs-layout> In the making... </rs-layout>
+  <rs-layout> Welcome to Rose UI</rs-layout>
 </template>
 
 <script>

@@ -29,7 +29,6 @@ $xlarge: 1280px;
 // Layout Vertical CSS
 .v-layout {
   .content-page {
-    padding: 6rem 2rem 0 2rem;
     height: 100vh;
   }
 
@@ -55,9 +54,11 @@ $xlarge: 1280px;
 
   .content-page {
     margin-left: 256px;
+    padding: 6rem 2rem 0 2rem;
 
     @media screen and (max-width: $medium) {
       margin-left: 0px;
+      padding: 6rem 1.25rem 0 1.25rem;
     }
   }
 
@@ -84,7 +85,7 @@ $xlarge: 1280px;
     }
   }
 
-  .menu-content-max{
+  .menu-content-max {
     max-height: 500px;
   }
 }

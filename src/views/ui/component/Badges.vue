@@ -4,7 +4,7 @@
     <!-- Default Badges -->
     <rs-card>
       <template #header>
-        <h3>Default Badges</h3>
+        <h5>Default Badges</h5>
       </template>
       <template #body>
         <p class="mb-2">Use the <code>rs-badges</code> to show badges.</p>
@@ -56,7 +56,7 @@
     <!-- Badges with icon -->
     <rs-card>
       <template #header>
-        <h3>Badges With Icon</h3>
+        <h5>Badges With Icon</h5>
       </template>
       <template #body>
         <p class="mb-2">

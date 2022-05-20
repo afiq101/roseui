@@ -27,9 +27,9 @@
       <perfect-scrollbar class="max-h-screen">
         <div v-for="(item, index) in menuItem" :key="index">
           <div class="text-left font-normal text-xs mx-6 mt-5 mb-2">
-            <h2 class="uppercase text-rose-500">
+            <span class="uppercase text-rose-500">
               {{ item.header }}
-            </h2>
+            </span>
             <p class="text-gray-500">
               {{ item.description }}
             </p>
@@ -127,7 +127,7 @@ export default {
       try {
         router.push(route);
       } catch (e) {
-        return;
+        router.push({ name: "error-404" });
       }
     }
 
