@@ -11,7 +11,8 @@
 <script>
 import store from "@/store";
 import RsHeader from "@/layout/components/Header.vue";
-import RsSideMenu from "@/layout/components/SideMenu.vue";
+// import RsSideMenu from "@/layout/components/sidemenu/SideMenu.vue";
+import RsSideMenu from "@/layout/components/sidemenu/SideMenu.vue";
 import RsFooter from "@/layout/components/Footer.vue";
 
 export default {

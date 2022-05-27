@@ -15,14 +15,46 @@ export default [
         ficon: "book-open",
         child: [
           {
+            title: "Authentication",
+            route: {
+              name: "authentication",
+            },
+            child: [
+              {
+                title: "Login V1",
+                route: { name: "auth-loginv1" },
+              },
+              {
+                title: "Login V2",
+                route: { name: "auth-loginv2" },
+              },
+              {
+                title: "Register V1",
+                route: { name: "auth-registerv1" },
+              },
+              {
+                title: "Register V2",
+                route: { name: "auth-registerv2" },
+              },
+              {
+                title: "Forgot Password V1",
+                route: { name: "auth-forgotpasswordv1" },
+              },
+              {
+                title: "Forgot Password V2",
+                route: { name: "auth-forgotpasswordv2" },
+              },
+            ],
+          },
+          {
             title: "Error 404",
             route: {
               name: "error-404",
             },
           },
           {
-            title: "Error 504",
-            route: { name: "error-504" },
+            title: "Error 500",
+            route: { name: "error-500" },
           },
         ],
       },
@@ -62,6 +94,20 @@ export default [
         route: { name: "form" },
         ficon: "book",
         child: [
+          {
+            title: "Element",
+            route: { name: "form-element" },
+            child: [
+              {
+                title: "Input Text",
+                route: { name: "form-element-input" },
+              },
+              {
+                title: "Input Group",
+                route: { name: "form-element-input-group" },
+              },
+            ],
+          },
           {
             title: "Basic",
             route: { name: "form-basic" },

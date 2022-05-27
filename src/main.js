@@ -6,6 +6,10 @@ import store from "./store/index";
 // import component
 import RsComponent from "./components";
 
+// import Formkit library
+import { plugin, defaultConfig } from "@formkit/vue";
+import FormKitTheme from "../formkit.config.js";
+
 // import 3rd party libraries
 import i18n from "./libs/i18n/index";
 import CountryFlag from "vue3-country-flag-icon";
@@ -41,6 +45,7 @@ app.use(PerfectScrollbar);
 app.use(FloatingVue);
 app.use(SDropdown);
 app.use(VueCodeHighlight);
+app.use(plugin, defaultConfig(FormKitTheme));
 
 app.component("country-flag", CountryFlag);
 app.component(VueFeather.name, VueFeather);

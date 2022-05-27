@@ -1,0 +1,76 @@
+<template>
+  <div class="flex-none lg:flex justify-center h-screen">
+    <div class="flex-auto w-full lg:w-5/12 bg-white">
+      <div class="flex h-screen items-center justify-center">
+        <div class="w-full mx-5 lg:mx-16 xl:mx-24 my-10">
+          <div class="text-center">
+            <!-- <img class="w-10 mb-6" src="@/assets/images/logo/logo.svg" /> -->
+          </div>
+          <h3 class="mb-5">Login</h3>
+          <p class="text-slate-500 mb-5">
+            Welcome to Rose UI. Please login to continue.
+          </p>
+          <div class="grid grid-cols-2">
+            <FormKit
+              label="Username"
+              type="text"
+              validation="required|matches:/^@[a-zA-Z]+$/|length:5"
+              outer-class="col-span-2"
+            />
+            <FormKit
+              label="Password"
+              type="password"
+              outer-class="col-span-2"
+            />
+            <FormKit type="checkbox" label="Remember Me" />
+            <router-link
+              class="
+                flex
+                items-center
+                justify-end
+                h-5
+                mt-1
+                text-rose-500
+                hover:underline
+              "
+              :to="{ name: 'auth-forgotpasswordv1' }"
+              >Forgot Password?</router-link
+            >
+            <FormKit
+              type="button"
+              label="Sign In"
+              outer-class="col-span-2"
+              input-class="w-full"
+            />
+            <FormKit
+              type="button"
+              outer-class="col-span-2"
+              input-class="w-full btn-white"
+            >
+              <div class="flex items-center justify-center gap-3">
+                <img class="w-5" src="@/assets/images/brand/google-logo.svg" />
+                Sign In with Google
+              </div>
+            </FormKit>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-5 left-5 text-xs text-slate-400">
+        © Rose UI 2022
+      </div>
+    </div>
+    <div class="flex-auto w-full lg:w-7/12 m-auto hidden lg:block">
+      <div class="flex justify-center items-center">
+        <img class="w-96" src="@/assets/images/illustration/login.svg" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>

@@ -20,6 +20,9 @@ code {
   color: rgb(233, 74, 74);
 }
 
+// Custom Component SCSS
+@import "./custom/component/button";
+
 // Custom Layout SCSS
 @import "./custom/layout/vertical";
 @import "./custom/layout/horizontal";

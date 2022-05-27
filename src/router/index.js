@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import NProgress from "nprogress/nprogress";
 import dashboardRoute from "./routes/dashboard";
+import authRoute from "./routes/auth";
 import uiRoute from "./routes/ui";
 import errorRoute from "./routes/error";
 
@@ -8,6 +9,7 @@ const routes = [
   { path: "/", redirect: { name: "dashboard" } },
   ...dashboardRoute,
   ...uiRoute,
+  ...authRoute,
   ...errorRoute,
 ];
 
@@ -23,7 +25,6 @@ router.beforeEach((to, from) => {
     // Start the route progress bar.
     NProgress.start();
   }
-
 });
 
 router.afterEach(() => {
