@@ -36,12 +36,9 @@
               :to="{ name: 'auth-forgotpasswordv1' }"
               >Forgot Password?</router-link
             >
-            <FormKit
-              type="button"
-              label="Sign In"
-              outer-class="col-span-2"
-              input-class="w-full"
-            />
+            <router-link to="/" class="col-span-2">
+              <FormKit type="button" input-class="w-full"> Sign In </FormKit>
+            </router-link>
             <FormKit
               type="button"
               outer-class="col-span-2"
