@@ -50,6 +50,12 @@
               </div>
             </FormKit>
           </div>
+          <p class="mt-3 text-center text-slate-500">
+            Don't have an account?
+            <router-link to="" class="text-rose-400 hover:underline"
+              >Sign Up</router-link
+            >
+          </p>
         </div>
       </div>
       <div class="absolute bottom-5 left-5 text-xs text-slate-400">
