@@ -1,8 +1,8 @@
 <template>
-  <div class="flex-none lg:flex justify-center h-screen">
-    <div class="flex-auto w-full lg:w-5/12 bg-white">
-      <div class="flex h-screen items-center justify-center">
-        <div class="w-full mx-5 lg:mx-16 xl:mx-24 my-10">
+  <div class="flex-none lg:flex justify-center h-screen ">
+    <div class="flex-auto w-full md:w-full lg:w-5/12 bg-white dark:bg-slate-800">
+      <div class="flex h-screen items-start md:items-center justify-start md:justify-center">
+        <div class="w-full md:w-8/12 lg:w-full px-10 md:px-16 py-12 md:py-20">
           <div class="text-center">
             <!-- <img class="w-10 mb-6" src="@/assets/images/logo/logo.svg" /> -->
           </div>
@@ -14,7 +14,6 @@
             <FormKit
               label="Username"
               type="text"
-              validation="required|matches:/^@[a-zA-Z]+$/|length:5"
               outer-class="col-span-2"
             />
             <FormKit
@@ -30,7 +29,7 @@
                 justify-end
                 h-5
                 mt-1
-                text-rose-500
+                text-rose-400
                 hover:underline
               "
               :to="{ name: 'auth-forgotpasswordv1' }"
@@ -52,7 +51,7 @@
           </div>
           <p class="mt-3 text-center text-slate-500">
             Don't have an account?
-            <router-link to="" class="text-rose-400 hover:underline"
+            <router-link :to="{ name: 'auth-registerv1'}" class="text-rose-400 hover:underline"
               >Sign Up</router-link
             >
           </p>
@@ -62,7 +61,7 @@
         © Rose UI 2022
       </div>
     </div>
-    <div class="flex-auto w-full lg:w-7/12 m-auto hidden lg:block">
+    <div class="flex-auto w-full lg:w-7/12 m-auto hidden md:block">
       <div class="flex justify-center items-center">
         <img class="w-96" src="@/assets/images/illustration/login.svg" />
       </div>

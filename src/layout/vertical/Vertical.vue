@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import store from "@/store";
+import state from "@/store";
 import RsHeader from "@/layout/components/Header.vue";
 // import RsSideMenu from "@/layout/components/sidemenu/SideMenu.vue";
 import RsSideMenu from "@/layout/components/sidemenu/SideMenu.vue";
@@ -24,7 +24,7 @@ export default {
     RsFooter,
   },
   setup() {
-    const mobileWidth = store.getters.mobileWidth;
+    const mobileWidth = state.getters.mobileWidth;
 
     function toggleMenuOpened() {
       document.querySelector(".v-layout").classList.toggle("menu-hide");
@@ -33,7 +33,7 @@ export default {
         .classList.toggle("hide");
     }
 
-    store.watch(
+    state.watch(
       (state, getters) => getters.windowWidth,
       (value) => {
         if (value <= mobileWidth) {

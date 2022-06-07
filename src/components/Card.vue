@@ -3,7 +3,7 @@
     class="
       bg-white
       dark:bg-slate-800 dark:text-white
-      rounded-md
+      rounded-lg
       transition-all
       mb-5
       duration-300

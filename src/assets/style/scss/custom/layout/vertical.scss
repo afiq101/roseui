@@ -29,7 +29,7 @@ $xlarge: 1280px;
 // Layout Vertical CSS
 .v-layout {
   .content-page {
-    height: 100vh;
+    height: 100%;
   }
 
   .w-header-search {
@@ -54,7 +54,7 @@ $xlarge: 1280px;
 
   .content-page {
     margin-left: 256px;
-    padding: 6rem 2rem 0 2rem;
+    padding: 6rem 2rem 10px 2rem;
 
     @media screen and (max-width: $medium) {
       margin-left: 0px;
@@ -78,7 +78,7 @@ $xlarge: 1280px;
 
   .menu-content,
   .menu-content-child {
-    max-height: 500px;
+    max-height: 100vh;
     overflow: hidden;
 
     &.hide {
@@ -88,7 +88,7 @@ $xlarge: 1280px;
 
   .menu-content-max,
   .menu-content-child-max {
-    max-height: 500px;
+    max-height: 100vh;
   }
 
   i[data-name="chevron-right"] {

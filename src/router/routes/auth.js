@@ -29,4 +29,14 @@ export default [
     name: "auth-forgotpasswordv2",
     component: () => import("@/views/authentication/ForgotPasswordV2.vue"),
   },
+  {
+    path: "/auth/resetpassword-v1",
+    name: "auth-resetpasswordv1",
+    component: () => import("@/views/authentication/ResetPasswordV1.vue"),
+  },
+  {
+    path: "/auth/resetpassword-v2",
+    name: "auth-resetpasswordv2",
+    component: () => import("@/views/authentication/ResetPasswordV2.vue"),
+  },
 ];

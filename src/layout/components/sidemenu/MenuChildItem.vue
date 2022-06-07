@@ -39,6 +39,7 @@
 
 <script>
 import { ref, computed } from "vue";
+import state from "@/store"
 import router from "@/router";
 
 export default {
@@ -82,7 +83,8 @@ export default {
     }
 
     const indentStyle = computed(() => {
-      return { "background-color": `rgba(226, 232, 240, ${indent.value})` };
+      if(state.getters.darkMode) return { "background-color": `rgba(18, 24, 37, ${indent.value})` };
+      else return { "background-color": `rgba(226, 232, 240, ${indent.value})` };
     });
 
     return {

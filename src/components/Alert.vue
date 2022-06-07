@@ -10,7 +10,7 @@
         w-100
         py-2
         px-3
-        rounded-md
+        rounded-lg
       "
       :class="{
         'bg-blue-100 dark:bg-blue-700 text-blue-500 dark:text-blue-100 ':

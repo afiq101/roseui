@@ -16,7 +16,7 @@
           <rs-badges type="danger" class="mb-4"> Danger </rs-badges>
         </div>
         <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-md"
+          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
           @click="showCode ? (showCode = false) : (showCode = true)"
         >
           Show Code
@@ -77,7 +77,7 @@
           <rs-badges type="danger" icon="star" class="mb-4"> Danger </rs-badges>
         </div>
         <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-md"
+          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
           @click="showCode2 ? (showCode2 = false) : (showCode2 = true)"
         >
           Show Code

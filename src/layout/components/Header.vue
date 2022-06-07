@@ -143,7 +143,28 @@
                     <div class="w-12 h-12 rounded-full ml-auto flex-none">
                       <img
                         class="rounded-full"
-                        src="@/assets/images/user/profile-1.jpg"
+                        src="https://ui-avatars.com/api/?name=Raziq Danish"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </a>
+                <a class="py-2 px-4 block">
+                  <div class="flex items-center">
+                    <vue-feather
+                      type="circle"
+                      size="12"
+                      class="text-rose-400 flex-none"
+                      fill="pink"
+                    ></vue-feather>
+                    <span class="mx-2"
+                      >Terdapat Satu Pembayaran yang berlaku menggunakan bil
+                      Mercun</span
+                    >
+                    <div class="w-12 h-12 rounded-full ml-auto flex-none">
+                      <img
+                        class="rounded-full"
+                        src="https://ui-avatars.com/api/?name=Iqmal Rizal"
                         alt=""
                       />
                     </div>
@@ -157,7 +178,7 @@
           class="
             icon-btn
             px-2
-            rounded-md
+            rounded-lg
             border border-white
             md:border-gray-200
             dark:border-gray-700
@@ -166,15 +187,14 @@
         >
           <img
             class="w-8 h-8 object-cover rounded-full"
-            src="@/assets/images/user/profile-1.jpg"
-            alt=""
+            src="https://ui-avatars.com/api/?name=John Doe"
           />
           <div
             v-if="isDesktop"
             class="grid grid-cols-1 text-left ml-3 flex-none"
           >
             <p class="font-semibold text-sm truncate w-24 mb-0">
-              afiqiskandar2022
+              John Doe
             </p>
             <span class="font-medium text-xs truncate w-24">RM 10,000.00</span>
           </div>
@@ -315,12 +335,14 @@ export default {
     const dark = ref(false);
 
     // Get darkmode from localstorage and toggle dark mode
-    dark.value = localStorage.getItem("dark") === "true";
+    dark.value = state.getters.darkMode;
 
     // Watch for changes in Dark mode
     watch(dark, (value) => {
-      localStorage.setItem("dark", value);
-      toggleDarkMode(value);
+      state.commit("CHANGE_DARK_MODE", {
+        value,
+      });
+      state.dispatch("toggleDarkMode");
     });
 
     // Computed for change window width
@@ -337,18 +359,10 @@ export default {
 
     // Toggle default setting after component mounted
     onMounted(() => {
-      toggleDarkMode();
       if (!isDesktop.value) {
         toggleMenuOpened();
       }
     });
-
-    // Toggle Dark mode
-    function toggleDarkMode() {
-      const html = document.documentElement;
-      if (dark.value) html.classList.add("dark");
-      else html.classList.remove("dark");
-    }
 
     // Change Layout Type
     function changeLayout() {

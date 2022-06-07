@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import state from "@/store";
 
 export default {
@@ -15,6 +15,10 @@ export default {
     window.onresize = () => {
       state.dispatch("changeWindowWidth", { windowWidth: window.innerWidth });
     };
+
+    onMounted(() => {
+      state.dispatch("toggleDarkMode");
+    });
 
     return {
       Name: name,

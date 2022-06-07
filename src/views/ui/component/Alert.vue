@@ -13,7 +13,7 @@
         <rs-alert type="warning" class="mb-4">Hi, this is a warning alert!</rs-alert>
         <rs-alert type="danger" class="mb-4">Hi, this is a danger alert!</rs-alert>
         <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-md"
+          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
           @click="showCode ? (showCode = false) : (showCode = true)"
         >
           Show Code

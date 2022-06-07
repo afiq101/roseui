@@ -4,7 +4,7 @@
       inline
       whitespace-nowrap
       text-center
-      rounded-md
+      rounded-lg
       w-auto
       text-white
       px-3

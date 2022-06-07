@@ -11,40 +11,24 @@
           md:justify-center
         "
       >
-       <div class="w-full md:w-8/12 lg:w-full px-10 md:px-16 py-12 md:py-20">
+        <div class="w-full md:w-8/12 lg:w-full px-10 md:px-16 py-12 md:py-20">
           <div class="text-center">
             <!-- <img class="w-10 mb-6" src="@/assets/images/logo/logo.svg" /> -->
           </div>
-          <h3 class="mb-5">Sign Up</h3>
+          <h3 class="mb-5">Reset Password</h3>
           <p class="text-slate-500 mb-5">
-            Please fill in the form to create an account.
+            Please fill in the form to reset your password.
           </p>
           <div class="grid grid-cols-1">
-            <FormKit label="Username" type="text" />
             <FormKit label="Email" type="email" />
             <FormKit label="Password" type="password" />
             <FormKit label="Re-enter Password" type="password" />
-            <FormKit type="checkbox">
-              <template #label
-                >I agree to the
-                <a class="text-rose-400 hover:underline ml-1"
-                  >Term and Services</a
-                >
-              </template>
-            </FormKit>
-
-            <router-link to="/">
-              <FormKit type="button" input-class="w-full">Sign up</FormKit>
+            <router-link :to="{ name: 'auth-loginv1' }">
+              <FormKit type="button" input-class="w-full"
+                >Reset Password</FormKit
+              >
             </router-link>
           </div>
-          <p class="mt-3 text-center text-slate-500">
-            Already have an account?
-            <router-link
-              :to="{ name: 'auth-loginv1' }"
-              class="text-rose-400 hover:underline"
-              >Login</router-link
-            >
-          </p>
         </div>
       </div>
       <div class="absolute bottom-5 left-5 text-xs text-slate-400">

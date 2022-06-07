@@ -2,18 +2,31 @@
 // many input types are identical in how
 // we want to style them.
 const textClassification = {
-  label: "block mb-1 font-semibold text-sm formkit-invalid:text-red-500",
+  label: "block mb-2 font-semibold text-sm formkit-invalid:text-red-500",
   inner: `
     w-full
-    border-2
+    border
     border-slate-300
+    dark:border-slate-700
     formkit-invalid:border-red-500
     rounded-lg mb-1
     overflow-hidden
     focus-within:border-rose-400
   `,
-  input:
-    "w-full h-9 px-3 border-none text-base text-gray-700 placeholder-gray-400 focus:outline-none focus:shadow-outline",
+  input: `
+    w-full 
+    h-9 
+    px-3 
+    border-none 
+    text-sm 
+    text-gray-700 
+    dark:text-gray-200
+    bg-white
+    dark:bg-slate-800
+    placeholder-gray-400 
+    focus:outline-none 
+    focus:shadow-outline 
+    `,
 };
 const boxClassification = {
   fieldset: "max-w-md border border-gray-400 rounded-lg px-2 pb-1",
@@ -22,12 +35,18 @@ const boxClassification = {
   help: "mb-2",
   input: `flex 
           items-center 
-          form-check-input 
+          form-check-input
           appearance-none 
           h-5 w-5 mr-2 
-          border-2 checked:border-none border-slate-300
+          border-2 
+          border-slate-300
+          dark:border-slate-700
+          checked:border-none 
+          checked:bg-rose-400
+          bg-white
+          dark:bg-slate-800
+          dark:checked:bg-rose-400
           rounded-sm 
-          bg-white checked:bg-rose-400 
           checked:shadow-sm checked:shadow-rose-500/30 
           focus:outline-none focus:ring-0 transition duration-200`,
   label: "text-sm text-gray-700 mt-1",
@@ -44,6 +63,7 @@ const buttonClassification = {
 export default {
   // the global key will apply to all inputs
   global: {
+    label: "text-gray-700 dark:text-gray-200",
     outer: "mb-4 formkit-disabled:opacity-50",
     help: "text-xs text-gray-500",
     messages: "list-none p-0 mt-1 mb-0",
@@ -53,7 +73,7 @@ export default {
   color: {
     label: "block mb-1 font-bold text-sm",
     input:
-      "w-16 h-8 appearance-none cursor-pointer border border-gray-300 rounded-md mb-2 p-1",
+      "w-16 h-8 appearance-none cursor-pointer border border-gray-300 rounded-lg mb-2 p-1",
   },
   date: textClassification,
   "datetime-local": textClassification,
@@ -87,8 +107,18 @@ export default {
   text: textClassification,
   textarea: {
     ...textClassification,
-    input:
-      "block w-full h-32 px-3 border-none text-base text-gray-700 placeholder-gray-400 focus:shadow-outline",
+    input: `
+      block 
+      w-full 
+      h-32 px-3 
+      border-none 
+      text-sm 
+      text-gray-700 
+      dark:text-gray-200
+      bg-white
+      dark:bg-slate-800
+      placeholder-gray-400 
+      focus:shadow-outline`,
   },
   time: textClassification,
   url: textClassification,

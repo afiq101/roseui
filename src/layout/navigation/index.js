@@ -44,6 +44,14 @@ export default [
                 title: "Forgot Password V2",
                 route: { name: "auth-forgotpasswordv2" },
               },
+              {
+                title: "Reset Password V1",
+                route: { name: "auth-resetpasswordv1" },
+              },
+              {
+                title: "Reset Password V2",
+                route: { name: "auth-resetpasswordv2" },
+              },
             ],
           },
           {
@@ -99,7 +107,7 @@ export default [
             route: { name: "form-element" },
             child: [
               {
-                title: "Input Text",
+                title: "Input",
                 route: { name: "form-element-input" },
               },
               {
@@ -107,14 +115,6 @@ export default [
                 route: { name: "form-element-input-group" },
               },
             ],
-          },
-          {
-            title: "Basic",
-            route: { name: "form-basic" },
-          },
-          {
-            title: "Advance",
-            route: { name: "form-advance" },
           },
         ],
       },
