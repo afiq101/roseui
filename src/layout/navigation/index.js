@@ -95,6 +95,10 @@ export default [
             title: "Badges",
             route: { name: "component-badges" },
           },
+          {
+            title: "Dropdown",
+            route: { name: "component-dropdown" },
+          },
         ],
       },
       {
@@ -107,12 +111,56 @@ export default [
             route: { name: "form-element" },
             child: [
               {
-                title: "Input",
-                route: { name: "form-element-input" },
+                title: "Text",
+                route: { name: "form-element-input-text" },
               },
               {
-                title: "Input Group",
+                title: "Group",
                 route: { name: "form-element-input-group" },
+              },
+              {
+                title: "Mask",
+                route: { name: "form-element-input-mask" },
+              },
+              {
+                title: "Button",
+                route: { name: "form-element-input-button" },
+              },
+              {
+                title: "Textarea",
+                route: { name: "form-element-input-textarea" },
+              },
+              {
+                title: "Number",
+                route: { name: "form-element-input-number" },
+              },
+              {
+                title: "Password",
+                route: { name: "form-element-input-password" },
+              },
+              {
+                title: "Date & Time",
+                route: { name: "form-element-input-datetime" },
+              },
+              {
+                title: "Radio",
+                route: { name: "form-element-input-radio" },
+              },
+              {
+                title: "Checkbox",
+                route: { name: "form-element-input-checkbox" },
+              },
+              {
+                title: "Select",
+                route: { name: "form-element-input-select" },
+              },
+              {
+                title: "Vue Select",
+                route: { name: "form-element-input-vueselect" },
+              },
+              {
+                title: "TinyMCE",
+                route: { name: "form-element-input-tinymce" },
               },
             ],
           },

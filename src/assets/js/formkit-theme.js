@@ -4,6 +4,10 @@
 const textClassification = {
   label: "block mb-2 font-semibold text-sm formkit-invalid:text-red-500",
   inner: `
+    flex
+    items-center
+    justify-center
+    align-center
     w-full
     border
     border-slate-300
@@ -12,6 +16,7 @@ const textClassification = {
     rounded-lg mb-1
     overflow-hidden
     focus-within:border-rose-400
+    mb-0
   `,
   input: `
     w-full 
@@ -27,6 +32,7 @@ const textClassification = {
     focus:outline-none 
     focus:shadow-outline 
     `,
+  prefix: `ml-2`,
 };
 const boxClassification = {
   fieldset: "max-w-md border border-gray-400 rounded-lg px-2 pb-1",

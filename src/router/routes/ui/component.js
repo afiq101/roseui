@@ -35,5 +35,23 @@ export default [
           ],
         },
       },
+      {
+        path: "/component/dropdown",
+        name: "component-dropdown",
+        component: () => import("@/views/ui/component/Dropdown.vue"),
+        meta: {
+          title: "Dropdown",
+          breadcrumb: [
+            {
+              title: "Home",
+              route: { name: "dashboard" },
+            },
+            {
+              title: "Dropdown",
+              route: { name: "component-dropdown" },
+            },
+          ],
+        },
+      },
   ];
   

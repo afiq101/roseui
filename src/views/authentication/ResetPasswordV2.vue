@@ -2,7 +2,7 @@
   <div
     class="flex-none md:flex justify-center text-center items-center h-screen"
   >
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-3/4 lg:w-1/2 xl:w-2/6">
       <rs-card class="h-screen md:h-auto px-10 md:px-16 py-12 md:py-20 mb-0">
         <h3 class="mb-4">Reset Password</h3>
         <p class="text-slate-500 mb-6">

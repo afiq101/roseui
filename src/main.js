@@ -18,6 +18,7 @@ import VueFeather from "vue-feather";
 import VueCodeHighlight from "vue-code-highlight";
 import FloatingVue from "floating-vue";
 import SDropdown from "@storinka/dropdown";
+import VueClickAway from "vue3-click-away";
 
 // import chart libraries
 import { Chart, registerables } from "chart.js";
@@ -46,6 +47,7 @@ app.use(FloatingVue);
 app.use(SDropdown);
 app.use(VueCodeHighlight);
 app.use(plugin, defaultConfig(FormKitTheme));
+app.use(VueClickAway)
 
 app.component("country-flag", CountryFlag);
 app.component(VueFeather.name, VueFeather);
