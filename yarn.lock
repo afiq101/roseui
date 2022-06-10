@@ -951,6 +951,11 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@devindex/vue-mask@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@devindex/vue-mask/-/vue-mask-2.0.3.tgz#062f9bd642bae28ce0bd9dd98463b6bdd5d158d7"
+  integrity sha512-zOVSHVhuV4NkCVTDsyInmBWNS1JvrwevU2QguNzXxe0DDowNp+3MCkVGYdmJtpZ63wRHFiU3YTQsBjCJBOYN2A==
+
 "@dzangolab/flag-icon-css@^3.4.5":
   version "3.4.5"
   resolved "https://registry.npmjs.org/@dzangolab/flag-icon-css/-/flag-icon-css-3.4.5.tgz"
@@ -8034,6 +8039,11 @@ vue-router@^4.0.3:
   integrity sha512-xa+pIN9ZqORdIW1MkN2+d9Ui2pCM1b/UMgwYUCZOiFYHAvz/slKKBDha8DLrh5aCG/RibtrpyhKjKOZ85tYyWg==
   dependencies:
     "@vue/devtools-api" "^6.0.0"
+
+vue-simple-password-meter@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-simple-password-meter/-/vue-simple-password-meter-1.1.0.tgz#30f41e1c6a4257bdb8d73c131d47c94e1cdeeeb3"
+  integrity sha512-gLtbE7oXvGiDrPMWp/sENCzFkyTFVENN8RN1+kANC0erJDaoMJt0q343ELR9aZOqLnoGxG1BL3ESInR/CeCYJA==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.3:
   version "4.1.3"

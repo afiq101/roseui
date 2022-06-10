@@ -18,7 +18,11 @@ body {
 
 code {
   color: rgb(233, 74, 74);
+  background-color: rgba(146, 146, 146, 0.1);
 }
+
+// Custom Form SCSS
+@import "./custom/form";
 
 // Custom Component SCSS
 @import "./custom/component/button";
@@ -38,3 +42,4 @@ code {
 // Custom SCSS library
 @import "./custom/library/dropdown";
 @import "./custom/library/nprogress";
+@import "./custom/library/simplepasswordmeter";

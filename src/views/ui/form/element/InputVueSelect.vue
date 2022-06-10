@@ -9,7 +9,7 @@
 import RsCard from "@/components/Card.vue";
 
 export default {
-  name: "form-element-input-button",
+  name: "form-element-input-vueselect",
   components: {
     RsCard,
   },

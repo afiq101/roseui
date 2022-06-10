@@ -1,7 +1,9 @@
 <template>
   <rs-layout>
     <rs-breadcrumb />
-    <rs-card></rs-card>
+    <rs-card>
+      <template #header> Coming Soon... </template>
+    </rs-card>
   </rs-layout>
 </template>
 
@@ -9,7 +11,7 @@
 import RsCard from "@/components/Card.vue";
 
 export default {
-  name: "form-element-input-button",
+  name: "form-element-input-mask",
   components: {
     RsCard,
   },

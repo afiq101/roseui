@@ -8,7 +8,7 @@ import RsComponent from "./components";
 
 // import Formkit library
 import { plugin, defaultConfig } from "@formkit/vue";
-import FormKitTheme from "../formkit.config.js";
+import formkitConfig from "../formkit.config.js";
 
 // import 3rd party libraries
 import i18n from "./libs/i18n/index";
@@ -19,6 +19,7 @@ import VueCodeHighlight from "vue-code-highlight";
 import FloatingVue from "floating-vue";
 import SDropdown from "@storinka/dropdown";
 import VueClickAway from "vue3-click-away";
+import VueMask from '@devindex/vue-mask';
 
 // import chart libraries
 import { Chart, registerables } from "chart.js";
@@ -46,8 +47,9 @@ app.use(PerfectScrollbar);
 app.use(FloatingVue);
 app.use(SDropdown);
 app.use(VueCodeHighlight);
-app.use(plugin, defaultConfig(FormKitTheme));
+app.use(plugin, defaultConfig(formkitConfig));
 app.use(VueClickAway)
+app.use(VueMask);
 
 app.component("country-flag", CountryFlag);
 app.component(VueFeather.name, VueFeather);

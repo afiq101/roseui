@@ -111,21 +111,18 @@ export default [
             route: { name: "form-element" },
             child: [
               {
-                title: "Text",
-                route: { name: "form-element-input-text" },
+                title: "Input",
+                route: { name: "form-element-input" },
               },
               {
-                title: "Group",
+                title: "Input Group",
                 route: { name: "form-element-input-group" },
               },
-              {
-                title: "Mask",
-                route: { name: "form-element-input-mask" },
-              },
-              {
-                title: "Button",
-                route: { name: "form-element-input-button" },
-              },
+              // {
+              //   title: "Input Mask",
+              //   route: { name: "form-element-input-mask" },
+              // },
+
               {
                 title: "Textarea",
                 route: { name: "form-element-input-textarea" },
@@ -149,6 +146,10 @@ export default [
               {
                 title: "Checkbox",
                 route: { name: "form-element-input-checkbox" },
+              },
+              {
+                title: "Button",
+                route: { name: "form-element-input-button" },
               },
               {
                 title: "Select",

@@ -33,6 +33,7 @@ const textClassification = {
     focus:shadow-outline 
     `,
   prefix: `ml-2`,
+  help: `mt-1`
 };
 const boxClassification = {
   fieldset: "max-w-md border border-gray-400 rounded-lg px-2 pb-1",
@@ -116,7 +117,7 @@ export default {
     input: `
       block 
       w-full 
-      h-32 px-3 
+      px-3 py-2
       border-none 
       text-sm 
       text-gray-700 
@@ -124,7 +125,8 @@ export default {
       bg-white
       dark:bg-slate-800
       placeholder-gray-400 
-      focus:shadow-outline`,
+      focus:outline-none 
+      focus:shadow-outline `,
   },
   time: textClassification,
   url: textClassification,

@@ -1,18 +1,18 @@
 export default [
   {
-    path: "/form/element/input-text",
-    name: "form-element-input-text",
-    component: () => import("@/views/ui/form/element/InputText.vue"),
+    path: "/form/element/input",
+    name: "form-element-input",
+    component: () => import("@/views/ui/form/element/Input.vue"),
     meta: {
-      title: "Input Text",
+      title: "Input",
       breadcrumb: [
         {
           title: "Home",
           route: { name: "dashboard" },
         },
         {
-          title: "Input Text",
-          route: { name: "form-element-input-text" },
+          title: "Input",
+          route: { name: "form-element-input" },
         },
       ],
     },
