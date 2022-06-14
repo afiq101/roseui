@@ -4,10 +4,10 @@
       v-if="item.header"
       class="text-left font-normal text-xs mx-6 mt-5 mb-2"
     >
-      <span class="uppercase text-rose-500">
+      <span class="uppercase text-rose-500 dark:text-rose-400">
         {{ item.header ? item.header : "" }}
       </span>
-      <p class="text-gray-500">
+      <p class="text-gray-500 dark:text-gray-400">
         {{ item.description ? item.description : "" }}
       </p>
     </div>

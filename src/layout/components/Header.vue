@@ -28,8 +28,19 @@
       </div>
       <div class="flex" v-else>
         <div class="flex flex-auto gap-3 justify-center items-center">
-          <img class="h-10 w-10" src="@/assets/images/logo/logo.svg" alt="" />
-          <span v-if="isDesktop" class="text-xl font-semibold text-rose-500"
+          <img
+            class="h-10 w-10 block dark:hidden"
+            src="@/assets/images/logo/logo.png"
+            alt=""
+          />
+          <img
+            class="h-10 w-10 hidden dark:block"
+            src="@/assets/images/logo/logo-white.png"
+            alt=""
+          />
+          <span
+            v-if="isDesktop"
+            class="text-xl font-semibold text-rose-500 dark:text-white"
             >Rose UI</span
           >
         </div>
@@ -193,9 +204,7 @@
             v-if="isDesktop"
             class="grid grid-cols-1 text-left ml-3 flex-none"
           >
-            <p class="font-semibold text-sm truncate w-24 mb-0">
-              John Doe
-            </p>
+            <p class="font-semibold text-sm truncate w-24 mb-0">John Doe</p>
             <span class="font-medium text-xs truncate w-24">RM 10,000.00</span>
           </div>
           <vue-feather

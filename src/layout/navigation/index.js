@@ -118,11 +118,10 @@ export default [
                 title: "Input Group",
                 route: { name: "form-element-input-group" },
               },
-              // {
-              //   title: "Input Mask",
-              //   route: { name: "form-element-input-mask" },
-              // },
-
+              {
+                title: "Input Mask",
+                route: { name: "form-element-input-mask" },
+              },
               {
                 title: "Textarea",
                 route: { name: "form-element-input-textarea" },
@@ -154,6 +153,18 @@ export default [
               {
                 title: "Select",
                 route: { name: "form-element-input-select" },
+              },
+              {
+                title: "File",
+                route: { name: "form-element-input-file" },
+              },
+              {
+                title: "Custom",
+                route: { name: "form-element-input-custom" },
+              },
+              {
+                title: "Dropzone",
+                route: { name: "form-element-input-dropzone" },
               },
               {
                 title: "Vue Select",

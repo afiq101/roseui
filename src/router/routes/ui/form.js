@@ -198,6 +198,60 @@ export default [
     },
   },
   {
+    path: "/form/element/input-file",
+    name: "form-element-input-file",
+    component: () => import("@/views/ui/form/element/InputFile.vue"),
+    meta: {
+      title: "Input File",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Input File",
+          route: { name: "form-element-input-file" },
+        },
+      ],
+    },
+  },
+  {
+    path: "/form/element/input-custom",
+    name: "form-element-input-custom",
+    component: () => import("@/views/ui/form/element/InputCustom.vue"),
+    meta: {
+      title: "Input Custom",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Input Custom",
+          route: { name: "form-element-input-custom" },
+        },
+      ],
+    },
+  },
+  {
+    path: "/form/element/input-dropzone",
+    name: "form-element-input-dropzone",
+    component: () => import("@/views/ui/form/element/InputDropzone.vue"),
+    meta: {
+      title: "Dropzone",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Dropzone",
+          route: { name: "form-element-input-dropzone" },
+        },
+      ],
+    },
+  },
+  {
     path: "/form/element/input-vueselect",
     name: "form-element-input-vueselect",
     component: () => import("@/views/ui/form/element/InputVueSelect.vue"),

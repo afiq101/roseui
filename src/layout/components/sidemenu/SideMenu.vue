@@ -19,8 +19,19 @@
   >
     <div class="py-2 px-4">
       <div class="flex flex-auto gap-3 justify-center items-center">
-        <img class="w-12 h-12" src="@/assets/images/logo/logo.svg" alt="" />
-        <span class="text-xl font-semibold text-rose-500">Rose UI</span>
+        <img
+          class="h-10 w-10 block dark:hidden"
+          src="@/assets/images/logo/logo.png"
+          alt=""
+        />
+        <img
+          class="h-10 w-10 hidden dark:block"
+          src="@/assets/images/logo/logo-white.png"
+          alt=""
+        />
+        <span class="text-xl font-semibold text-rose-500 dark:text-white"
+          >Rose UI</span
+        >
       </div>
     </div>
     <div class="flex flex-col justify-between my-6">

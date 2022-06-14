@@ -2,7 +2,8 @@
 // many input types are identical in how
 // we want to style them.
 const textClassification = {
-  label: "block mb-2 font-semibold text-sm formkit-invalid:text-red-500",
+  label:
+    "block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
   inner: `
     flex
     items-center
@@ -13,6 +14,7 @@ const textClassification = {
     border-slate-300
     dark:border-slate-700
     formkit-invalid:border-red-500
+    dark:formkit-invalid:border-red-400
     rounded-lg mb-1
     overflow-hidden
     focus-within:border-rose-400
@@ -33,18 +35,18 @@ const textClassification = {
     focus:shadow-outline 
     `,
   prefix: `ml-2`,
-  help: `mt-1`
+  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
 };
 const boxClassification = {
-  fieldset: "max-w-md border border-gray-400 rounded-lg px-2 pb-1",
+  fieldset: "max-w-md border border-slate-300 rounded-lg px-4 py-2",
   legend: "font-bold text-sm",
-  wrapper: "flex items-center mb-1 cursor-pointer",
-  help: "mb-2",
+  wrapper: "flex items-center mb-3 cursor-pointer",
+  help: "mb-3",
   input: `flex 
           items-center 
           form-check-input
           appearance-none 
-          h-5 w-5 mr-2 
+          h-5 w-5 mr-2
           border-2 
           border-slate-300
           dark:border-slate-700
@@ -56,12 +58,45 @@ const boxClassification = {
           rounded-sm 
           checked:shadow-sm checked:shadow-rose-500/30 
           focus:outline-none focus:ring-0 transition duration-200`,
-  label: "text-sm text-gray-700 mt-1",
+  label:
+    "text-sm text-gray-700 formkit-disabled:text-gray-300 dark:formkit-disabled:text-gray-700",
+  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
 };
 const buttonClassification = {
   wrapper: "mb-1",
   input:
     "bg-rose-400 hover:bg-rose-500 text-white text-sm font-normal py-2 px-5 rounded-lg",
+};
+const OtpClassification = {
+  label:
+    "block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
+  inner: `
+        flex
+        items-center
+        justify-left
+        align-center
+        rounded-lg mb-1
+        overflow-hidden
+        mb-0
+  `,
+  digit: `
+    w-9 h-9 mr-2
+    text-center
+    rounded-lg
+    border
+    border-slate-300
+    dark:border-slate-700   
+    text-sm 
+    text-gray-700 
+    dark:text-gray-200
+    bg-white
+    dark:bg-slate-800
+    placeholder-gray-400
+    focus-within:border-rose-400
+    focus:outline-none 
+    focus:shadow-outline
+`,
+  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
 };
 
 // export our definitions using our above
@@ -72,7 +107,7 @@ export default {
   global: {
     label: "text-gray-700 dark:text-gray-200",
     outer: "mb-4 formkit-disabled:opacity-50",
-    help: "text-xs text-gray-500",
+    help: "text-xs text-gray-500 dark:text-gray-400 mt-1",
     messages: "list-none p-0 mt-1 mb-0",
     message: "text-red-500 mb-1 text-xs",
   },
@@ -88,11 +123,11 @@ export default {
   email: textClassification,
   file: {
     label: "block mb-1 font-bold text-sm",
-    inner: "max-w-md cursor-pointer",
+    inner: "w-full cursor-pointer",
     input:
-      "text-gray-600 text-sm mb-1 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:bg-rose-400 file:text-white hover:file:bg-rose-500",
-    noFiles: "block text-gray-800 text-sm mb-1",
-    fileItem: "block flex text-gray-800 text-sm mb-1",
+      "w-full cursor-pointer border rounded-lg text-gray-600 text-sm mb-1 file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-l-lg file:border-0 file:text-sm file:bg-rose-400 file:text-white hover:file:bg-rose-500",
+    noFiles: "block text-gray-800 text-sm my-1",
+    fileItem: "block flex text-gray-800 text-sm my-1",
     removeFiles: "ml-auto text-blue-500 text-sm",
   },
   month: textClassification,
@@ -108,7 +143,7 @@ export default {
       "form-range appearance-none w-full h-2 p-0 bg-gray-200 rounded-full focus:outline-none focus:ring-0 focus:shadow-none",
   },
   search: textClassification,
-  select: textClassification,
+  select: { ...textClassification, option: "p-2" },
   submit: buttonClassification,
   tel: textClassification,
   text: textClassification,
@@ -131,4 +166,11 @@ export default {
   time: textClassification,
   url: textClassification,
   week: textClassification,
+  otp: OtpClassification,
+  mask: textClassification,
+  dropzone: {
+    ...textClassification,
+    inner: "w-full",
+    dropzone: "border-2 border-gray-500 border-dashed p-6",
+  },
 };

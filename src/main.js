@@ -19,11 +19,17 @@ import VueCodeHighlight from "vue-code-highlight";
 import FloatingVue from "floating-vue";
 import SDropdown from "@storinka/dropdown";
 import VueClickAway from "vue3-click-away";
-import VueMask from '@devindex/vue-mask';
+import Maska from "maska";
 
 // import chart libraries
 import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import Icons from "@/assets/js/fontawesome.js";
+
+library.add(Icons);
 
 // import css and style files
 import "./assets/style/tailwind.css";
@@ -48,10 +54,11 @@ app.use(FloatingVue);
 app.use(SDropdown);
 app.use(VueCodeHighlight);
 app.use(plugin, defaultConfig(formkitConfig));
-app.use(VueClickAway)
-app.use(VueMask);
+app.use(VueClickAway);
+app.use(Maska);
 
 app.component("country-flag", CountryFlag);
 app.component(VueFeather.name, VueFeather);
+app.component("font-awesome-icon", FontAwesomeIcon);
 
 app.mount("#app");
