@@ -23,6 +23,9 @@ import VueClickAway from "vue3-click-away";
 import Maska from "maska";
 import vSelect from "vue-select";
 import Toast from "vue-toastification";
+import { SetupCalendar } from "v-calendar";
+
+// Setup plugin for defaults or `$screens` (optional)
 
 // import chart libraries
 import { Chart, registerables } from "chart.js";
@@ -44,6 +47,7 @@ import "vue-code-highlight/themes/window.css";
 import "floating-vue/dist/style.css";
 import "vue-select/dist/vue-select.css";
 import "vue-toastification/dist/index.css";
+import "swiper/css/bundle";
 
 const options = {
   transition: "Vue-Toastification__bounce",
@@ -70,6 +74,7 @@ app.use(VueCodeHighlight);
 app.use(VueClickAway);
 app.use(Maska);
 app.use(Toast, options);
+app.use(SetupCalendar, {});
 
 app.component("country-flag", CountryFlag);
 app.component(VueFeather.name, VueFeather);

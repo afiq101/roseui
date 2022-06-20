@@ -96,13 +96,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "ui-typography",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {};
   },

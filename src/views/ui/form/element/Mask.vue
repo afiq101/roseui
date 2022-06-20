@@ -28,13 +28,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-mask",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {};
   },

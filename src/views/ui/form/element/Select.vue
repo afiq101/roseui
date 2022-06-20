@@ -56,13 +56,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-select",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {
       options: [

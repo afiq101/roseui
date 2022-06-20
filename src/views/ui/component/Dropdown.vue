@@ -18,12 +18,14 @@
           </rs-dropdown>
         </div>
 
-        <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
-          @click="showCode ? (showCode = false) : (showCode = true)"
-        >
-          Show Code
-        </button>
+        <div class="flex justify-end">
+          <button
+            class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
+            @click="showCode ? (showCode = false) : (showCode = true)"
+          >
+            Show Code
+          </button>
+        </div>
         <transition name="fade">
           <div class="z-0" v-if="showCode" v-highlight>
             <perfect-scrollbar style="height: 300px">

@@ -53,13 +53,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-custom",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {};
   },

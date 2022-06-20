@@ -17,13 +17,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-dropzone",
-  components: {
-    RsCard,
-  },
+  
   setup() {},
 };
 </script>

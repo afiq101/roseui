@@ -120,13 +120,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "ui-color",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {
       defaultColor: {

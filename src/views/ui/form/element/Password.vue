@@ -93,12 +93,11 @@
 <script>
 import { ref, computed } from "vue";
 import PasswordMeter from "vue-simple-password-meter";
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-password",
   components: {
-    RsCard,
     PasswordMeter,
   },
   setup() {

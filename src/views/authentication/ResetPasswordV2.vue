@@ -22,12 +22,10 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {};
   },

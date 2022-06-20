@@ -27,13 +27,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-radio",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {
       options: ["Audi", "Mazda", "Proton", "Perodua", "BMW", "Mercedes"],

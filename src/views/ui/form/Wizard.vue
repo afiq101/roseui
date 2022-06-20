@@ -81,13 +81,12 @@
 
 <script>
 import { ref } from "vue";
-import RsCard from "@/components/Card.vue";
+
 import RsWizard from "@/components/Wizard.vue";
 
 export default {
   name: "form-wizard",
   components: {
-    RsCard,
     RsWizard,
   },
   setup() {

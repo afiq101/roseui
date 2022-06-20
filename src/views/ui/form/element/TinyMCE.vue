@@ -73,13 +73,11 @@
 
 <script>
 import Editor from "@tinymce/tinymce-vue";
-import RsCard from "@/components/Card.vue";
 
 export default {
   name: "form-element-input-tinymce",
   components: {
     Editor,
-    RsCard,
   },
   setup() {
     return {

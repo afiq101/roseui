@@ -131,12 +131,11 @@
 <script>
 import { ref, computed } from "vue";
 import VueApexCharts from "vue3-apexcharts";
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "chart-apex",
   components: {
-    RsCard,
     VueApexCharts,
   },
   setup() {

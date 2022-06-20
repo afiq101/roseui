@@ -7,17 +7,27 @@
       </template>
       <template #body>
         <p class="mb-2">Use the <code>rs-alert</code> to show alert.</p>
-        <rs-alert type="primary" class="mb-4">Hi, this is a primary alert!</rs-alert>
-        <rs-alert type="info" class="mb-4">Hi, this is an info alert!</rs-alert>
-        <rs-alert type="success" class="mb-4">Hi, this is a success alert!</rs-alert>
-        <rs-alert type="warning" class="mb-4">Hi, this is a warning alert!</rs-alert>
-        <rs-alert type="danger" class="mb-4">Hi, this is a danger alert!</rs-alert>
-        <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
-          @click="showCode ? (showCode = false) : (showCode = true)"
+        <rs-alert type="primary" class="mb-4"
+          >Hi, this is a primary alert!</rs-alert
         >
-          Show Code
-        </button>
+        <rs-alert type="info" class="mb-4">Hi, this is an info alert!</rs-alert>
+        <rs-alert type="success" class="mb-4"
+          >Hi, this is a success alert!</rs-alert
+        >
+        <rs-alert type="warning" class="mb-4"
+          >Hi, this is a warning alert!</rs-alert
+        >
+        <rs-alert type="danger" class="mb-4"
+          >Hi, this is a danger alert!</rs-alert
+        >
+        <div class="flex justify-end">
+          <button
+            class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
+            @click="showCode ? (showCode = false) : (showCode = true)"
+          >
+            Show Code
+          </button>
+        </div>
         <transition name="fade">
           <div v-if="showCode" v-highlight>
             <perfect-scrollbar style="height: 300px">
@@ -72,5 +82,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

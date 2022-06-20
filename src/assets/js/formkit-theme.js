@@ -30,6 +30,8 @@ const textClassification = {
     dark:text-gray-200
     bg-white
     dark:bg-slate-800
+    border-slate-300
+    dark:border-slate-700
     placeholder-gray-400 
     focus:outline-none 
     focus:shadow-outline 
@@ -38,6 +40,7 @@ const textClassification = {
   message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
 };
 const boxClassification = {
+  inner: "relative",
   fieldset: "max-w-md border border-slate-300 rounded-lg px-4 py-2",
   legend: "font-bold text-sm",
   wrapper: "flex items-center mb-3 cursor-pointer",
@@ -55,7 +58,7 @@ const boxClassification = {
           bg-white
           dark:bg-slate-800
           dark:checked:bg-rose-400
-          rounded-sm 
+          rounded-md
           checked:shadow-sm checked:shadow-rose-500/30 
           focus:outline-none focus:ring-0 transition duration-200`,
   label:

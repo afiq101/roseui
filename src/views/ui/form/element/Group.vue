@@ -114,13 +114,11 @@
 
 <script>
 import { ref, computed } from "vue";
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-group",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     const key = ref("jg9dsk23rnfsd");
 

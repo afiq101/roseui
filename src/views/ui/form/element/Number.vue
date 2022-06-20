@@ -52,13 +52,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-number",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {};
   },

@@ -15,12 +15,14 @@
           <rs-badges type="warning" class="mb-4"> Warning </rs-badges>
           <rs-badges type="danger" class="mb-4"> Danger </rs-badges>
         </div>
-        <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
-          @click="showCode ? (showCode = false) : (showCode = true)"
-        >
-          Show Code
-        </button>
+        <div class="flex justify-end">
+          <button
+            class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
+            @click="showCode ? (showCode = false) : (showCode = true)"
+          >
+            Show Code
+          </button>
+        </div>
         <transition name="fade">
           <div v-if="showCode" v-highlight>
             <perfect-scrollbar style="height: 300px">
@@ -76,12 +78,14 @@
           </rs-badges>
           <rs-badges type="danger" icon="star" class="mb-4"> Danger </rs-badges>
         </div>
-        <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
-          @click="showCode2 ? (showCode2 = false) : (showCode2 = true)"
-        >
-          Show Code
-        </button>
+        <div class="flex justify-end">
+          <button
+            class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
+            @click="showCode2 ? (showCode2 = false) : (showCode2 = true)"
+          >
+            Show Code
+          </button>
+        </div>
         <transition name="fade">
           <div v-if="showCode2" v-highlight>
             <perfect-scrollbar style="height: 300px">
@@ -119,13 +123,12 @@
 
 <script>
 import { ref } from "vue";
-import RsCard from "@/components/Card.vue";
+
 import RsBadges from "@/components/Badges.vue";
 
 export default {
   name: "badge-component",
   components: {
-    RsCard,
     RsBadges,
   },
   setup() {
@@ -139,5 +142,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

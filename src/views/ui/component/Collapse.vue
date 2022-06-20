@@ -7,8 +7,7 @@
 
 <script>
 export default {
-  name: "",
-  
+  name: "component-collapse",
   setup() {
     return {};
   },

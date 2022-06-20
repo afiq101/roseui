@@ -106,7 +106,7 @@
 
 <script>
 import { ref, computed } from "vue";
-import RsCard from "@/components/Card.vue";
+
 import {
   BarChart,
   useBarChart,
@@ -129,7 +129,6 @@ import {
 export default {
   name: "chart-chartjs",
   components: {
-    RsCard,
     BarChart,
     DoughnutChart,
     LineChart,

@@ -38,7 +38,7 @@ export default [
   {
     path: "/form/element/input-group",
     name: "form-element-input-group",
-    component: () => import("@/views/ui/form/element/InputGroup.vue"),
+    component: () => import("@/views/ui/form/element/Group.vue"),
     meta: {
       title: "Input Group",
       breadcrumb: [
@@ -56,7 +56,7 @@ export default [
   {
     path: "/form/element/input-mask",
     name: "form-element-input-mask",
-    component: () => import("@/views/ui/form/element/InputMask.vue"),
+    component: () => import("@/views/ui/form/element/Mask.vue"),
     meta: {
       title: "Input Mask",
       breadcrumb: [
@@ -74,7 +74,7 @@ export default [
   {
     path: "/form/element/input-button",
     name: "form-element-input-button",
-    component: () => import("@/views/ui/form/element/InputButton.vue"),
+    component: () => import("@/views/ui/form/element/Button.vue"),
     meta: {
       title: "Input Button",
       breadcrumb: [
@@ -92,7 +92,7 @@ export default [
   {
     path: "/form/element/input-textarea",
     name: "form-element-input-textarea",
-    component: () => import("@/views/ui/form/element/InputTextarea.vue"),
+    component: () => import("@/views/ui/form/element/Textarea.vue"),
     meta: {
       title: "Input Textarea",
       breadcrumb: [
@@ -110,7 +110,7 @@ export default [
   {
     path: "/form/element/input-number",
     name: "form-element-input-number",
-    component: () => import("@/views/ui/form/element/InputNumber.vue"),
+    component: () => import("@/views/ui/form/element/Number.vue"),
     meta: {
       title: "Input Number",
       breadcrumb: [
@@ -128,7 +128,7 @@ export default [
   {
     path: "/form/element/input-password",
     name: "form-element-input-password",
-    component: () => import("@/views/ui/form/element/InputPassword.vue"),
+    component: () => import("@/views/ui/form/element/Password.vue"),
     meta: {
       title: "Input Password",
       breadcrumb: [
@@ -146,7 +146,7 @@ export default [
   {
     path: "/form/element/input-datetime",
     name: "form-element-input-datetime",
-    component: () => import("@/views/ui/form/element/InputDatetime.vue"),
+    component: () => import("@/views/ui/form/element/Datetime.vue"),
     meta: {
       title: "Input Datetime",
       breadcrumb: [
@@ -164,7 +164,7 @@ export default [
   {
     path: "/form/element/input-radio",
     name: "form-element-input-radio",
-    component: () => import("@/views/ui/form/element/InputRadio.vue"),
+    component: () => import("@/views/ui/form/element/Radio.vue"),
     meta: {
       title: "Input Radio",
       breadcrumb: [
@@ -182,7 +182,7 @@ export default [
   {
     path: "/form/element/input-checkbox",
     name: "form-element-input-checkbox",
-    component: () => import("@/views/ui/form/element/InputCheckbox.vue"),
+    component: () => import("@/views/ui/form/element/Checkbox.vue"),
     meta: {
       title: "Input Checkbox",
       breadcrumb: [
@@ -200,7 +200,7 @@ export default [
   {
     path: "/form/element/input-select",
     name: "form-element-input-select",
-    component: () => import("@/views/ui/form/element/InputSelect.vue"),
+    component: () => import("@/views/ui/form/element/Select.vue"),
     meta: {
       title: "Input Select",
       breadcrumb: [
@@ -218,7 +218,7 @@ export default [
   {
     path: "/form/element/input-file",
     name: "form-element-input-file",
-    component: () => import("@/views/ui/form/element/InputFile.vue"),
+    component: () => import("@/views/ui/form/element/File.vue"),
     meta: {
       title: "Input File",
       breadcrumb: [
@@ -236,7 +236,7 @@ export default [
   {
     path: "/form/element/input-custom",
     name: "form-element-input-custom",
-    component: () => import("@/views/ui/form/element/InputCustom.vue"),
+    component: () => import("@/views/ui/form/element/Custom.vue"),
     meta: {
       title: "Input Custom",
       breadcrumb: [
@@ -254,7 +254,7 @@ export default [
   {
     path: "/form/element/input-vueselect",
     name: "form-element-input-vueselect",
-    component: () => import("@/views/ui/form/element/InputVueSelect.vue"),
+    component: () => import("@/views/ui/form/element/VueSelect.vue"),
     meta: {
       title: "Vue Select",
       breadcrumb: [
@@ -272,7 +272,7 @@ export default [
   {
     path: "/form/element/input-tinymce",
     name: "form-element-input-tinymce",
-    component: () => import("@/views/ui/form/element/InputTinyMCE.vue"),
+    component: () => import("@/views/ui/form/element/TinyMCE.vue"),
     meta: {
       title: "TinyMCE",
       breadcrumb: [

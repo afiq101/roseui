@@ -11,6 +11,7 @@
           name="terms"
           validation="accepted"
           validation-visibility="dirty"
+          input-class="icon-check"
         />
       </template>
     </rs-card>
@@ -55,13 +56,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-checkbox",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     return {
       options: ["Audi", "Mazda", "Proton", "Perodua", "BMW", "Mercedes"],

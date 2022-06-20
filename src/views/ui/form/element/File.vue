@@ -16,17 +16,15 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
-  components: {
-    RsCard,
-  },
+  name: "form-element-input-file",
+  
   setup() {
     return {};
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

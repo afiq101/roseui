@@ -12,7 +12,7 @@
     "
     :class="{
       'bg-blue-500': type === 'info',
-      'bg-rose-500': type === 'primary',
+      'bg-rose-400': type === 'primary',
       'bg-green-500': type === 'success',
       'bg-orange-400': type === 'warning',
       'bg-red-500': type === 'danger',

@@ -50,4 +50,9 @@
     @apply text-base
             font-bold;
   }
+
+  input[type="checkbox"]:checked.icon-check{
+    @apply !border-solid bg-white border-rose-400 
+  }
+
 }

@@ -50,6 +50,23 @@
     </rs-card>
 
     <rs-card>
+      <template #header>Type</template>
+      <template #body>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5">
+          <FormKit type="text" label="Basic" />
+          <FormKit
+            type="text"
+            label="Without Border"
+            :classes="{
+              input: '!border-solid border-b',
+              inner: 'border-none',
+            }"
+          />
+        </div>
+      </template>
+    </rs-card>
+
+    <rs-card>
       <template #header>Validation</template>
       <template #body>
         <p class="mb-4 text-justify">
@@ -72,16 +89,7 @@
           <FormKit type="text" label="Required" validation="?required">
             <template #label>
               <label
-                class="
-                  formkit-label
-                  text-gray-700
-                  dark:text-gray-200
-                  block
-                  mb-2
-                  font-semibold
-                  text-sm
-                  formkit-invalid:text-red-500
-                "
+                class="formkit-label text-gray-700 dark:text-gray-200 block mb-2 font-semibold text-sm formkit-invalid:text-red-500"
                 >Required <span class="text-red-400">*</span></label
               >
             </template>
@@ -97,13 +105,11 @@
 
 <script>
 import { ref, computed } from "vue";
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     const key = ref("jg9dsk23rnfsd");
 

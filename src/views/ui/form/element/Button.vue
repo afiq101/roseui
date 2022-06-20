@@ -29,13 +29,11 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 
 export default {
   name: "form-element-input-button",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     const randomColor = (e) => {
       const hex = Math.floor(Math.random() * 16777215).toString(16);

@@ -111,85 +111,24 @@ export default [
             route: { name: "component-badges" },
           },
           {
+            title: "Buttons",
+            route: { name: "component-button" },
+          },
+          {
+            title: "Calendar",
+            route: { name: "component-calendar" },
+          },
+          {
+            title: "Carousel",
+            route: { name: "component-carousel" },
+          },
+          {
+            title: "Collapse",
+            route: { name: "component-collapse" },
+          },
+          {
             title: "Dropdown",
             route: { name: "component-dropdown" },
-          },
-        ],
-      },
-      {
-        title: "Form",
-        route: { name: "form" },
-        ficon: "book",
-        child: [
-          {
-            title: "Element",
-            route: { name: "form-element" },
-            child: [
-              {
-                title: "Input",
-                route: { name: "form-element-input" },
-              },
-              {
-                title: "Input Group",
-                route: { name: "form-element-input-group" },
-              },
-              {
-                title: "Input Mask",
-                route: { name: "form-element-input-mask" },
-              },
-              {
-                title: "Textarea",
-                route: { name: "form-element-input-textarea" },
-              },
-              {
-                title: "Number",
-                route: { name: "form-element-input-number" },
-              },
-              {
-                title: "Password",
-                route: { name: "form-element-input-password" },
-              },
-              {
-                title: "Date & Time",
-                route: { name: "form-element-input-datetime" },
-              },
-              {
-                title: "Radio",
-                route: { name: "form-element-input-radio" },
-              },
-              {
-                title: "Checkbox",
-                route: { name: "form-element-input-checkbox" },
-              },
-              {
-                title: "Button",
-                route: { name: "form-element-input-button" },
-              },
-              {
-                title: "Select",
-                route: { name: "form-element-input-select" },
-              },
-              {
-                title: "File",
-                route: { name: "form-element-input-file" },
-              },
-              {
-                title: "Custom",
-                route: { name: "form-element-input-custom" },
-              },
-              {
-                title: "Vue Select",
-                route: { name: "form-element-input-vueselect" },
-              },
-              {
-                title: "TinyMCE",
-                route: { name: "form-element-input-tinymce" },
-              },
-            ],
-          },
-          {
-            title: "Wizard",
-            route: { name: "form-wizard" },
           },
         ],
       },
@@ -207,6 +146,84 @@ export default [
             route: { name: "chart-chartjs" },
           },
         ],
+      },
+    ],
+  },
+  {
+    header: "Forms",
+    description: "Forms for the application",
+    child: [
+      {
+        title: "Element",
+        route: { name: "form-element" },
+        ficon: "book",
+        child: [
+          {
+            title: "Input",
+            route: { name: "form-element-input" },
+          },
+          {
+            title: "Input Group",
+            route: { name: "form-element-input-group" },
+          },
+          {
+            title: "Input Mask",
+            route: { name: "form-element-input-mask" },
+          },
+          {
+            title: "Textarea",
+            route: { name: "form-element-input-textarea" },
+          },
+          {
+            title: "Number",
+            route: { name: "form-element-input-number" },
+          },
+          {
+            title: "Password",
+            route: { name: "form-element-input-password" },
+          },
+          {
+            title: "Date & Time",
+            route: { name: "form-element-input-datetime" },
+          },
+          {
+            title: "Radio",
+            route: { name: "form-element-input-radio" },
+          },
+          {
+            title: "Checkbox",
+            route: { name: "form-element-input-checkbox" },
+          },
+          // {
+          //   title: "Button",
+          //   route: { name: "form-element-input-button" },
+          // },
+          {
+            title: "Select",
+            route: { name: "form-element-input-select" },
+          },
+          {
+            title: "File",
+            route: { name: "form-element-input-file" },
+          },
+          {
+            title: "Custom",
+            route: { name: "form-element-input-custom" },
+          },
+          {
+            title: "Vue Select",
+            route: { name: "form-element-input-vueselect" },
+          },
+          {
+            title: "TinyMCE",
+            route: { name: "form-element-input-tinymce" },
+          },
+        ],
+      },
+      {
+        title: "Wizard",
+        route: { name: "form-wizard" },
+        ficon: "book",
       },
     ],
   },

@@ -42,14 +42,12 @@
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
+
 import { DateTime } from "luxon";
 
 export default {
   name: "form-element-input-datetime",
-  components: {
-    RsCard,
-  },
+  
   setup() {
     const dt = DateTime.now();
     return {
