@@ -3,7 +3,7 @@
 export const state = {
   layoutType: localStorage.getItem('layoutType') || 'vertical',
   windowWidth: window.innerWidth,
-  mobileWidth: "768",
+  mobileWidth: "1024",
 };
 
 export const getters = {

@@ -83,6 +83,21 @@ export default [
         ficon: "droplet",
       },
       {
+        title: "Icon",
+        route: { name: "icon" },
+        ficon: "alert-circle",
+        child: [
+          {
+            title: "Feather",
+            route: { name: "icon-feather" },
+          },
+          {
+            title: "Font Awesome",
+            route: { name: "icon-fontawesome" },
+          },
+        ],
+      },
+      {
         title: "Component",
         route: { name: "component" },
         ficon: "layers",
@@ -163,10 +178,6 @@ export default [
                 route: { name: "form-element-input-custom" },
               },
               {
-                title: "Dropzone",
-                route: { name: "form-element-input-dropzone" },
-              },
-              {
                 title: "Vue Select",
                 route: { name: "form-element-input-vueselect" },
               },
@@ -175,6 +186,10 @@ export default [
                 route: { name: "form-element-input-tinymce" },
               },
             ],
+          },
+          {
+            title: "Wizard",
+            route: { name: "form-wizard" },
           },
         ],
       },

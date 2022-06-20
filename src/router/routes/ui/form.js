@@ -1,5 +1,23 @@
 export default [
   {
+    path: "/form/wizard",
+    name: "form-wizard",
+    component: () => import("@/views/ui/form/Wizard.vue"),
+    meta: {
+      title: "Wizard",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Wizard",
+          route: { name: "form-element-wizard" },
+        },
+      ],
+    },
+  },
+  {
     path: "/form/element/input",
     name: "form-element-input",
     component: () => import("@/views/ui/form/element/Input.vue"),
@@ -229,24 +247,6 @@ export default [
         {
           title: "Input Custom",
           route: { name: "form-element-input-custom" },
-        },
-      ],
-    },
-  },
-  {
-    path: "/form/element/input-dropzone",
-    name: "form-element-input-dropzone",
-    component: () => import("@/views/ui/form/element/InputDropzone.vue"),
-    meta: {
-      title: "Dropzone",
-      breadcrumb: [
-        {
-          title: "Home",
-          route: { name: "dashboard" },
-        },
-        {
-          title: "Dropzone",
-          route: { name: "form-element-input-dropzone" },
         },
       ],
     },

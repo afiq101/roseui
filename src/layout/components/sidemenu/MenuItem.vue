@@ -88,6 +88,7 @@ export default {
         target.querySelector("a").classList.toggle("nav-open");
         target.querySelector("ul").classList.toggle("hide");
       } catch (e) {
+        console.log(e);
         return;
       }
     }
@@ -115,5 +116,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

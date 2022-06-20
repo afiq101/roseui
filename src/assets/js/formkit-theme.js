@@ -110,12 +110,12 @@ export default {
     help: "text-xs text-gray-500 dark:text-gray-400 mt-1",
     messages: "list-none p-0 mt-1 mb-0",
     message: "text-red-500 mb-1 text-xs",
+    wrapper: "my-4",
   },
   button: buttonClassification,
   color: {
     label: "block mb-1 font-bold text-sm",
-    input:
-      "w-16 h-8 appearance-none cursor-pointer border border-gray-300 rounded-lg mb-2 p-1",
+    input: "w-16 h-8 cursor-pointer rounded-lg mb-2",
   },
   date: textClassification,
   "datetime-local": textClassification,
@@ -138,7 +138,6 @@ export default {
     input: boxClassification.input.replace("rounded-sm", "rounded-full"),
   },
   range: {
-    inner: "max-w-md",
     input:
       "form-range appearance-none w-full h-2 p-0 bg-gray-200 rounded-full focus:outline-none focus:ring-0 focus:shadow-none",
   },
@@ -171,6 +170,7 @@ export default {
   dropzone: {
     ...textClassification,
     inner: "w-full",
-    dropzone: "border-2 border-gray-500 border-dashed p-6",
+    dropzone:
+      "border-2 border-gray-500 border-dashed p-6 active:bg-gray-100 dark:active:bg-gray-700",
   },
 };

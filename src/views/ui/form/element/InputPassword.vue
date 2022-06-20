@@ -42,6 +42,7 @@
             matches:
               'The password must contain at least one uppercase letter, one lowercase letter, one digit, one special character and should have 8 characters long.',
           }"
+          validation-visibility="dirty"
         />
         <FormKit :type="computedtype" label="See Password">
           <template #suffix>

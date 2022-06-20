@@ -19,11 +19,33 @@
         <FormKit
           type="dropzone"
           label="Documents"
-          accept=".pdf,.doc,.docx,.xml,.md,.csv"
           help="Select as many documents as you would like."
-          maxSize="1000"
-          maxFiles="5"
           multiple="true"
+        />
+      </template>
+    </rs-card>
+
+    <rs-card>
+      <template #header> Range</template>
+      <template #body>
+        <FormKit
+          type="range"
+          label="Volume"
+          min="0"
+          max="11"
+          help="Select your volume level."
+        />
+      </template>
+    </rs-card>
+
+    <rs-card>
+      <template #header> Color</template>
+      <template #body>
+        <FormKit
+          type="color"
+          value="#FB7185"
+          label="Select a color"
+          help="Select your favorite color."
         />
       </template>
     </rs-card>
