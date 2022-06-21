@@ -17,14 +17,14 @@ const props = defineProps({
 const steps = props.context.steps;
 const currentStep = props.context.currentStep;
 
-console.log(props.context);
-console.log(steps);
-console.log(currentStep);
+// console.log(props.context);
+// console.log(steps);
+// console.log(currentStep);
 
 // lowercase and remove spaces
 if (steps) {
   const stepsLower = steps.map((step) => step.toLowerCase().replace(/\s/g, ""));
-  console.log(stepsLower);
+  // console.log(stepsLower);
 }
 </script>
 

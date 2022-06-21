@@ -55,4 +55,22 @@
     @apply !border-solid bg-white border-rose-400 
   }
 
+  /* Collapse Component */
+
+  .collapse{
+    @apply dark:border-slate-700
+  }
+  
+  .collapse-group{
+    @apply overflow-hidden duration-300 dark:border-slate-700
+  }
+
+  .collapse-header{
+    @apply text-lg font-medium px-5 py-4 cursor-pointer
+  }
+
+  .collapse-body{
+    @apply px-5 pb-4 pt-2
+  }
+
 }

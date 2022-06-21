@@ -130,6 +130,10 @@ export default [
             title: "Dropdown",
             route: { name: "component-dropdown" },
           },
+          {
+            title: "Modal",
+            route: { name: "component-modal" },
+          },
         ],
       },
       {
@@ -150,8 +154,8 @@ export default [
     ],
   },
   {
-    header: "Forms",
-    description: "Forms for the application",
+    header: "Forms & Tables",
+    description: "Form and table component",
     child: [
       {
         title: "Element",
@@ -223,7 +227,22 @@ export default [
       {
         title: "Wizard",
         route: { name: "form-wizard" },
-        ficon: "book",
+        ficon: "bookmark",
+      },
+      {
+        title: "Table",
+        route: { name: "table" },
+        ficon: "grid",
+        child: [
+          {
+            title: "Basic",
+            route: { name: "table-basic" },
+          },
+          {
+            title: "Advance",
+            route: { name: "table-advance" },
+          },
+        ],
       },
     ],
   },

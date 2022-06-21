@@ -27,12 +27,14 @@
           <code>src/assets/js/fontawesome.js</code>. Below is the code to import
           the icon:
         </p>
-        <button
-          class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
-          @click="showCode ? (showCode = false) : (showCode = true)"
-        >
-          Show Code
-        </button>
+        <div class="flex justify-end">
+          <button
+            class="text-sm border border-slate-200 py-1 px-3 rounded-lg"
+            @click="showCode ? (showCode = false) : (showCode = true)"
+          >
+            Show Code
+          </button>
+        </div>
         <transition name="fade">
           <div v-if="showCode" v-highlight>
             <pre class="language-js shadow-none">
@@ -62,7 +64,7 @@
       class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6"
     >
       <div
-        class="flex justify-center items-center flex-col gap-y-2 cursor-pointer bg-white border-2 p-4 w-full rounded-lg hover:scale-110 transition-all duration-200"
+        class="flex justify-center items-center flex-col gap-y-2 cursor-pointer bg-white dark:bg-slate-800 dark:border-slate-700 border-2 p-4 w-full rounded-lg hover:scale-110 transition-all duration-200"
         v-for="(icon, index) in icons"
         :key="index"
         @click="copyText(icon)"
@@ -80,10 +82,9 @@ import { ref } from "vue";
 import FontAwesomeIcon from "@/assets/js/fontawesome.js";
 import { useToast } from "vue-toastification";
 
-
 export default {
   name: "icon-fontawesome",
-  
+
   setup() {
     const toast = useToast();
 

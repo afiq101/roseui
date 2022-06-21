@@ -125,4 +125,22 @@ export default [
       ],
     },
   },
+  {
+    path: "/component/modal",
+    name: "component-modal",
+    component: () => import("@/views/ui/component/Modal.vue"),
+    meta: {
+      title: "Modal",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Modal",
+          route: { name: "component-modal" },
+        },
+      ],
+    },
+  },
 ];

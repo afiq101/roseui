@@ -39,7 +39,7 @@
                 bg-slate-100
                 hover:bg-slate-200
                 dark:bg-slate-700
-                hover:dark:bg-slate-900
+                hover:dark:bg-slate-900	
                 h-full
                 rounded-l-md
                 p-2
@@ -93,7 +93,7 @@
                 bg-slate-100
                 hover:bg-slate-200
                 dark:bg-slate-700
-                hover:dark:bg-slate-900
+                hover:dark:bg-slate-900	
                 h-full
                 rounded-r-md
                 p-2

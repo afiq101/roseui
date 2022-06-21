@@ -95,7 +95,7 @@ export default {
     const stepNames2 = ["Contact", "Organization", "Application"];
 
     function submit() {
-      console.log("submit");
+      // console.log("submit");
     }
 
     return {

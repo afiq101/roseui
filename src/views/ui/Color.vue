@@ -148,7 +148,7 @@ export default {
           "bg-slate-600",
           "bg-slate-700",
           "bg-slate-800",
-          "bg-slate-900",
+          "bg-slate-900	",
         ],
         gray: [
           "bg-gray-50",
@@ -159,8 +159,8 @@ export default {
           "bg-gray-500",
           "bg-gray-600",
           "bg-gray-700",
-          "bg-gray-800",
-          "bg-gray-900",
+          "bg-slate-800",
+          "bg-slate-900",
         ],
         zinc: [
           "bg-zinc-50",
@@ -171,8 +171,8 @@ export default {
           "bg-zinc-500",
           "bg-zinc-600",
           "bg-zinc-700",
-          "bg-zinc-800",
-          "bg-zinc-900",
+          "bg-slate-800",
+          "bg-slate-900",
         ],
         neutral: [
           "bg-neutral-50",
@@ -183,8 +183,8 @@ export default {
           "bg-neutral-500",
           "bg-neutral-600",
           "bg-neutral-700",
-          "bg-neutral-800",
-          "bg-neutral-900",
+          "bg-slate-800",
+          "bg-slate-900",
         ],
         stone: [
           "bg-stone-50",

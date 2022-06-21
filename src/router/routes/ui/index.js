@@ -3,6 +3,7 @@ import ComponentRoute from "./component";
 import FormRoute from "./form";
 import ChartRoute from "./chart";
 import IconRoute from "./icon";
+import TableRoute from "./table";
 
 export default [
   ...UiRoute,
@@ -10,4 +11,5 @@ export default [
   ...FormRoute,
   ...ChartRoute,
   ...IconRoute,
+  ...TableRoute,
 ];

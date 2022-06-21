@@ -1,15 +1,6 @@
 <template>
   <div
-    class="
-      bg-white
-      dark:bg-slate-800 dark:text-white
-      rounded-lg
-      transition-all
-      mb-5
-      duration-300
-      shadow-md shadow-slate-200
-      dark:shadow-slate-900
-    "
+    class="bg-white dark:bg-slate-800 rounded-lg transition-all mb-5 duration-300 shadow-md shadow-slate-200 dark:shadow-slate-900"
   >
     <header v-if="!!$slots.header" class="text-xl p-5 font-medium">
       <slot name="header"></slot>
@@ -33,5 +24,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
