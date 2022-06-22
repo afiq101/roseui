@@ -36,8 +36,8 @@
           </button>
         </div>
         <transition name="fade">
-          <div v-if="showCode1" v-highlight>
-            <perfect-scrollbar style="height: 300px">
+          <div v-show="showCode1" v-highlight>
+            <perfect-scrollbar style="height: 400px">
               <pre class="language-html shadow-none">
             <code>
               &lt;template&gt; 
@@ -104,8 +104,8 @@
           </button>
         </div>
         <transition name="fade">
-          <div v-if="showCode2" v-highlight>
-            <perfect-scrollbar style="height: 300px">
+          <div v-show="showCode2" v-highlight>
+            <perfect-scrollbar style="height: 400px">
               <pre class="language-html shadow-none">
             <code>
               &lt;template&gt; 
@@ -186,8 +186,8 @@
           </button>
         </div>
         <transition name="fade">
-          <div v-if="showCode3" v-highlight>
-            <perfect-scrollbar style="height: 300px">
+          <div v-show="showCode3" v-highlight>
+            <perfect-scrollbar style="height: 400px">
               <pre class="language-html shadow-none">
             <code>
               &lt;template&gt; 

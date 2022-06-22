@@ -11,11 +11,11 @@
       py-1
     "
     :class="{
-      'bg-blue-500': type === 'info',
-      'bg-rose-400': type === 'primary',
-      'bg-green-500': type === 'success',
-      'bg-orange-400': type === 'warning',
-      'bg-red-500': type === 'danger',
+      'bg-blue-500': variant === 'info',
+      'bg-rose-400': variant === 'primary',
+      'bg-green-500': variant === 'success',
+      'bg-orange-400': variant === 'warning',
+      'bg-red-500': variant === 'danger',
     }"
   >
     <vue-feather
@@ -32,7 +32,7 @@
 export default {
   name: "component-badges",
   props: {
-    type: {
+    variant: {
       type: String,
       default: "primary",
     },

@@ -2,55 +2,87 @@
   <div class="relative" v-click-away="closeMenu">
     <button
       @click="toggle"
-      class="px-6 py-2.5 bg-rose-400 hover:bg-rose-500 focus:bg-rose-500 active:bg-rose-600 text-white rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg active:text-white transition duration-150 ease-in-out flex menuItems-center whitespace-nowrap"
+      class="flex items-center gap-x-2 rounded focus:outline-none focus:ring-0 whitespace-nowrap"
+      :class="{
+        'text-xs px-3 py-1': size === 'sm',
+        'text-sm px-6 py-2.5': size === 'md',
+        'text-base px-8 py-4': size === 'lg',
+
+        // Filled Button
+        'text-white focus:text-white bg-rose-400 hover:bg-rose-500 focus:bg-rose-500':
+          variant === 'primary',
+        'text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600':
+          variant === 'info',
+        'text-white focus:text-white bg-green-500 hover:bg-green-600 focus:bg-green-600':
+          variant === 'success',
+        'text-white focus:text-white bg-orange-400 hover:bg-orange-500 focus:bg-orange-500':
+          variant === 'warning',
+        'text-white focus:text-white bg-red-500 hover:bg-red-600 focus:bg-red-600':
+          variant === 'danger',
+
+        // Outline Button
+        'text-rose-400 border border-rose-400 hover:bg-rose-50 focus:bg-rose-50':
+          variant === 'primary-outline',
+        'text-blue-500 border border-blue-500 hover:bg-blue-50 focus:bg-blue-50':
+          variant === 'info-outline',
+        'text-green-500 border border-green-500 hover:bg-green-50 focus:bg-green-50':
+          variant === 'success-outline',
+        'text-orange-400 border border-orange-400 hover:bg-orange-50 focus:bg-orange-50':
+          variant === 'warning-outline',
+        'text-red-500 border border-red-500 hover:bg-red-50 focus:bg-red-50':
+          variant === 'danger-outline',
+
+        // Text Button
+        'text-rose-400 hover:bg-rose-50 focus:bg-rose-50 ':
+          variant === 'primary-text',
+        'text-blue-500 hover:bg-blue-50 focus:bg-blue-50':
+          variant === 'info-text',
+        'text-green-500 hover:bg-green-50 focus:bg-green-50':
+          variant === 'success-text',
+        'text-orange-400 hover:bg-orange-50 focus:bg-orange-50':
+          variant === 'warning-text',
+        'text-red-500 hover:bg-red-50 focus:bg-red-50':
+          variant === 'danger-text',
+      }"
       type="button"
     >
-      {{ props.title }}
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fas"
-        data-icon="caret-down"
-        class="w-3 ml-2"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 320 512"
-      >
-        <path
-          fill="currentColor"
-          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-        ></path>
-      </svg>
+      <span>{{ props.title }}</span>
+      <font-awesome-icon
+        v-if="position === 'bottom'"
+        :icon="['fas', 'caret-down']"
+      />
+      <font-awesome-icon
+        v-else-if="position === 'top'"
+        :icon="['fas', 'caret-up']"
+      />
+      <font-awesome-icon
+        v-else-if="position === 'left'"
+        :icon="['fas', 'caret-left']"
+      />
+      <font-awesome-icon
+        v-else-if="position === 'right'"
+        :icon="['fas', 'caret-right']"
+      />
     </button>
-    <transition name="fade">
-      <section v-show="isOpen">
-        <div
-          class="min-w-max absolute bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none"
-          v-if="!props.menuItems || props.menuItems.length === 0"
-        >
-          <slot class="cursor-pointer" name="content"></slot>
-        </div>
-        <div v-else>
-          <ul
-            class="min-w-max absolute bg-white text-base z-50 float-left py-2 text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none"
-          >
-            <li v-for="(value, index) in props.menuItems" :key="index">
-              <a
-                @click="navigateMenu(value.route)"
-                class="cursor-pointer text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
-                >{{ value.label }}</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-    </transition>
+    <section v-show="isOpen">
+      <div
+        class="absolute z-10 bg-white border shadow-md rounded-md py-1 whitespace-nowrap"
+        :class="{
+          '-bottom-32': position === 'bottom',
+          '-top-32': position === 'top',
+          'top-0 -left-42': position === 'left',
+          'top-0 -right-42': position === 'right',
+        }"
+        style="min-width: 10rem"
+      >
+        <slot></slot>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import router from "@/router";
 export default {
   name: "component-dropdown",
   props: {
@@ -58,9 +90,17 @@ export default {
       type: String,
       default: "Default",
     },
-    menuItems: {
-      type: Array,
-      default: () => [],
+    variant: {
+      type: String,
+      default: "primary",
+    },
+    position: {
+      type: String,
+      default: "bottom",
+    },
+    size: {
+      type: String,
+      default: "md",
     },
   },
   setup(props) {
@@ -74,23 +114,12 @@ export default {
       isOpen.value = false;
     };
 
-    const navigateMenu = (route) => {
-      try {
-        router.push(route);
-      } catch (e) {
-        router.push({ name: "error-404" });
-      }
-    };
-
     return {
-      props,
       toggle,
       isOpen,
-      navigateMenu,
       closeMenu,
+      props,
     };
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

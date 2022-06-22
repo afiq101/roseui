@@ -3,10 +3,10 @@ import {
   faFileArrowUp as fasFileArrowUp,
   faUser as fasUser,
   faUsers as fasUsers,
-  faChevronRight as fasChevronRight,
-  faChevronLeft as fasChevronLeft,
-  faChevronDown as fasChevronDown,
-  faChevronUp as fasChevronUp,
+  faCaretDown as fasCaretDown,
+  faCaretUp as fasCaretUp,
+  faCaretRight as fasCaretRight,
+  faCaretLeft as fasCaretLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFile as farFile } from "@fortawesome/free-regular-svg-icons";
 import { faVuejs, faCss3 } from "@fortawesome/free-brands-svg-icons";
@@ -14,10 +14,10 @@ import { faVuejs, faCss3 } from "@fortawesome/free-brands-svg-icons";
 export default {
   fasUser,
   fasUsers,
-  fasChevronUp,
-  fasChevronDown,
-  fasChevronRight,
-  fasChevronLeft,
+  fasCaretDown,
+  fasCaretUp,
+  fasCaretRight,
+  fasCaretLeft,
   fasFile,
   farFile,
   fasFileArrowUp,

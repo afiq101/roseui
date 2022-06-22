@@ -2,6 +2,7 @@
   <div
     class="
       w-header
+      z-20
       bg-white
       dark:bg-slate-800
       fixed

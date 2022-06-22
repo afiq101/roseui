@@ -36,7 +36,7 @@
           </button>
         </div>
         <transition name="fade">
-          <div v-if="showCode" v-highlight>
+          <div v-show="showCode" v-highlight>
             <pre class="language-js shadow-none">
             <code>
              import {

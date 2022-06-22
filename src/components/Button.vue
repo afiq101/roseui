@@ -1,40 +1,36 @@
 <template>
   <button
-    class="w-full py-2 px-3 rounded-lg flex justify-center items-center"
+    class="w-fit rounded-lg flex justify-center items-center h-fit"
     :class="{
+      'text-xs px-4 py-1': size === 'sm',
+      'text-sm px-8 py-2.5': size === 'md',
+      'text-base px-10 py-4': size === 'lg',
+
       // Filled Button
-      'text-white bg-rose-400 hover:bg-rose-500':
-        variant === 'primary' && type === 'fill',
-      'text-white bg-blue-500 hover:bg-blue-600':
-        variant === 'info' && type === 'fill',
-      'text-white bg-green-500 hover:bg-green-600':
-        variant === 'success' && type === 'fill',
-      'text-white bg-orange-400 hover:bg-orange-500':
-        variant === 'warning' && type === 'fill',
-      'text-white bg-red-500 hover:bg-red-600':
-        variant === 'danger' && type === 'fill',
+      'text-white bg-rose-400 hover:bg-rose-500': variant === 'primary',
+      'text-white bg-blue-500 hover:bg-blue-600': variant === 'info',
+      'text-white bg-green-500 hover:bg-green-600': variant === 'success',
+      'text-white bg-orange-400 hover:bg-orange-500': variant === 'warning',
+      'text-white bg-red-500 hover:bg-red-600': variant === 'danger',
 
       // Outline Button
       'text-rose-400 border border-rose-400 hover:bg-rose-50':
-        variant === 'primary' && type === 'outline',
+        variant === 'primary-outline',
       'text-blue-500 border border-blue-500 hover:bg-blue-50':
-        variant === 'info' && type === 'outline',
+        variant === 'info-outline',
       'text-green-500 border border-green-500 hover:bg-green-50':
-        variant === 'success' && type === 'outline',
+        variant === 'success-outline',
       'text-orange-400 border border-orange-400 hover:bg-orange-50':
-        variant === 'warning' && type === 'outline',
+        variant === 'warning-outline',
       'text-red-500 border border-red-500 hover:bg-red-50':
-        variant === 'danger' && type === 'outline',
+        variant === 'danger-outline',
 
       //Text Button
-      'text-rose-400 hover:bg-rose-50':
-        variant === 'primary' && type === 'text',
-      'text-blue-500 hover:bg-blue-50': variant === 'info' && type === 'text',
-      'text-green-500 hover:bg-green-50':
-        variant === 'success' && type === 'text',
-      'text-orange-400 hover:bg-orange-50':
-        variant === 'warning' && type === 'text',
-      'text-red-500 hover:bg-red-50': variant === 'danger' && type === 'text',
+      'text-rose-400 hover:bg-rose-50': variant === 'primary-text',
+      'text-blue-500 hover:bg-blue-50': variant === 'info-text',
+      'text-green-500 hover:bg-green-50': variant === 'success-text',
+      'text-orange-400 hover:bg-orange-50': variant === 'warning-text',
+      'text-red-500 hover:bg-red-50': variant === 'danger-text',
     }"
   >
     <slot></slot>
@@ -43,7 +39,7 @@
 
 <script>
 export default {
-  name: "component-badges",
+  name: "component-button",
   props: {
     type: {
       type: String,
@@ -52,6 +48,10 @@ export default {
     variant: {
       type: String,
       default: "primary",
+    },
+    size: {
+      type: String,
+      default: "md",
     },
   },
   setup() {

@@ -1,6 +1,6 @@
 <template>
   <div v-highlight>
-    <perfect-scrollbar style="height: 300px">
+    <perfect-scrollbar style="height: 400px">
       <pre class="shadow-none" :class="`language-${code ? code : 'html'}`">
             <code>
               <slot></slot>
