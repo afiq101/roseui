@@ -41,7 +41,7 @@ const textClassification = {
 };
 const boxClassification = {
   inner: "relative",
-  fieldset: "max-w-md border border-slate-300 rounded-lg px-4 py-2",
+  fieldset: "max-w-md border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2",
   legend: "font-bold text-sm",
   wrapper: "flex items-center mb-3 cursor-pointer",
   help: "mb-3",
@@ -113,7 +113,7 @@ export default {
     help: "text-xs text-gray-500 dark:text-gray-400 mt-1",
     messages: "list-none p-0 mt-1 mb-0",
     message: "text-red-500 mb-1 text-xs",
-    wrapper: "my-4",
+    wrapper: "",
   },
   button: buttonClassification,
   color: {

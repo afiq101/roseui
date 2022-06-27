@@ -66,7 +66,7 @@
     </button>
     <section v-show="isOpen">
       <div
-        class="absolute z-10 bg-white border shadow-md rounded-md py-1 whitespace-nowrap"
+        class="absolute z-10 bg-white dark:bg-slate-800 border dark:border-slate-700 shadow-md rounded-md py-1 whitespace-nowrap"
         :class="{
           '-bottom-32': position === 'bottom',
           '-top-32': position === 'top',

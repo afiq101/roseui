@@ -7,6 +7,9 @@ import {
   faCaretUp as fasCaretUp,
   faCaretRight as fasCaretRight,
   faCaretLeft as fasCaretLeft,
+  faSort as faSort,
+  faSortDown as faSortDown,
+  faSortUp as faSortUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFile as farFile } from "@fortawesome/free-regular-svg-icons";
 import { faVuejs, faCss3 } from "@fortawesome/free-brands-svg-icons";
@@ -18,6 +21,9 @@ export default {
   fasCaretUp,
   fasCaretRight,
   fasCaretLeft,
+  faSort,
+  faSortDown,
+  faSortUp,
   fasFile,
   farFile,
   fasFileArrowUp,

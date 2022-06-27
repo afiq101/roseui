@@ -19,10 +19,10 @@ export default [
   },
   {
     path: "/table/advance",
-    name: "table-advance",
-    component: () => import("@/views/ui/table/Advance.vue"),
+    name: "table-advanced",
+    component: () => import("@/views/ui/table/Advanced.vue"),
     meta: {
-      title: "Table Advance",
+      title: "Table Advanced",
       breadcrumb: [
         {
           title: "Home",

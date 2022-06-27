@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="flex flex-col justify-between my-6">
-      <perfect-scrollbar style="max-height: 84vh">
+      <perfect-scrollbar style="max-height: 87vh">
         <rs-menu-items :items="menuItem"></rs-menu-items>
       </perfect-scrollbar>
     </div>

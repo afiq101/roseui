@@ -158,76 +158,77 @@ export default [
     description: "Form and table component",
     child: [
       {
-        title: "Element",
-        route: { name: "form-element" },
+        title: "Form",
+        route: { name: "form" },
         ficon: "book",
         child: [
           {
-            title: "Input",
-            route: { name: "form-element-input" },
+            title: "Element",
+            route: { name: "form-element" },
+            child: [
+              {
+                title: "Input",
+                route: { name: "form-element-input" },
+              },
+              {
+                title: "Input Group",
+                route: { name: "form-element-input-group" },
+              },
+              {
+                title: "Input Mask",
+                route: { name: "form-element-input-mask" },
+              },
+              {
+                title: "Textarea",
+                route: { name: "form-element-input-textarea" },
+              },
+              {
+                title: "Number",
+                route: { name: "form-element-input-number" },
+              },
+              {
+                title: "Password",
+                route: { name: "form-element-input-password" },
+              },
+              {
+                title: "Date & Time",
+                route: { name: "form-element-input-datetime" },
+              },
+              {
+                title: "Radio",
+                route: { name: "form-element-input-radio" },
+              },
+              {
+                title: "Checkbox",
+                route: { name: "form-element-input-checkbox" },
+              },
+              {
+                title: "Select",
+                route: { name: "form-element-input-select" },
+              },
+              {
+                title: "File",
+                route: { name: "form-element-input-file" },
+              },
+              {
+                title: "Custom",
+                route: { name: "form-element-input-custom" },
+              },
+              {
+                title: "Vue Select",
+                route: { name: "form-element-input-vueselect" },
+              },
+              {
+                title: "TinyMCE",
+                route: { name: "form-element-input-tinymce" },
+              },
+            ],
           },
           {
-            title: "Input Group",
-            route: { name: "form-element-input-group" },
-          },
-          {
-            title: "Input Mask",
-            route: { name: "form-element-input-mask" },
-          },
-          {
-            title: "Textarea",
-            route: { name: "form-element-input-textarea" },
-          },
-          {
-            title: "Number",
-            route: { name: "form-element-input-number" },
-          },
-          {
-            title: "Password",
-            route: { name: "form-element-input-password" },
-          },
-          {
-            title: "Date & Time",
-            route: { name: "form-element-input-datetime" },
-          },
-          {
-            title: "Radio",
-            route: { name: "form-element-input-radio" },
-          },
-          {
-            title: "Checkbox",
-            route: { name: "form-element-input-checkbox" },
-          },
-          // {
-          //   title: "Button",
-          //   route: { name: "form-element-input-button" },
-          // },
-          {
-            title: "Select",
-            route: { name: "form-element-input-select" },
-          },
-          {
-            title: "File",
-            route: { name: "form-element-input-file" },
-          },
-          {
-            title: "Custom",
-            route: { name: "form-element-input-custom" },
-          },
-          {
-            title: "Vue Select",
-            route: { name: "form-element-input-vueselect" },
-          },
-          {
-            title: "TinyMCE",
-            route: { name: "form-element-input-tinymce" },
+            title: "Wizard",
+            route: { name: "form-wizard" },
           },
         ],
-      },
-      {
-        title: "Wizard",
-        route: { name: "form-wizard" },
-        ficon: "bookmark",
       },
       {
         title: "Table",
@@ -239,8 +240,8 @@ export default [
             route: { name: "table-basic" },
           },
           {
-            title: "Advance",
-            route: { name: "table-advance" },
+            title: "Advanced",
+            route: { name: "table-advanced" },
           },
         ],
       },
