@@ -134,6 +134,10 @@ export default [
             title: "Modal",
             route: { name: "component-modal" },
           },
+          {
+            title: "Tab",
+            route: { name: "component-tab" },
+          },
         ],
       },
       {

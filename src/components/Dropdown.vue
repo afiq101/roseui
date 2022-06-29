@@ -1,10 +1,10 @@
 <template>
-  <div class="relative" v-click-away="closeMenu">
+  <div class="relative inline-flex" v-click-away="closeMenu">
     <button
       @click="toggle"
-      class="flex items-center gap-x-2 rounded focus:outline-none focus:ring-0 whitespace-nowrap"
+      class="flex items-center gap-x-2 rounded-lg focus:outline-none focus:ring-0 whitespace-nowrap"
       :class="{
-        'text-xs px-3 py-1': size === 'sm',
+        'text-sm px-3 py-1.5': size === 'sm',
         'text-sm px-6 py-2.5': size === 'md',
         'text-base px-8 py-4': size === 'lg',
 
@@ -46,7 +46,8 @@
       }"
       type="button"
     >
-      <span>{{ props.title }}</span>
+      <slot v-if="$slots.title" name="title"></slot>
+      <span v-else>{{ props.title }}</span>
       <font-awesome-icon
         v-if="position === 'bottom'"
         :icon="['fas', 'caret-down']"
@@ -64,19 +65,24 @@
         :icon="['fas', 'caret-right']"
       />
     </button>
-    <section v-show="isOpen">
-      <div
-        class="absolute z-10 bg-white dark:bg-slate-800 border dark:border-slate-700 shadow-md rounded-md py-1 whitespace-nowrap"
-        :class="{
-          '-bottom-32': position === 'bottom',
-          '-top-32': position === 'top',
-          'top-0 -left-42': position === 'left',
-          'top-0 -right-42': position === 'right',
-        }"
-        style="min-width: 10rem"
-      >
-        <slot></slot>
-      </div>
+    <section
+      class="absolute z-10 bg-white dark:bg-slate-800 border dark:border-slate-700 shadow-md rounded-lg py-1 whitespace-nowrap"
+      :class="{
+        'top-10': position == 'bottom' && size == 'sm',
+        'top-12': position == 'bottom' && size == 'md',
+        'top-16': position == 'bottom' && size == 'lg',
+        'bottom-10': position == 'top' && size == 'sm',
+        'bottom-12': position == 'top' && size == 'md',
+        'bottom-16': position == 'top' && size == 'lg',
+        'top-0 -left-42': position == 'left' && size == 'sm',
+        'top-0 -right-42': position == 'right' && size == 'sm',
+        'right-0':
+          (position == 'bottom' || position == 'top') && textAlign == 'right',
+      }"
+      :style="`min-width: ${itemSize}`"
+      v-show="isOpen"
+    >
+      <slot></slot>
     </section>
   </div>
 </template>
@@ -98,9 +104,17 @@ export default {
       type: String,
       default: "bottom",
     },
+    textAlign: {
+      type: String,
+      default: "left",
+    },
     size: {
       type: String,
       default: "md",
+    },
+    itemSize: {
+      type: String,
+      default: "10rem",
     },
   },
   setup(props) {

@@ -143,4 +143,22 @@ export default [
       ],
     },
   },
+  {
+    path: "/component/tab",
+    name: "component-tab",
+    component: () => import("@/views/ui/component/Tab.vue"),
+    meta: {
+      title: "Tab",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Tab",
+          route: { name: "component-tab" },
+        },
+      ],
+    },
+  },
 ];

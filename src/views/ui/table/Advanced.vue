@@ -8,6 +8,7 @@
           :data="data"
           :options-advanced="{
             sortable: true,
+            responsive: true,
           }"
           advanced
         >

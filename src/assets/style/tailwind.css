@@ -51,9 +51,6 @@
             font-bold;
   }
 
-  input[type="checkbox"]:checked.icon-check{
-    @apply !border-solid bg-white border-rose-400 
-  }
 
   /* Collapse Component */
 
@@ -66,7 +63,7 @@
   }
 
   .collapse-header{
-    @apply text-lg font-medium px-5 py-4 cursor-pointer
+    @apply text-lg font-medium px-5 pr-10 py-4 cursor-pointer
   }
 
   .collapse-body{
@@ -79,7 +76,11 @@
   }
 
   .table-header{
-    @apply flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center gap-4 m-4
+    @apply m-4
+  } 
+
+  .table-header-filter{
+    @apply flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center gap-4
   } 
 
   .table-content{

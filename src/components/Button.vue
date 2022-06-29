@@ -7,45 +7,45 @@
       'text-base px-10 py-4': size === 'lg',
 
       // Filled Button
-      'text-white bg-rose-400 hover:bg-rose-500 disabled:bg-rose-50 disabled:text-rose-100 disabled:border-rose-50':
+      'text-white bg-rose-400 hover:bg-rose-500 disabled:bg-rose-50 disabled:text-rose-100 disabled:border-rose-50 disabled:cursor-default':
         variant === 'primary',
-      'text-white bg-gray-400 hover:bg-gray-500 disabled:bg-gray-50 disabled:text-gray-100 disabled:border-gray-50':
+      'text-white bg-gray-400 hover:bg-gray-500 disabled:bg-gray-50 disabled:text-gray-100 disabled:border-gray-50 disabled:cursor-default':
         variant === 'secondary',
-      'text-white bg-blue-500 hover:bg-blue-600 disabled:bg-blue-50 disabled:text-blue-100 disabled:border-blue-50':
+      'text-white bg-blue-500 hover:bg-blue-600 disabled:bg-blue-50 disabled:text-blue-100 disabled:border-blue-50 disabled:cursor-default':
         variant === 'info',
-      'text-white bg-green-500 hover:bg-green-600 disabled:bg-green-50 disabled:text-green-100 disabled:border-green-50':
+      'text-white bg-green-500 hover:bg-green-600 disabled:bg-green-50 disabled:text-green-100 disabled:border-green-50 disabled:cursor-default':
         variant === 'success',
-      'text-white bg-orange-400 hover:bg-orange-500 disabled:bg-orange-50 disabled:text-orange-100 disabled:border-orange-50':
+      'text-white bg-orange-400 hover:bg-orange-500 disabled:bg-orange-50 disabled:text-orange-100 disabled:border-orange-50 disabled:cursor-default':
         variant === 'warning',
-      'text-white bg-red-500 hover:bg-red-600 disabled:bg-red-50 disabled:text-red-100 disabled:border-red-50':
+      'text-white bg-red-500 hover:bg-red-600 disabled:bg-red-50 disabled:text-red-100 disabled:border-red-50 disabled:cursor-default':
         variant === 'danger',
 
       // Outline Button
-      'text-rose-400 border border-rose-400 hover:bg-rose-50 disabled:bg-rose-50 disabled:text-rose-100 disabled:border-rose-50':
+      'text-rose-400 border border-rose-400 hover:bg-rose-50 disabled:bg-rose-50 disabled:text-rose-100 disabled:border-rose-50 disabled:cursor-default':
         variant === 'primary-outline',
-      'text-gray-400 border border-gray-400 hover:bg-gray-50 disabled:bg-gray-50 disabled:text-gray-100 disabled:border-gray-50':
+      'text-gray-400 border border-gray-400 hover:bg-gray-50 disabled:bg-gray-50 disabled:text-gray-100 disabled:border-gray-50 disabled:cursor-default':
         variant === 'secondary-outline',
-      'text-blue-500 border border-blue-500 hover:bg-blue-50 disabled:bg-blue-50 disabled:text-blue-100 disabled:border-blue-50':
+      'text-blue-500 border border-blue-500 hover:bg-blue-50 disabled:bg-blue-50 disabled:text-blue-100 disabled:border-blue-50 disabled:cursor-default':
         variant === 'info-outline',
-      'text-green-500 border border-green-500 hover:bg-green-50 disabled:bg-green-50 disabled:text-green-100 disabled:border-green-50':
+      'text-green-500 border border-green-500 hover:bg-green-50 disabled:bg-green-50 disabled:text-green-100 disabled:border-green-50 disabled:cursor-default':
         variant === 'success-outline',
-      'text-orange-400 border border-orange-400 hover:bg-orange-50 disabled:bg-orange-50 disabled:text-orange-100 disabled:border-orange-50':
+      'text-orange-400 border border-orange-400 hover:bg-orange-50 disabled:bg-orange-50 disabled:text-orange-100 disabled:border-orange-50 disabled:cursor-default':
         variant === 'warning-outline',
-      'text-red-500 border border-red-500 hover:bg-red-50 disabled:bg-red-50 disabled:text-red-100 disabled:border-red-50':
+      'text-red-500 border border-red-500 hover:bg-red-50 disabled:bg-red-50 disabled:text-red-100 disabled:border-red-50 disabled:cursor-default':
         variant === 'danger-outline',
 
       //Text Button
-      'text-rose-400 hover:bg-rose-50 disabled:bg-rose-50 disabled:text-rose-100':
+      'text-rose-400 hover:bg-rose-50 disabled:bg-rose-50 disabled:text-rose-100 disabled:cursor-default':
         variant === 'primary-text',
-      'text-gray-400 hover:bg-gray-50 disabled:bg-gray-50 disabled:text-gray-100':
+      'text-gray-400 hover:bg-gray-50 disabled:bg-gray-50 disabled:text-gray-100 disabled:cursor-default':
         variant === 'secondary-text',
-      'text-blue-500 hover:bg-blue-50 disabled:bg-blue-50 disabled:text-blue-100':
+      'text-blue-500 hover:bg-blue-50 disabled:bg-blue-50 disabled:text-blue-100 disabled:cursor-default':
         variant === 'info-text',
-      'text-green-500 hover:bg-green-50 disabled:bg-green-50 disabled:text-green-100':
+      'text-green-500 hover:bg-green-50 disabled:bg-green-50 disabled:text-green-100 disabled:cursor-default':
         variant === 'success-text',
-      'text-orange-400 hover:bg-orange-50 disabled:bg-orange-50 disabled:text-orange-100':
+      'text-orange-400 hover:bg-orange-50 disabled:bg-orange-50 disabled:text-orange-100 disabled:cursor-default':
         variant === 'warning-text',
-      'text-red-500 hover:bg-red-50 disabled:bg-red-50 disabled:text-red-100':
+      'text-red-500 hover:bg-red-50 disabled:bg-red-50 disabled:text-red-100 disabled:cursor-default':
         variant === 'danger-text',
     }"
   >

@@ -2,38 +2,96 @@
   <div
     class="table-wrapper"
     :class="{
-      '!border': advanced,
+      '!border': advanced && !hideTable,
     }"
   >
-    <div v-if="advanced" class="table-header">
-      <div class="flex gap-x-2">
-        <FormKit
-          v-model="keyword"
-          type="search"
-          placeholder="Search..."
-          outer-class="mb-0"
-        />
-        <rs-button class="!px-3 sm:!px-6">
-          <vue-feather
-            type="filter"
-            class="mr-0 md:mr-1"
-            size="1rem"
-          ></vue-feather>
-          <span class="hidden sm:block">Filter</span>
-        </rs-button>
+    <div
+      class="table-header"
+      :class="{
+        open: openFilter,
+      }"
+      v-if="advanced"
+    >
+      <div class="table-header-filter">
+        <div>
+          <div class="flex gap-x-2">
+            <FormKit
+              v-model="keyword"
+              type="search"
+              placeholder="Search..."
+              outer-class="mb-0"
+            />
+            <rs-button
+              class="!px-3 sm:!px-6"
+              @click="openFilter ? (openFilter = false) : (openFilter = true)"
+            >
+              <vue-feather
+                type="filter"
+                class="mr-0 md:mr-1"
+                size="1rem"
+              ></vue-feather>
+              <span class="hidden sm:block">Filter</span>
+            </rs-button>
+          </div>
+          <!-- <rs-button class="mt-2">asdaasd</rs-button> -->
+        </div>
+        <div class="flex justify-center items-center gap-x-2">
+          <span class="text-gray-400">Result per page:</span>
+          <FormKit
+            type="select"
+            v-model="pageSize"
+            :options="[5, 10, 25, 100]"
+            outer-class="mb-0"
+          />
+          <!-- <v-select
+            :options="[5, 10, 25, 100]"
+            v-model="pageSize"
+            :clearable="false"
+          ></v-select> -->
+        </div>
       </div>
-      <div class="flex justify-center items-center gap-x-2">
-        <span class="text-gray-400">Result per page:</span>
-        <v-select
-          name="country"
-          :options="[5, 10, 25, 100]"
-          v-model="pageSize"
-          :clearable="false"
-        ></v-select>
+      <div class="flex flex-wrap items-center justify-start gap-x-3">
+        <rs-dropdown
+          :title="camelCasetoTitle(val)"
+          size="sm"
+          class="mt-3"
+          v-for="(val, index) in dataTitle"
+          :key="index"
+        >
+          <rs-dropdown-item @click="hideColumn(val)">
+            {{ getFilter(val) ? "Show Column" : "Hide Column" }}
+            <vue-feather
+              :type="getFilter(val) ? 'eye' : 'eye-off'"
+              size="1rem"
+              class="ml-auto"
+            ></vue-feather>
+          </rs-dropdown-item>
+        </rs-dropdown>
+      </div>
+    </div>
+    <div
+      v-if="filterComputed.length > 0"
+      class="table-header-filter-list w-full m-4"
+    >
+      <div class="flex flex-wrap items-center justify-start gap-x-2">
+        <div
+          class="flex items-center justify-center gap-x-2 border border-rose-400 text-rose-400 rounded-lg py-1 px-2"
+          v-for="(val, index) in filterComputed"
+          :key="index"
+        >
+          {{ val ? camelCasetoTitle(val.title) : "" }}
+          <vue-feather
+            type="x"
+            class="mr-0 md:mr-1 hover:text-red-500 cursor-pointer"
+            size="1rem"
+            @click="hideColumn(val.title)"
+          ></vue-feather>
+        </div>
       </div>
     </div>
     <div class="w-full overflow-x-auto">
       <table
+        v-if="!hideTable"
         class="table-content"
         :class="{
           '!border-y !border-0': advanced,
@@ -74,15 +132,15 @@
                 'border-orange-300': options.variant === 'warning',
                 'border-red-300': options.variant === 'danger',
                 'w-36': options.fixed,
-                'cursor-pointer': optionsAdvanced.sortable,
+                'cursor-pointer': optionsAdvanced.sortable && advanced,
               }"
               style="min-width: 100px"
-              @click="optionsAdvanced.sortable ? sort(index) : null"
+              @click="optionsAdvanced.sortable && advanced ? sort(index) : null"
               v-for="(val, index) in title"
               :key="index"
             >
               {{ field.length > 0 ? val : camelCasetoTitle(val) }}
-              <div v-if="optionsAdvanced.sortable" class="sortable">
+              <div v-if="optionsAdvanced.sortable && advanced" class="sortable">
                 <font-awesome-icon
                   class="absolute top-4 right-4 opacity-20"
                   :icon="['fas', 'sort']"
@@ -161,14 +219,46 @@
           </tr>
         </tbody>
       </table>
+      <div v-else>
+        <rs-collapse accordion>
+          <rs-collapse-item>
+            <template #title>
+              <div class="grid grid-cols-2">
+                <div class="col-span-1">
+                  <span class="font-semibold"> Ali Bin Kamal </span>
+                  <span class="text-sm"> Ali Bin Kamal </span>
+                </div>
+              </div>
+            </template>
+            <template #default>
+              <p class="text-justify">asdads</p>
+            </template>
+          </rs-collapse-item>
+          <rs-collapse-item>
+            <template #title> Collapse Item 2</template>
+            <template #default>
+              <p class="text-justify">asdads</p>
+            </template>
+          </rs-collapse-item>
+        </rs-collapse>
+      </div>
     </div>
     <div v-if="advanced" class="table-footer">
-      <span class="text-sm text-gray-400 hidden md:block"
-        >Showing
-        {{ currentPage === 1 ? 1 : pageSize * currentPage - pageSize }} to
-        {{ pageSize * currentPage }} of {{ totalEntries }} entries</span
-      >
+      <div class="flex justify-center items-center gap-x-2">
+        <span class="text-sm text-gray-400 hidden md:block"
+          >Showing {{ pageSize * currentPage - pageSize + 1 }} to
+          {{ pageSize * currentPage }} of {{ totalEntries }} entries</span
+        >
+      </div>
       <div class="table-footer-page">
+        <rs-button
+          variant="primary-outline"
+          class="rounded-full !p-1 w-8 h-8"
+          @click="firstPage"
+          :disabled="currentPage == 1"
+        >
+          <vue-feather type="chevrons-left" size="1rem"></vue-feather>
+        </rs-button>
         <rs-button
           variant="primary-outline"
           class="rounded-full !p-1 w-8 h-8"
@@ -194,6 +284,14 @@
         >
           <vue-feather type="chevron-right" size="1rem"></vue-feather>
         </rs-button>
+        <rs-button
+          variant="primary-outline"
+          class="rounded-full !p-1 w-8 h-8"
+          @click="lastPage"
+          :disabled="currentPage == totalPage"
+        >
+          <vue-feather type="chevrons-right" size="1rem"></vue-feather>
+        </rs-button>
       </div>
     </div>
   </div>
@@ -202,11 +300,21 @@
 <script>
 /* eslint-disable */
 import { ref, watch, computed } from "vue";
+import state from "@/store";
 import RsButton from "@/components/Button";
+import RsDropdown from "@/components/Dropdown.vue";
+import RsDropdownItem from "@/components/DropdownItem.vue";
+import RsCollapse from "@/components/Collapse.vue";
+import RsCollapseItem from "@/components/CollapseItem.vue";
+
 export default {
   name: "component-table",
   components: {
     RsButton,
+    RsDropdown,
+    RsDropdownItem,
+    RsCollapse,
+    RsCollapseItem,
   },
   props: {
     field: {
@@ -239,13 +347,20 @@ export default {
       type: Object,
       default: () => ({
         sortable: true,
+        filterable: true,
+        responsive: true,
       }),
+    },
+    grid: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
     // Default varaiable
     const columnTitle = ref([]);
     const dataTable = ref(props.data);
+    const dataTitle = ref([]);
     const dataLength = ref(props.data.length);
 
     // Advanced Option Variable
@@ -258,8 +373,28 @@ export default {
     // Searching Variable
     const keyword = ref("");
 
+    // Filtering Variable
+    const filter = ref([]);
+    const openFilter = ref(false);
+
+    const hideTable = ref(false);
+
     if (dataLength.value == 0) {
       return false;
+    }
+
+    const isDesktop = computed(() => {
+      return state.getters.windowWidth >= state.getters.mobileWidth
+        ? true
+        : false;
+    });
+
+    if (props.optionsAdvanced.responsive) {
+      if (isDesktop.value) {
+        hideTable.value = false;
+      } else {
+        hideTable.value = true;
+      }
     }
 
     // watch props.data change and redo all the data
@@ -268,8 +403,10 @@ export default {
       () => {
         if (props.field.length > 0) {
           columnTitle.value = props.field;
+          dataTitle.value = props.field;
         } else {
           columnTitle.value = Object.keys(dataTable.value[0]);
+          dataTitle.value = Object.keys(dataTable.value[0]);
         }
       },
       { immediate: true }
@@ -405,15 +542,134 @@ export default {
       if (currentPage.value > 1) currentPage.value--;
     };
 
+    const firstPage = () => {
+      currentPage.value = 1;
+    };
+
+    const lastPage = () => {
+      currentPage.value = totalPage.value;
+    };
+
+    const hideColumn = (key) => {
+      if (!getFilter(key)) {
+        // insert into filter variable to tell there is a change in filter
+        setFilter(key, "hide", true);
+      } else {
+        // update filter variable to tell there is a change in filter
+        setFilter(key, "hide", false);
+      }
+    };
+
+    const setFilter = (key, action, condition) => {
+      // Check if key exist inside filter
+      let index = filter.value.findIndex((item) => item.key === key);
+
+      if (index == -1) {
+        // If key not exist, insert new filter
+        filter.value.push({
+          key: key,
+          action: {
+            [action]: condition,
+          },
+        });
+      } else {
+        // If key exist, update filter
+        filter.value[index].action[action] = condition;
+        console.log(filter.value);
+      }
+    };
+
+    const getFilter = (key) => {
+      let result = false;
+      filter.value.forEach((item) => {
+        if (item.key === key) {
+          result = item.action.hide;
+        }
+      });
+      return result;
+    };
+
+    // Watch filter.value
+    watch(
+      () => filter.value,
+      () => {
+        // console.log(filter.value);
+        // Loop json object filter.value
+        filter.value.forEach((item) => {
+          // Hide Column
+          if (item.action.hide) {
+            // Get index title from columnTitle
+            let index = columnTitle.value.indexOf(item.key);
+
+            if (index !== -1) {
+              // Remove column from columnTitle
+              columnTitle.value.splice(index, 1);
+            }
+          } else if (!item.action.hide) {
+            // Get index title from dataTitle
+            let indexData = dataTitle.value.indexOf(item.key);
+
+            if (!columnTitle.value.includes(item.key)) {
+              // Add Column back to its original position
+              columnTitle.value.splice(indexData, 0, item.key);
+
+              // Sort the columnTitle like dataTitle
+              columnTitle.value.sort((a, b) => {
+                let indexA = dataTitle.value.indexOf(a);
+                let indexB = dataTitle.value.indexOf(b);
+                return indexA - indexB;
+              });
+            }
+          }
+        });
+      },
+      { deep: true }
+    );
+
+    const filterComputed = computed(() => {
+      let result = [];
+      let i = 0;
+      filter.value.forEach((item) => {
+        if (item.action.hide) {
+          result.push({
+            title: item.key,
+            hide: item.action.hide,
+          });
+        }
+        i++;
+      });
+      return result;
+    });
+
+    // watch state getter windowWidth
+    watch(
+      () => state.getters.windowWidth,
+      () => {
+        if (props.optionsAdvanced.responsive) {
+          if (state.getters.windowWidth <= state.getters.mobileWidth) {
+            hideTable.value = true;
+          } else {
+            hideTable.value = false;
+          }
+        }
+      },
+      { deep: true }
+    );
+
     return {
       camelCasetoTitle,
       filteredDatabyTitle,
       sort,
       nextPage,
       prevPage,
+      firstPage,
+      lastPage,
       pageChange,
+      hideColumn,
+      getFilter,
       pageSize,
       title: columnTitle,
+      dataTitle,
       computedData,
       currentSort,
       currentSortDir,
@@ -422,9 +678,10 @@ export default {
       currentPage,
       totalEntries,
       keyword,
+      openFilter,
+      filterComputed,
+      hideTable,
     };
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

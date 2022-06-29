@@ -1,6 +1,6 @@
 <template>
   <hr v-if="divider" />
-  <div class="hover:bg-slate-100 cursor-pointer px-4 py-2">
+  <div @click="clickEvent" class="flex items-center hover:bg-slate-100 cursor-pointer px-4 py-2">
     <slot></slot>
   </div>
 </template>
@@ -14,8 +14,14 @@ export default {
       default: false,
     },
   },
-  setup() {
-    return {};
+  emits: ["click"],
+  setup(_, { emit }) {
+    const clickEvent = () => {
+      emit("click");
+    };
+    return {
+      clickEvent,
+    };
   },
 };
 </script>
