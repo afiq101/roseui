@@ -1,7 +1,7 @@
 <template>
   <rs-header @toggleMenu="toggleMenuOpened"></rs-header>
   <rs-side-menu></rs-side-menu>
-  <div class="content-page transition-all duration-300">
+  <div class="content-page duration-300">
     <slot />
   </div>
   <rs-footer></rs-footer>

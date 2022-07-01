@@ -252,6 +252,24 @@ export default [
     },
   },
   {
+    path: "/form/element/input-vcalendar",
+    name: "form-element-input-vcalendar",
+    component: () => import("@/views/ui/form/element/VCalendar.vue"),
+    meta: {
+      title: "Vue Calendar",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Vue Calendar",
+          route: { name: "form-element-input-vcalendar" },
+        },
+      ],
+    },
+  },
+  {
     path: "/form/element/input-vueselect",
     name: "form-element-input-vueselect",
     component: () => import("@/views/ui/form/element/VueSelect.vue"),

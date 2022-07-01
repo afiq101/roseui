@@ -10,7 +10,6 @@
       w-64
       top-0
       z-50
-      transition-all
       duration-300
       border-l-0
       shadow-md shadow-slate-200

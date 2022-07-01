@@ -11,7 +11,6 @@
       z-40
       px-5
       py-3
-      transition-all
       duration-300
       shadow-md shadow-slate-200
       dark:shadow-slate-900
@@ -306,7 +305,6 @@
       dark:bg-slate-800
       px-4
       z-40
-      transition-all
       duration-300
       shadow-md shadow-slate-200
       dark:shadow-slate-900
@@ -328,6 +326,7 @@
         text-md
         rounded-lg
         focus:outline-none
+        dark:bg-slate-800
       "
       name="Search"
       placeholder="Search..."

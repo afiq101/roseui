@@ -219,6 +219,10 @@ export default [
                 route: { name: "form-element-input-custom" },
               },
               {
+                title: "VCalendar",
+                route: { name: "form-element-input-vcalendar" },
+              },
+              {
                 title: "Vue Select",
                 route: { name: "form-element-input-vueselect" },
               },
