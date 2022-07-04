@@ -72,11 +72,11 @@
 
   /* Table Component */
   .table-wrapper{
-    @apply w-full border-0 rounded-md
+    @apply w-full border-0 rounded-md border-gray-200 dark:border-slate-700
   }
 
   .table-header{
-    @apply m-4
+    @apply m-4 
   } 
 
   .table-header-filter{

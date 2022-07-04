@@ -165,7 +165,7 @@
       </li>
     </ul>
     <div
-      class="tab-content bg-white"
+      class="tab-content bg-white dark:bg-slate-800"
       :class="{
         'flex-grow': vertical && !fill,
         'flex-1': vertical && fill,

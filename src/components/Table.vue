@@ -100,10 +100,11 @@
         }"
       >
         <thead
-          class="text-left"
+          class="text-left border-gray-200 dark:border-slate-700"
           :class="{
             'border-y': !options.borderless,
-            'border-gray-200 bg-gray-100 ': options.variant === 'default',
+            'border-gray-200 bg-gray-100 dark:bg-gray-800':
+              options.variant === 'default',
             'border-rose-200 bg-rose-400 text-white ':
               options.variant === 'primary',
             'border-gray-200 bg-gray-400 text-white':
@@ -162,11 +163,11 @@
         <tbody>
           <tr
             :class="{
-              'border-y border-gray-200':
+              'border-y border-gray-200 dark:border-slate-700':
                 !options.bordered && !options.borderless,
               'border-b': options.bordered && !options.borderless,
               'border-b-0': options.borderless,
-              'border-gray-200 odd:bg-white even:bg-slate-50':
+              'border-gray-200 odd:bg-white even:bg-slate-50 dark:even:bg-slate-700 dark:odd:bg-slate-800':
                 options.variant === 'default' && options.striped,
               'border-rose-100 odd:bg-white even:bg-rose-50':
                 options.variant === 'primary' && options.striped,
@@ -220,24 +221,39 @@
         </tbody>
       </table>
       <div v-else>
-        <rs-collapse accordion>
-          <rs-collapse-item>
+        <rs-collapse v-if="computedData.length > 0" accordion>
+          <rs-collapse-item v-for="(val, index) in computedData" :key="index">
             <template #title>
               <div class="grid grid-cols-2">
-                <div class="col-span-1">
-                  <span class="font-semibold"> Ali Bin Kamal </span>
-                  <span class="text-sm"> Ali Bin Kamal </span>
+                <div class="flex flex-col col-span-1">
+                  <span class="font-semibold leading-tight">
+                    {{ Object.values(val)[0] }}
+                  </span>
+                  <span class="text-sm"> {{ Object.values(val)[1] }} </span>
+                </div>
+                <div class="flex justify-end items-center col-span-1">
+                  <div class="mr-4">
+                    {{ Object.values(val)[computedData.length] }}
+                  </div>
                 </div>
               </div>
             </template>
             <template #default>
-              <p class="text-justify">asdads</p>
-            </template>
-          </rs-collapse-item>
-          <rs-collapse-item>
-            <template #title> Collapse Item 2</template>
-            <template #default>
-              <p class="text-justify">asdads</p>
+              <div
+                class="flex justify-between items-center even:bg-inherit odd:bg-gray-200 rounded-lg p-3"
+                v-for="(val1, index1) in Object.entries(val).slice(
+                  2,
+                  Object.entries(val).length
+                )"
+                :key="index1"
+              >
+                <span>
+                  {{ camelCasetoTitle(val1[0]) }}
+                </span>
+                <span>
+                  {{ val1[1] }}
+                </span>
+              </div>
             </template>
           </rs-collapse-item>
         </rs-collapse>
@@ -367,7 +383,7 @@ export default {
     const currentSort = ref(0);
     const currentSortDir = ref("asc");
     const currentPage = ref(1);
-    const pageSize = ref(10);
+    const pageSize = ref(5);
     const maxPageShown = ref(3);
 
     // Searching Variable

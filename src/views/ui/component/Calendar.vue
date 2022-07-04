@@ -38,16 +38,6 @@
         <full-calendar :options="calendarOptions" />
       </template>
     </rs-card>
-    <rs-card>
-      <template #header> Default </template>
-      <template #body>
-        <p class="mb-4">
-          Use <code>rs-calendar</code> to display a calendar. The calendar is a
-          simple component that displays a grid of days.
-        </p>
-        <rs-calendar :events="events"></rs-calendar>
-      </template>
-    </rs-card>
   </rs-layout>
 </template>
 
@@ -61,17 +51,15 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import scrollGrid from "@fullcalendar/scrollgrid";
 import luxon2Plugin from "@fullcalendar/luxon2";
-import RsCalendar from "@/components/Calendar.vue";
 
 export default {
   name: "component-calendar",
   components: {
     FullCalendar,
-    RsCalendar,
   },
   setup() {
     const handleDateClick = (arg) => {
-      alert("date click! " + arg.dateStr);
+      // alert("date click! " + arg.dateStr);
     };
 
     return {

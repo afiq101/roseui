@@ -128,18 +128,100 @@
       </rs-card>
     </div>
 
-    <div class="grid grid-cols-8 gap-x-6">
-      <div class="col-span-5">
-        <rs-card>
-          <div class="p-5 h-full">asd</div>
+    <div class="flex flex-col md:flex-row gap-x-6">
+      <div class="w-12/2 md:w-8/12 flex flex-col">
+        <!-- Graph -->
+        <rs-card class="flex-1">
+          <template #header> Transaction </template>
+          <template #body>
+            <VueApexCharts
+              width="100%"
+              height="300"
+              type="area"
+              :options="chartOptionsTransaction"
+              :series="transactionData"
+            ></VueApexCharts>
+          </template>
+        </rs-card>
+        <rs-card class="flex-1">
+          <template #header> Latest Customer</template>
+          <template #body>
+            <div
+              v-for="(val, index) in customers"
+              :key="index"
+              class="flex justify-between items-center rounded-lg bg-gray-100 dark:bg-slate-700 p-5 first:mt-0 mt-3"
+            >
+              <div class="flex items-center gap-x-4">
+                <img
+                  :src="`https://avatars.dicebear.com/api/adventurer-neutral/${val.name}.svg`"
+                  class="h-10 w-10 rounded-lg"
+                />
+                <div class="flex-1">
+                  <div class="flex flex-col">
+                    <span
+                      class="text-gray-900 dark:text-white font-semibold text-lg"
+                    >
+                      {{ val.name }}
+                    </span>
+                    <span class="text-gray-600 dark:text-gray-50 text-sm">
+                      RM{{ parseFloat(val.totalPurchase).toFixed(2) }} |
+                      {{ val.purchase }} purchases
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="flex items-center p-4 rounded-full bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-900 shadow-md"
+                >
+                  <vue-feather size="20px" type="mail"></vue-feather>
+                </button>
+              </div>
+            </div>
+          </template>
         </rs-card>
       </div>
-      <div class="col-span-3 flex flex-col">
-        <rs-card>
-          <div class="p-5">asd</div>
-        </rs-card>
-        <rs-card>
-          <div class="p-5">asd</div>
+      <div class="w-12/2 md:w-4/12 flex flex-col">
+        <!-- Monthly Target Radial -->
+        <rs-card class="flex-1">
+          <template #header> Monthly Target </template>
+          <template #body>
+            <VueApexCharts
+              width="100%"
+              height="300"
+              type="radialBar"
+              :options="chartOptionsRadial"
+              :series="radialData"
+            ></VueApexCharts>
+            <hr class="my-4" />
+            <p class="text-xl py-5 font-medium">Products</p>
+            <div
+              class="flex item-center gap-x-4"
+              :class="{
+                'mt-0': index === 0,
+                'mt-3': index !== 0,
+              }"
+              v-for="(val, index) in ['A', 'B', 'C', 'D', 'E']"
+              :key="index"
+            >
+              <img
+                :src="`https://picsum.photos/id/${Math.round(
+                  Math.random() * 100
+                )}/200/300`"
+                class="h-20 w-20 object-cover rounded-lg"
+              />
+              <div class="flex-1 flex items-center">
+                <div>
+                  <span class="font-semibold text-lg leading-tight"
+                    >Product {{ val }}</span
+                  >
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </template>
         </rs-card>
       </div>
     </div>
@@ -223,6 +305,123 @@ export default {
       },
     }));
 
+    // Radial Chart
+
+    const radialData = ref([44, 55, 67, 83]);
+
+    const chartOptionsRadial = computed(() => ({
+      chart: {
+        height: 350,
+        type: "radialBar",
+      },
+      plotOptions: {
+        radialBar: {
+          dataLabels: {
+            style: {
+              colors: "#9CA3AF",
+            },
+            name: {
+              offsetY: 30,
+              fontSize: "18px",
+            },
+            value: {
+              offsetY: -15,
+              fontSize: "30px",
+            },
+            total: {
+              show: true,
+              label: "Total",
+              formatter: function (w) {
+                // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                return 249;
+              },
+            },
+          },
+        },
+      },
+      labels: ["Product A", "Product B", "Product C", "Product D"],
+      stroke: {
+        lineCap: "round",
+      },
+    }));
+
+    // Transaction Graph
+    const transactionData = ref([
+      {
+        name: "Bill A",
+        data: [...Array(12).keys()].map((n) => Math.round(Math.random() * 100)),
+      },
+      {
+        name: "Bill B",
+        data: [...Array(12).keys()].map((n) => Math.round(Math.random() * 100)),
+      },
+    ]);
+
+    const chartOptionsTransaction = computed(() => ({
+      chart: {
+        height: 350,
+        type: "area",
+        toolbar: {
+          show: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      colors: ["#6366F1", "#F97316"],
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#9CA3AF",
+            fontSize: "12px",
+          },
+        },
+      },
+      xaxis: {
+        type: "datetime",
+        categories: [
+          "2022-01-01",
+          "2022-02-01",
+          "2022-03-01",
+          "2022-04-01",
+          "2022-05-01",
+          "2022-06-01",
+          "2022-07-01",
+          "2022-08-01",
+          "2022-09-01",
+          "2022-10-01",
+          "2022-11-01",
+          "2022-12-01",
+        ],
+        labels: {
+          style: {
+            colors: "#9CA3AF",
+            fontSize: "14px",
+            fontWeight: 400,
+          },
+          datetimeFormatter: {
+            month: "MMM",
+          },
+        },
+      },
+      legend: {
+        position: "top",
+        horizontalAlign: "left",
+        labels: {
+          colors: "#9CA3AF",
+          useSeriesColors: false,
+        },
+      },
+      tooltip: {
+        x: {
+          format: "MMMM",
+        },
+      },
+    }));
+
     return {
       title: "Dashboard",
       data1: spark1,
@@ -230,6 +429,44 @@ export default {
       data3: spark3,
       data4: spark4,
       chartOptions,
+      radialData,
+      chartOptionsRadial,
+      transactionData,
+      chartOptionsTransaction,
+      customers: [
+        {
+          name: "Ali",
+          age: "25",
+          city: "Kuala Lumpur",
+          country: "Malaysia",
+          totalPurchase: 1524,
+          purchase: 23,
+        },
+        {
+          name: "Kamal",
+          age: "45",
+          city: "Pulau Pinang",
+          country: "Malaysia",
+          totalPurchase: 643,
+          purchase: 14,
+        },
+        {
+          name: "Auni",
+          age: "21",
+          city: "Kelantan",
+          country: "Malaysia",
+          totalPurchase: 543,
+          purchase: 12,
+        },
+        {
+          name: "Iqmal",
+          age: "19",
+          city: "Negeri Sembilan",
+          country: "Malaysia",
+          totalPurchase: 258,
+          purchase: 6,
+        },
+      ],
     };
   },
 };
