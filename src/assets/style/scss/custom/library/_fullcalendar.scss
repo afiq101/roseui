@@ -1,0 +1,78 @@
+// Overwrite fullcalendar styles
+.fc {
+  .fc-toolbar {
+    .fc-toolbar-chunk {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .fc-button {
+    padding: 0.75rem 1rem !important;
+
+    &.fc-button-primary {
+      background-color: transparent !important;
+      color: #fb7185;
+      border-color: #fb7185 !important;
+    }
+
+    &.fc-button-active {
+      background-color: #fb7185 !important;
+    }
+
+    &:hover {
+      background-color: #fb7185 !important;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.05rem rgba(255, 113, 133, 0.5) !important;
+      background-color: #fb7185 !important;
+      color: white !important;
+    }
+  }
+
+  .fc-view-harness {
+    table {
+      &.fc-col-header {
+        td,
+        th {
+          border-color: #e7e7e7 !important;
+        }
+
+        .fc-col-header-cell {
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    .fc-daygrid-day {
+      &.fc-day-today {
+        background-color: #f9e2e6;
+        background: #f9e2e6;
+      }
+
+      .fc-more-link {
+        color: #fb7185;
+      }
+    }
+
+    .fc-daygrid-event-harness {
+      font-size: 14px !important;
+
+      .fc-daygrid-event {
+        padding: 0.5rem 1rem;
+      }
+
+      .fc-h-event {
+        &.fc-event-start {
+          border-color: #fb7185;
+          background-color: #fb7185;
+        }
+      }
+    }
+  }
+
+  .fc-popover-header {
+    padding: 0.5rem !important;
+  }
+}
