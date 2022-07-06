@@ -510,45 +510,6 @@
             <rs-dropdown-item> Option 1 </rs-dropdown-item>
             <rs-dropdown-item> Option 3 </rs-dropdown-item>
           </rs-dropdown>
-          <rs-dropdown title="Small" size="sm" position="top" class="mb-2">
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Medium" size="md" position="top" class="mb-2">
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-            <rs-dropdown-item> Option 2 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Large" size="lg" position="top" class="mb-2">
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Small" size="sm" position="left" class="mb-2">
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Medium" size="md" position="left" class="mb-2">
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Large" size="lg" position="left" class="mb-2">
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-            <rs-dropdown-item> Option 2 </rs-dropdown-item>
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Small" size="sm" position="right" class="mb-2">
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Medium" size="md" position="right" class="mb-2">
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-            <rs-dropdown-item> Option 2 </rs-dropdown-item>
-          </rs-dropdown>
-          <rs-dropdown title="Large" size="lg" position="right" class="mb-2">
-            <rs-dropdown-item> Option 1 </rs-dropdown-item>
-            <rs-dropdown-item> Option 3 </rs-dropdown-item>
-          </rs-dropdown>
-          
         </div>
         <div class="flex justify-end">
           <button

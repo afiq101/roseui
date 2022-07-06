@@ -74,8 +74,8 @@
         'bottom-10': position == 'top' && size == 'sm',
         'bottom-12': position == 'top' && size == 'md',
         'bottom-16': position == 'top' && size == 'lg',
-        'top-0 -left-42': position == 'left' && size == 'sm',
-        'top-0 -right-42': position == 'right' && size == 'sm',
+        'top-0 -left-42': position == 'left',
+        'top-0 -right-42': position == 'right',
         'right-0':
           (position == 'bottom' || position == 'top') && textAlign == 'right',
       }"

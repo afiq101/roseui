@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 export default {
   name: "alert-component",
   props: {
@@ -36,9 +36,30 @@ export default {
       type: Boolean,
       default: true,
     },
+    autoDismiss: {
+      type: Boolean,
+      default: false,
+    },
+    timer: {
+      type: Number,
+      default: 1000,
+    },
   },
   setup(props) {
     const showComponent = ref(props.show);
+
+    const autoDismiss = () => {
+      setTimeout(() => {
+        showComponent.value = false;
+      }, props.timer);
+    };
+
+    onMounted(() => {
+      if (props.autoDismiss) {
+        autoDismiss();
+      }
+    });
+
     return { showComponent };
   },
 };

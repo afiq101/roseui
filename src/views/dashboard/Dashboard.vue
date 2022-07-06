@@ -144,7 +144,7 @@
           </template>
         </rs-card>
         <rs-card class="flex-1">
-          <template #header> Latest Customer</template>
+          <template #header> Referral</template>
           <template #body>
             <div
               v-for="(val, index) in customers"
@@ -165,7 +165,7 @@
                     </span>
                     <span class="text-gray-600 dark:text-gray-50 text-sm">
                       RM{{ parseFloat(val.totalPurchase).toFixed(2) }} |
-                      {{ val.purchase }} purchases
+                      {{ val.purchase }} sold
                     </span>
                   </div>
                 </div>
