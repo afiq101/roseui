@@ -1,20 +1,29 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from "vue-router";
 import NProgress from "nprogress/nprogress";
 import dashboardRoute from "./routes/dashboard";
 import authRoute from "./routes/auth";
+import appsRoute from "./routes/apps";
 import uiRoute from "./routes/ui";
 import errorRoute from "./routes/error";
 
 const routes = [
   { path: "/", redirect: { name: "dashboard" } },
   ...dashboardRoute,
+  ...appsRoute,
   ...uiRoute,
   ...authRoute,
   ...errorRoute,
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history:
+    process.env.VUE_APP_ENV == "production"
+      ? createWebHistory()
+      : createWebHashHistory(process.env.VUE_APP_BASE_URL),
   routes,
   scrollBehavior() {
     return { top: 0 };

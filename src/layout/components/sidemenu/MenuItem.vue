@@ -28,8 +28,8 @@
           :class="activeMenu(item2.route.name)"
         >
           <vue-feather
-            v-if="item2.ficon"
-            :type="item2.ficon"
+            v-if="item2.icon"
+            :type="item2.icon"
             size="18"
           ></vue-feather>
           <vue-feather v-else type="circle" size="18"></vue-feather>

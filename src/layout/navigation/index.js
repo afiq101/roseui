@@ -1,18 +1,22 @@
 export default [
   {
-    header: "Apps",
-    description: "Wonderful apps",
     child: [
       {
         title: "Dashboard",
         route: { name: "dashboard" },
-        ficon: "home",
+        icon: "home",
         child: [],
       },
+    ],
+  },
+  {
+    header: "Apps & Pages",
+    description: "Wonderful apps",
+    child: [
       {
         title: "Pages",
         route: "page",
-        ficon: "book-open",
+        icon: "book-open",
         child: [
           {
             title: "Authentication",
@@ -66,6 +70,35 @@ export default [
           },
         ],
       },
+      {
+        title: "E-commerce",
+        route: { name: "ecommerce" },
+        icon: "shopping-bag",
+        child: [
+          {
+            title: "Products",
+            route: { name: "ecommerce-products" },
+          },
+          {
+            title: "Product Detail",
+            route: { name: "ecommerce-product-detail" },
+          },
+          {
+            title: "Cart",
+            route: { name: "ecommerce-cart" },
+          },
+          {
+            title: "Checkout",
+            route: { name: "ecommerce-checkout" },
+          },
+        ],
+      },
+      {
+        title: "Point of Sales",
+        route: { name: "pos" },
+        icon: "tablet",
+        child: [],
+      },
     ],
   },
   {
@@ -75,17 +108,17 @@ export default [
       {
         title: "Typography",
         route: { name: "typography" },
-        ficon: "at-sign",
+        icon: "at-sign",
       },
       {
         title: "Colors",
         route: { name: "color" },
-        ficon: "droplet",
+        icon: "droplet",
       },
       {
         title: "Icon",
         route: { name: "icon" },
-        ficon: "alert-circle",
+        icon: "alert-circle",
         child: [
           {
             title: "Feather",
@@ -100,7 +133,7 @@ export default [
       {
         title: "Component",
         route: { name: "component" },
-        ficon: "layers",
+        icon: "layers",
         child: [
           {
             title: "Alert",
@@ -143,7 +176,7 @@ export default [
       {
         title: "Chart",
         route: { name: "chart" },
-        ficon: "pie-chart",
+        icon: "pie-chart",
         child: [
           {
             title: "Apex Chart",
@@ -164,7 +197,7 @@ export default [
       {
         title: "Form",
         route: { name: "form" },
-        ficon: "book",
+        icon: "book",
         child: [
           {
             title: "Element",
@@ -241,7 +274,7 @@ export default [
       {
         title: "Table",
         route: { name: "table" },
-        ficon: "grid",
+        icon: "grid",
         child: [
           {
             title: "Basic",
