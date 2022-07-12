@@ -1,8 +1,9 @@
-const formKitTailwind = require("@formkit/themes/tailwindcss");
-
 module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  plugins: [formKitTailwind],
+  plugins: [
+    require("@formkit/themes/tailwindcss"),
+    require('@tailwindcss/line-clamp'),
+  ],
   presets: [],
   darkMode: "class", // or 'class'
   theme: {

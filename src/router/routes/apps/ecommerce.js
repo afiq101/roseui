@@ -3,6 +3,19 @@ export default [
     path: "/ecommerce/products",
     name: "ecommerce-products",
     component: () => import("@/views/apps/ecommerce/Products.vue"),
+    meta: {
+      title: "Products",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Products",
+          route: { name: "products" },
+        },
+      ],
+    },
   },
   {
     path: "/ecommerce/product/detail",

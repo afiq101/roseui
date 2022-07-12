@@ -61,10 +61,35 @@
 
     <span class="text-xl p-5 font-medium">Imported Icon</span>
     <div
-      class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6"
+      class="
+        mt-4
+        grid grid-cols-2
+        sm:grid-cols-3
+        md:grid-cols-4
+        lg:grid-cols-5
+        xl:grid-cols-6
+        gap-6
+      "
     >
       <div
-        class="flex justify-center items-center flex-col gap-y-2 cursor-pointer bg-white dark:bg-slate-800 dark:border-slate-700 border-2 p-4 w-full rounded-lg hover:scale-110 transition-all duration-200"
+        class="
+          flex
+          justify-center
+          items-center
+          flex-col
+          gap-y-2
+          cursor-pointer
+          bg-white
+          dark:bg-slate-800
+          border-2 border-slate-200
+          dark:border-slate-700
+          p-4
+          w-full
+          rounded-lg
+          hover:scale-110
+          transition-all
+          duration-200
+        "
         v-for="(icon, index) in icons"
         :key="index"
         @click="copyText(icon)"

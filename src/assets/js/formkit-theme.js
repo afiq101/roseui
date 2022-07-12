@@ -11,7 +11,7 @@ const textClassification = {
     align-center
     w-full
     border
-    border-slate-300
+    border-slate-200
     dark:border-slate-700
     formkit-invalid:border-red-500
     dark:formkit-invalid:border-red-400
@@ -30,7 +30,7 @@ const textClassification = {
     dark:text-gray-200
     bg-white
     dark:bg-slate-800
-    border-slate-300
+    border-slate-200
     dark:border-slate-700
     placeholder-gray-400 
     focus:outline-none 
@@ -41,7 +41,7 @@ const textClassification = {
 };
 const boxClassification = {
   inner: "relative",
-  fieldset: "max-w-md border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-2",
+  fieldset: "max-w-md border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2",
   legend: "font-bold text-sm",
   wrapper: "flex items-center mb-3 cursor-pointer",
   help: "mb-3",
@@ -51,7 +51,7 @@ const boxClassification = {
           appearance-none 
           h-5 w-5 mr-2
           border-2 
-          border-slate-300
+          border-slate-200
           dark:border-slate-700
           checked:border-none 
           checked:bg-rose-400
@@ -87,7 +87,7 @@ const OtpClassification = {
     text-center
     rounded-lg
     border
-    border-slate-300
+    border-slate-200
     dark:border-slate-700   
     text-sm 
     text-gray-700 

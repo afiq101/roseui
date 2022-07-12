@@ -1413,6 +1413,11 @@
   resolved "https://registry.npmjs.org/@storinka/dropdown/-/dropdown-2.0.2.tgz"
   integrity sha512-TgExA48Qkf1k6WHr3WVNCMH7CTSQzRCt8tFPA83E4GoqjMmMa0S9IqJseIDj4Ypc98E3mKLP6nwBT6szdbD5nw==
 
+"@tailwindcss/line-clamp@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.4.0.tgz#03353e31e77636b785f2336e8c978502cec1de81"
+  integrity sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==
+
 "@tinymce/tinymce-vue@^4":
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/@tinymce/tinymce-vue/-/tinymce-vue-4.0.7.tgz#811dd87a2a9f70e60c43c2d9d932771c0c8b4677"
