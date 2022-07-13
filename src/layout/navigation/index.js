@@ -81,11 +81,14 @@ export default [
           },
           {
             title: "Product Detail",
-            route: { name: "ecommerce-product-detail" },
+            route: {
+              name: "ecommerce-product-detail",
+              params: { sku: "P-1001" },
+            },
           },
           {
-            title: "Cart",
-            route: { name: "ecommerce-cart" },
+            title: "Wishlist",
+            route: { name: "ecommerce-wishlist" },
           },
           {
             title: "Checkout",

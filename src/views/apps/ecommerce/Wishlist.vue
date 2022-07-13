@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "ecommerce-cart",
+  name: "ecommerce-wishlist",
   setup() {
     return {};
   },

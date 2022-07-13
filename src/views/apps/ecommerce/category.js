@@ -5,9 +5,9 @@ export default [
       "https://www.nvidia.com/content/dam/en-zz/Solutions/shop/1532541-gf-web-dmo-graphics-cards-3060ti-594x308.png",
   },
   {
-    name: "Appliance",
+    name: "Laptop",
     image:
-      "https://images.samsung.com/is/image/samsung/my-microwave-oven-grill-mg28j5255gs-mg28j5255gs-sm-frontsilver-65114218?$650_519_PNG$",
+      "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP858/mbp16-gray.png",
   },
   {
     name: "Audio",

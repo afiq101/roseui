@@ -75,7 +75,17 @@
     >
       <div class="flex flex-wrap items-center justify-start gap-x-2">
         <div
-          class="flex items-center justify-center gap-x-2 border border-rose-400 text-rose-400 rounded-lg py-1 px-2"
+          class="
+            flex
+            items-center
+            justify-center
+            gap-x-2
+            border border-rose-400
+            text-rose-400
+            rounded-lg
+            py-1
+            px-2
+          "
           v-for="(val, index) in filterComputed"
           :key="index"
         >
@@ -240,7 +250,15 @@
             </template>
             <template #default>
               <div
-                class="flex justify-between items-center even:bg-inherit odd:bg-gray-200 rounded-lg p-3"
+                class="
+                  flex
+                  justify-between
+                  items-center
+                  even:bg-inherit
+                  odd:bg-gray-200
+                  rounded-lg
+                  p-3
+                "
                 v-for="(val1, index1) in Object.entries(val).slice(
                   2,
                   Object.entries(val).length

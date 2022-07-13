@@ -24,6 +24,9 @@ code {
 // Custom Form SCSS
 @import "./custom/form";
 
+// Custom App SCSS
+@import "./custom/apps/products";
+
 // Custom Component SCSS
 @import "./custom/component/button";
 @import "./custom/component/collapse";
@@ -38,6 +41,7 @@ code {
 @import "./custom/transition/fade";
 @import "./custom/transition/fade-up";
 @import "./custom/transition/slide";
+@import "./custom/transition/slide-fade";
 
 // Scrollbar SCSS
 @import "./custom/scrollbar/scrollbar";

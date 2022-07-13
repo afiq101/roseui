@@ -22,7 +22,7 @@ const textClassification = {
   `,
   input: `
     w-full 
-    h-9 
+    h-10 
     px-3 
     border-none 
     text-sm 
@@ -83,7 +83,7 @@ const OtpClassification = {
         mb-0
   `,
   digit: `
-    w-9 h-9 mr-2
+    w-9 h-10 mr-2
     text-center
     rounded-lg
     border
