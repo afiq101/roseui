@@ -48,5 +48,18 @@ export default [
     path: "/ecommerce/checkout",
     name: "ecommerce-checkout",
     component: () => import("@/views/apps/ecommerce/Checkout.vue"),
+    meta: {
+      title: "Checkout",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Checkout",
+          route: { name: "ecommerce-checkout" },
+        },
+      ],
+    },
   },
 ];

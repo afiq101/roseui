@@ -8,7 +8,6 @@
       fixed
       top-0
       right-0
-      z-40
       px-5
       py-3
       duration-300
@@ -40,7 +39,7 @@
           />
           <span
             v-if="isDesktop"
-            class="text-xl font-semibold text-rose-500 dark:text-white"
+            class="text-xl font-semibold text-primary-500 dark:text-white"
             >Rose UI</span
           >
         </div>
@@ -113,7 +112,7 @@
             v-s-dropdown-toggle:notification
           >
             <span
-              class="w-3 h-3 absolute top-1 right-2 rounded-full bg-rose-400"
+              class="w-3 h-3 absolute top-1 right-2 rounded-full bg-primary-400"
             ></span>
             <vue-feather type="bell" mb-2></vue-feather>
           </button>
@@ -126,7 +125,7 @@
                 class="
                   flex
                   items-center
-                  text-rose-400
+                  text-primary-400
                   cursor-pointer
                   hover:underline
                 "
@@ -144,7 +143,7 @@
                     <vue-feather
                       type="circle"
                       size="12"
-                      class="text-rose-400 flex-none"
+                      class="text-primary-400 flex-none"
                       fill="pink"
                     ></vue-feather>
                     <span class="mx-2"
@@ -165,7 +164,7 @@
                     <vue-feather
                       type="circle"
                       size="12"
-                      class="text-rose-400 flex-none"
+                      class="text-primary-400 flex-none"
                       fill="pink"
                     ></vue-feather>
                     <span class="mx-2"

@@ -36,7 +36,7 @@
           <!-- <rs-button class="mt-2">asdaasd</rs-button> -->
         </div>
         <div class="flex justify-center items-center gap-x-2">
-          <span class="text-gray-400">Result per page:</span>
+          <span class="text-secondary">Result per page:</span>
           <FormKit
             type="select"
             v-model="pageSize"
@@ -80,8 +80,8 @@
             items-center
             justify-center
             gap-x-2
-            border border-rose-400
-            text-rose-400
+            border border-primary-400
+            text-primary-400
             rounded-lg
             py-1
             px-2
@@ -115,15 +115,15 @@
             'border-y': !options.borderless,
             'border-gray-200 bg-gray-100 dark:bg-gray-800':
               options.variant === 'default',
-            'border-rose-200 bg-rose-400 text-white ':
+            'border-primary-200 bg-primary-400 text-white ':
               options.variant === 'primary',
-            'border-gray-200 bg-gray-400 text-white':
+            'border-gray-200 bg-secondary text-white':
               options.variant === 'secondary',
             'border-blue-200 bg-blue-500 text-white ':
               options.variant === 'info',
             'border-green-200 bg-green-500 text-white':
               options.variant === 'success',
-            'border-orange-200 bg-orange-400 text-white':
+            'border-orange-200 bg-warning text-white':
               options.variant === 'warning',
             'border-red-200 bg-red-500 text-white':
               options.variant === 'danger',
@@ -136,7 +136,7 @@
                 'border-r last:border-l last:border-r-0':
                   options.bordered && !options.borderless,
                 'border-gray-300': options.variant === 'default',
-                'border-rose-300': options.variant === 'primary',
+                'border-primary-300': options.variant === 'primary',
                 'border-gray-300': options.variant === 'secondary',
                 'border-blue-300': options.variant === 'info',
                 'border-green-300': options.variant === 'success',
@@ -179,7 +179,7 @@
               'border-b-0': options.borderless,
               'border-gray-200 odd:bg-white even:bg-slate-50 dark:even:bg-slate-700 dark:odd:bg-slate-800':
                 options.variant === 'default' && options.striped,
-              'border-rose-100 odd:bg-white even:bg-rose-50':
+              'border-primary-100 odd:bg-white even:bg-primary-50':
                 options.variant === 'primary' && options.striped,
               'border-gray-100 odd:bg-white even:bg-gray-50':
                 options.variant === 'secondary' && options.striped,
@@ -193,7 +193,7 @@
                 options.variant === 'danger' && options.striped,
               'cursor-pointer hover:bg-gray-50':
                 options.hover && options.variant === 'default',
-              'cursor-pointer hover:bg-rose-50':
+              'cursor-pointer hover:bg-primary-50':
                 options.hover && options.variant === 'primary',
               'cursor-pointer hover:bg-gray-50':
                 options.hover && options.variant === 'secondary',
@@ -215,7 +215,7 @@
                 'border-r last:border-l last:border-r-0':
                   options.bordered && !options.borderless,
                 'border-gray-100': options.variant === 'default',
-                'border-rose-100': options.variant === 'primary',
+                'border-primary-100': options.variant === 'primary',
                 'border-gray-100': options.variant === 'secondary',
                 'border-blue-100': options.variant === 'info',
                 'border-green-100': options.variant === 'success',
@@ -279,7 +279,7 @@
     </div>
     <div v-if="advanced" class="table-footer">
       <div class="flex justify-center items-center gap-x-2">
-        <span class="text-sm text-gray-400 hidden md:block"
+        <span class="text-sm text-secondary hidden md:block"
           >Showing {{ pageSize * currentPage - pageSize + 1 }} to
           {{ pageSize * currentPage }} of {{ totalEntries }} entries</span
         >

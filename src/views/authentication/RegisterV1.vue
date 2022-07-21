@@ -27,7 +27,7 @@
             <FormKit type="checkbox">
               <template #label
                 >I agree to the
-                <a class="text-rose-400 hover:underline ml-1"
+                <a class="text-primary-400 hover:underline ml-1"
                   >Term and Services</a
                 >
               </template>
@@ -41,7 +41,7 @@
             Already have an account?
             <router-link
               :to="{ name: 'auth-loginv1' }"
-              class="text-rose-400 hover:underline"
+              class="text-primary-400 hover:underline"
               >Login</router-link
             >
           </p>

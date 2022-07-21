@@ -4,6 +4,7 @@
     @input="handleInput"
     :class="context.classes.input"
     :value="props.context._value"
+    :placeholder="props.context.attrs.placeholder"
     v-maska="mask"
   />
 </template>
@@ -15,6 +16,7 @@ const props = defineProps({
 });
 
 const mask = String(props.context.mask);
+console.log(props.context)
 
 function handleInput(e) {
   props.context.node.input(e.target.value);

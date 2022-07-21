@@ -17,7 +17,7 @@
           <a
             href="https://swiperjs.com/vue"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >Swiper JS</a
           >
           which is a Vue component that allows you to create a carousel.

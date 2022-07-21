@@ -9,7 +9,7 @@
           <a
             href="https://formkit.com"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >Formkit</a
           >
           which is a powerfull form builder for Vue. It is a Vue component that

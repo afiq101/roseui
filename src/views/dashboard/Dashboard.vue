@@ -7,15 +7,15 @@
       <rs-card>
         <div class="summary-1 pt-5 pb-3 px-5 flex items-center gap-4">
           <div
-            class="p-5 flex justify-center items-center bg-rose-100 rounded-2xl"
+            class="p-5 flex justify-center items-center bg-primary-100 rounded-2xl"
           >
-            <vue-feather class="text-rose-500" type="dollar-sign"></vue-feather>
+            <vue-feather class="text-primary-500" type="dollar-sign"></vue-feather>
           </div>
           <div class="flex-1 truncate">
             <span class="block font-semibold text-xl leading-tight">
               RM 100,000</span
             >
-            <span class="text-base font-semibold text-gray-400"
+            <span class="text-base font-semibold text-secondary"
               >Total Revenues</span
             >
           </div>
@@ -44,7 +44,7 @@
           </div>
           <div class="flex-1 truncate">
             <span class="block font-semibold text-xl leading-tight"> 512</span>
-            <span class="text-base font-semibold text-gray-400"
+            <span class="text-base font-semibold text-secondary"
               >Total Users</span
             >
           </div>
@@ -76,7 +76,7 @@
           </div>
           <div class="flex-1 truncate">
             <span class="block font-semibold text-xl leading-tight"> 20</span>
-            <span class="text-base font-semibold text-gray-400"
+            <span class="text-base font-semibold text-secondary"
               >Total Products</span
             >
           </div>
@@ -107,7 +107,7 @@
             <span class="block font-semibold text-xl leading-tight">
               2,452</span
             >
-            <span class="text-base font-semibold text-gray-400"
+            <span class="text-base font-semibold text-secondary"
               >Total Viewers</span
             >
           </div>

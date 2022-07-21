@@ -33,7 +33,7 @@
         />
         <div
           v-else
-          class="h-full flex items-center justify-center opacity-50 text-rose-400 font-semibold uppercase text-xl whitespace-nowrap"
+          class="h-full flex items-center justify-center opacity-50 text-primary-400 font-semibold uppercase text-xl whitespace-nowrap"
         >
           {{
             file.data.name.slice(
@@ -62,7 +62,7 @@
       aria-live="polite"
     >
       <li
-        class="formkit-message text-red-500 mb-1 text-xs formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400"
+        class="formkit-message text-red-500 mb-1 text-xs formkit-invalid:text-red-500 dark:formkit-invalid:text-danger"
         id="input_9-rule_required"
         data-message-type="validation"
       >

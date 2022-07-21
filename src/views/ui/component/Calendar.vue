@@ -17,7 +17,7 @@
           <a
             href="https://fullcalendar.io/"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >FullCalendar</a
           >
           which is a Vue component that allows you to create a calendar.

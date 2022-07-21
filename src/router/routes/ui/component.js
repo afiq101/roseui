@@ -161,4 +161,22 @@ export default [
       ],
     },
   },
+  {
+    path: "/component/progress",
+    name: "component-progress-bar",
+    component: () => import("@/views/ui/component/ProgressBar.vue"),
+    meta: {
+      title: "Progress",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Progress",
+          route: { name: "progress-bar" },
+        },
+      ],
+    },
+  },
 ];

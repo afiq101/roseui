@@ -3,7 +3,7 @@
 // we want to style them.
 const textClassification = {
   label:
-    "block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
+    "block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger",
   inner: `
     flex
     items-center
@@ -14,10 +14,10 @@ const textClassification = {
     border-slate-200
     dark:border-slate-700
     formkit-invalid:border-red-500
-    dark:formkit-invalid:border-red-400
+    dark:formkit-invalid:border-danger
     rounded-lg mb-1
     overflow-hidden
-    focus-within:border-rose-400
+    focus-within:border-primary-400
     mb-0
   `,
   input: `
@@ -32,12 +32,12 @@ const textClassification = {
     dark:bg-slate-800
     border-slate-200
     dark:border-slate-700
-    placeholder-gray-400 
+    placeholder-secondary 
     focus:outline-none 
     focus:shadow-outline 
     `,
   prefix: `ml-2`,
-  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
+  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-danger",
 };
 const boxClassification = {
   inner: "relative",
@@ -54,25 +54,25 @@ const boxClassification = {
           border-slate-200
           dark:border-slate-700
           checked:border-none 
-          checked:bg-rose-400
+          checked:bg-primary-400
           bg-white
           dark:bg-slate-800
-          dark:checked:bg-rose-400
+          dark:checked:bg-primary-400
           rounded-md
-          checked:shadow-sm checked:shadow-rose-500/30 
+          checked:shadow-sm checked:shadow-primary-500/30 
           focus:outline-none focus:ring-0 transition duration-200`,
   label:
     "text-sm text-gray-700 formkit-disabled:text-gray-300 dark:formkit-disabled:text-gray-700",
-  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
+  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-danger",
 };
 const buttonClassification = {
   wrapper: "mb-1",
   input:
-    "bg-rose-400 hover:bg-rose-500 text-white text-sm font-normal py-2 px-5 rounded-lg",
+    "bg-primary-400 hover:bg-primary-500 text-white text-sm font-normal py-2 px-5 rounded-lg",
 };
 const OtpClassification = {
   label:
-    "block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
+    "block mb-2 font-semibold text-sm formkit-invalid:text-red-500 dark:formkit-invalid:text-danger",
   inner: `
         flex
         items-center
@@ -94,12 +94,12 @@ const OtpClassification = {
     dark:text-gray-200
     bg-white
     dark:bg-slate-800
-    placeholder-gray-400
-    focus-within:border-rose-400
+    placeholder-secondary
+    focus-within:border-primary-400
     focus:outline-none 
     focus:shadow-outline
 `,
-  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-red-400",
+  message: "formkit-invalid:text-red-500 dark:formkit-invalid:text-danger",
 };
 
 // export our definitions using our above
@@ -110,7 +110,7 @@ export default {
   global: {
     label: "text-gray-700 dark:text-gray-200",
     outer: "mb-4 formkit-disabled:opacity-50",
-    help: "text-xs text-gray-500 dark:text-gray-400 mt-1",
+    help: "text-xs text-gray-500 dark:text-secondary mt-1",
     messages: "list-none p-0 mt-1 mb-0",
     message: "text-red-500 mb-1 text-xs",
     wrapper: "",
@@ -128,7 +128,7 @@ export default {
     label: "block mb-1 font-bold text-sm",
     inner: "w-full cursor-pointer",
     input:
-      "w-full cursor-pointer border rounded-lg text-gray-600 text-sm mb-1 file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-l-lg file:border-0 file:text-sm file:bg-rose-400 file:text-white hover:file:bg-rose-500",
+      "w-full cursor-pointer border rounded-lg text-gray-600 text-sm mb-1 file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-l-lg file:border-0 file:text-sm file:bg-primary-400 file:text-white hover:file:bg-primary-500",
     noFiles: "block text-gray-800 text-sm my-1",
     fileItem: "block flex text-gray-800 text-sm my-1",
     removeFiles: "ml-auto text-blue-500 text-sm",
@@ -161,7 +161,7 @@ export default {
       dark:text-gray-200
       bg-white
       dark:bg-slate-800
-      placeholder-gray-400 
+      placeholder-secondary 
       focus:outline-none 
       focus:shadow-outline `,
   },

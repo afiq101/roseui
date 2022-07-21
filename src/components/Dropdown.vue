@@ -9,37 +9,37 @@
         'text-base px-8 py-4': size === 'lg',
 
         // Filled Button
-        'text-white focus:text-white bg-rose-400 hover:bg-rose-500 focus:bg-rose-500':
+        'text-white focus:text-white bg-primary-400 hover:bg-primary-500 focus:bg-primary-500':
           variant === 'primary',
         'text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600':
           variant === 'info',
         'text-white focus:text-white bg-green-500 hover:bg-green-600 focus:bg-green-600':
           variant === 'success',
-        'text-white focus:text-white bg-orange-400 hover:bg-orange-500 focus:bg-orange-500':
+        'text-white focus:text-white bg-warning hover:bg-orange-500 focus:bg-orange-500':
           variant === 'warning',
         'text-white focus:text-white bg-red-500 hover:bg-red-600 focus:bg-red-600':
           variant === 'danger',
 
         // Outline Button
-        'text-rose-400 border border-rose-400 hover:bg-rose-50 focus:bg-rose-50':
+        'text-primary-400 border border-primary-400 hover:bg-primary-50 focus:bg-primary-50':
           variant === 'primary-outline',
         'text-blue-500 border border-blue-500 hover:bg-blue-50 focus:bg-blue-50':
           variant === 'info-outline',
         'text-green-500 border border-green-500 hover:bg-green-50 focus:bg-green-50':
           variant === 'success-outline',
-        'text-orange-400 border border-orange-400 hover:bg-orange-50 focus:bg-orange-50':
+        'text-warning border border-warning hover:bg-orange-50 focus:bg-orange-50':
           variant === 'warning-outline',
         'text-red-500 border border-red-500 hover:bg-red-50 focus:bg-red-50':
           variant === 'danger-outline',
 
         // Text Button
-        'text-rose-400 hover:bg-rose-50 focus:bg-rose-50 ':
+        'text-primary-400 hover:bg-primary-50 focus:bg-primary-50 ':
           variant === 'primary-text',
         'text-blue-500 hover:bg-blue-50 focus:bg-blue-50':
           variant === 'info-text',
         'text-green-500 hover:bg-green-50 focus:bg-green-50':
           variant === 'success-text',
-        'text-orange-400 hover:bg-orange-50 focus:bg-orange-50':
+        'text-warning hover:bg-orange-50 focus:bg-orange-50':
           variant === 'warning-text',
         'text-red-500 hover:bg-red-50 focus:bg-red-50':
           variant === 'danger-text',

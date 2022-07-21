@@ -29,7 +29,7 @@
               justify-end
               h-5
               mt-1
-              text-rose-400
+              text-primary-400
               hover:underline
             "
             :to="{ name: 'auth-forgotpasswordv2' }"
@@ -53,7 +53,7 @@
           Don't have an account?
           <router-link
             :to="{ name: 'auth-registerv2' }"
-            class="text-rose-400 hover:underline"
+            class="text-primary-400 hover:underline"
             >Sign Up</router-link
           >
         </p>

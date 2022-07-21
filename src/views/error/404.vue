@@ -25,10 +25,10 @@
                 px-4
                 py-3
                 rounded-lg
-                shadow-lg shadow-rose-500/30
+                shadow-lg shadow-primary-500/30
                 text-white
-                bg-rose-400
-                hover:bg-rose-500
+                bg-primary-400
+                hover:bg-primary-500
               "
             >
               Back to Home

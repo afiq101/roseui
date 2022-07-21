@@ -2,7 +2,7 @@ module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   plugins: [
     require("@formkit/themes/tailwindcss"),
-    require('@tailwindcss/line-clamp'),
+    require("@tailwindcss/line-clamp"),
   ],
   presets: [],
   darkMode: "class", // or 'class'
@@ -15,6 +15,12 @@ module.exports = {
       "2xl": "1536px",
     },
     colors: ({ colors }) => ({
+      primary: colors.rose,
+      secondary: colors.gray,
+      success: colors.green[400],
+      info: colors.blue[400],
+      warning: colors.orange[400],
+      danger: colors.red[400],
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
@@ -42,14 +48,6 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      primary: colors.rose[400],
-      secondary: colors.gray[400],
-      success: colors.green[400],
-      info: colors.cyan[400],
-      warning: colors.orange[400],
-      danger: colors.red[400],
-      light: colors.gray[100],
-      dark: colors.gray[900],
     }),
     columns: {
       auto: "auto",

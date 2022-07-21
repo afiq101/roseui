@@ -28,7 +28,7 @@
           src="@/assets/images/logo/logo-white.png"
           alt=""
         />
-        <span class="text-xl font-semibold text-rose-500 dark:text-white"
+        <span class="text-xl font-semibold text-primary-500 dark:text-white"
           >Rose UI</span
         >
       </div>

@@ -5,12 +5,12 @@
       'flex flex-col md:flex-row': vertical,
       'shadow-md pt-4': type === 'card' && !vertical,
       'shadow-md': type === 'card' && vertical,
-      'bg-rose-400': type === 'card' && variant === 'primary',
-      'bg-gray-400': type === 'card' && variant === 'secondary',
-      'bg-green-400': type === 'card' && variant === 'success',
-      'bg-red-400': type === 'card' && variant === 'danger',
-      'bg-orange-400': type === 'card' && variant === 'warning',
-      'bg-blue-400': type === 'card' && variant === 'info',
+      'bg-primary-400': type === 'card' && variant === 'primary',
+      'bg-secondary': type === 'card' && variant === 'secondary',
+      'bg-success': type === 'card' && variant === 'success',
+      'bg-danger': type === 'card' && variant === 'danger',
+      'bg-warning': type === 'card' && variant === 'warning',
+      'bg-info': type === 'card' && variant === 'info',
     }"
   >
     <ul
@@ -37,33 +37,33 @@
             selectedTitle === val.title && type === 'border' && vertical,
 
           // Variant Color for Border Type
-          'hover:border-rose-400 ': type === 'border' && variant == 'primary',
-          'hover:border-gray-400 ': type === 'border' && variant == 'secondary',
-          'hover:border-blue-400 ': type === 'border' && variant == 'info',
-          'hover:border-green-400 ': type === 'border' && variant == 'success',
-          'hover:border-orange-400 ': type === 'border' && variant == 'warning',
-          'hover:border-red-400 ': type === 'border' && variant == 'danger',
-          'border-rose-400 text-rose-400':
+          'hover:border-primary-400 ': type === 'border' && variant == 'primary',
+          'hover:border-secondary ': type === 'border' && variant == 'secondary',
+          'hover:border-info ': type === 'border' && variant == 'info',
+          'hover:border-success ': type === 'border' && variant == 'success',
+          'hover:border-warning ': type === 'border' && variant == 'warning',
+          'hover:border-danger ': type === 'border' && variant == 'danger',
+          'border-primary-400 text-primary-400':
             selectedTitle === val.title &&
             type === 'border' &&
             variant == 'primary',
-          'border-gray-400 text-gray-400':
+          'border-secondary text-secondary':
             selectedTitle === val.title &&
             type === 'border' &&
             variant == 'secondary',
-          'border-blue-400 text-blue-400':
+          'border-info text-info':
             selectedTitle === val.title &&
             type === 'border' &&
             variant == 'info',
-          'border-green-400 text-green-400':
+          'border-success text-success':
             selectedTitle === val.title &&
             type === 'border' &&
             variant == 'success',
-          'border-orange-400 text-orange-400':
+          'border-warning text-warning':
             selectedTitle === val.title &&
             type === 'border' &&
             variant == 'warning',
-          'border-red-400 text-red-400':
+          'border-danger text-danger':
             selectedTitle === val.title &&
             type === 'border' &&
             variant == 'danger',
@@ -84,39 +84,39 @@
               selectedTitle === val.title && type === 'default' && vertical,
 
             // Variant Color for default type
-            'hover:border-rose-400 hover:text-rose-400':
+            'hover:border-primary-400 hover:text-primary-400':
               type === 'default' && variant == 'primary',
-            'hover:border-gray-400 hover:text-gray-400':
+            'hover:border-secondary hover:text-secondary':
               type === 'default' && variant == 'secondary',
-            'hover:border-blue-400 hover:text-blue-400':
+            'hover:border-info hover:text-info':
               type === 'default' && variant == 'info',
-            'hover:border-green-400 hover:text-green-400':
+            'hover:border-success hover:text-success':
               type === 'default' && variant == 'success',
-            'hover:border-orange-400 hover:text-orange-400':
+            'hover:border-warning hover:text-warning':
               type === 'default' && variant == 'warning',
-            'hover:border-red-400 hover:text-red-400':
+            'hover:border-danger hover:text-danger':
               type === 'default' && variant == 'danger',
-            'text-rose-400 border-rose-400':
+            'text-primary-400 border-primary-400':
               selectedTitle === val.title &&
               type === 'default' &&
               variant == 'primary',
-            'text-gray-400 border-gray-400':
+            'text-secondary border-secondary':
               selectedTitle === val.title &&
               type === 'default' &&
               variant == 'secondary',
-            'text-blue-400 border-blue-400':
+            'text-info border-info':
               selectedTitle === val.title &&
               type === 'default' &&
               variant == 'info',
-            'text-green-400 border-green-400':
+            'text-success border-success':
               selectedTitle === val.title &&
               type === 'default' &&
               variant == 'success',
-            'text-orange-400 border-orange-400':
+            'text-warning border-warning':
               selectedTitle === val.title &&
               type === 'default' &&
               variant == 'warning',
-            'text-red-400 border-red-400':
+            'text-danger border-danger':
               selectedTitle === val.title &&
               type === 'default' &&
               variant == 'danger',
@@ -124,13 +124,13 @@
             'px-5 mx-1 text-white rounded-t-md': type === 'card' && !vertical,
             'px-5 my-0 mb:my-1 mb:px-0 text-white rounded-bl-none rounded-t-md md:rounded-tr-none md:rounded-l-md':
               type === 'card' && vertical,
-            'bg-rose-300': type === 'card' && variant == 'primary',
+            'bg-primary-300': type === 'card' && variant == 'primary',
             'bg-gray-300': type === 'card' && variant == 'secondary',
             'bg-blue-300': type === 'card' && variant == 'info',
             'bg-green-300': type === 'card' && variant == 'success',
             'bg-orange-300': type === 'card' && variant == 'warning',
             'bg-red-300': type === 'card' && variant == 'danger',
-            '!bg-white text-rose-300':
+            '!bg-white text-primary-300':
               selectedTitle === val.title &&
               type === 'card' &&
               variant == 'primary',
@@ -171,12 +171,12 @@
         'flex-1': vertical && fill,
         'border rounded-b-md': type === 'border' && !vertical,
         'border rounded-md rounded-l-none': type === 'border' && vertical,
-        'border-rose-400': type === 'border' && variant === 'primary',
-        'border-gray-400': type === 'border' && variant === 'secondary',
-        'border-blue-400': type === 'border' && variant === 'info',
-        'border-green-400': type === 'border' && variant === 'success',
-        'border-orange-400': type === 'border' && variant === 'warning',
-        'border-red-400': type === 'border' && variant === 'danger',
+        'border-primary-400': type === 'border' && variant === 'primary',
+        'border-secondary': type === 'border' && variant === 'secondary',
+        'border-info': type === 'border' && variant === 'info',
+        'border-success': type === 'border' && variant === 'success',
+        'border-warning': type === 'border' && variant === 'warning',
+        'border-danger': type === 'border' && variant === 'danger',
       }"
     >
       <slot></slot>

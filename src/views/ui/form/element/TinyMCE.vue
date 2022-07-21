@@ -8,7 +8,7 @@
           <a
             href="https://www.tiny.cloud"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >TinyMCE</a
           >
           is a WYSIWYG editor that can be used to create content in a visual
@@ -17,7 +17,7 @@
           <a
             href="https://www.tiny.cloud/auth/signup"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >signup</a
           >
           for a free account and if use for commercial purposes, you need to
@@ -47,7 +47,7 @@
           <a
             href="https://www.tiny.cloud/docs/integrations/vue/#configuringtheeditor"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >https://www.tiny.cloud/docs/integrations/vue/#configuringtheeditor</a
           >
         </p>

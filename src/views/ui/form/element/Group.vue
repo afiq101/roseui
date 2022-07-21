@@ -7,13 +7,13 @@
       <template #body>
         <!-- Prefix with button text -->
         <FormKit type="text" label="Text" placeholder="1.00">
-          <template #prefix> <div class="p-2">RM</div> </template>
+          <template #prefix> <div class="p-3">RM</div> </template>
         </FormKit>
 
         <!-- Prefix with button text -->
         <FormKit type="text" placeholder="1.00">
           <template #prefix>
-            <div class="bg-slate-100 dark:bg-slate-700 h-full rounded-l-md p-2">
+            <div class="bg-slate-100 dark:bg-slate-700 h-full rounded-l-md p-3">
               RM
             </div>
           </template>
@@ -39,10 +39,10 @@
                 bg-slate-100
                 hover:bg-slate-200
                 dark:bg-slate-700
-                hover:dark:bg-slate-900	
+                hover:dark:bg-slate-900
                 h-full
                 rounded-l-md
-                p-2
+                p-3
                 flex
                 justify-center
                 items-center
@@ -61,13 +61,13 @@
       <template #body>
         <!-- Prefix with button text -->
         <FormKit type="text" label="Text" placeholder="10.00">
-          <template #suffix> <div class="p-2">Kg</div> </template>
+          <template #suffix> <div class="p-3">Kg</div> </template>
         </FormKit>
 
         <!-- Prefix with button text -->
         <FormKit type="text" placeholder="1.00">
           <template #suffix>
-            <div class="bg-slate-100 dark:bg-slate-700 h-full rounded-r-md p-2">
+            <div class="bg-slate-100 dark:bg-slate-700 h-full rounded-r-md p-3">
               Kg
             </div>
           </template>
@@ -93,10 +93,10 @@
                 bg-slate-100
                 hover:bg-slate-200
                 dark:bg-slate-700
-                hover:dark:bg-slate-900	
+                hover:dark:bg-slate-900
                 h-full
                 rounded-r-md
-                p-2
+                p-3
                 flex
                 justify-center
                 items-center
@@ -115,10 +115,9 @@
 <script>
 import { ref, computed } from "vue";
 
-
 export default {
   name: "form-element-input-group",
-  
+
   setup() {
     const key = ref("jg9dsk23rnfsd");
 

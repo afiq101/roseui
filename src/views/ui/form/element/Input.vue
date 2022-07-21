@@ -17,7 +17,7 @@
           <a
             href="https://formkit.com"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >Formkit</a
           >
           which is a powerfull form builder for Vue. It is a Vue component that
@@ -80,7 +80,7 @@
             href="
             https://formkit.com/essentials/validation"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >Formkit documentation</a
           >
           for more information.
@@ -90,7 +90,7 @@
             <template #label>
               <label
                 class="formkit-label text-gray-700 dark:text-gray-200 block mb-2 font-semibold text-sm formkit-invalid:text-red-500"
-                >Required <span class="text-red-400">*</span></label
+                >Required <span class="text-danger">*</span></label
               >
             </template>
           </FormKit>

@@ -11,7 +11,7 @@
       <span
         v-for="(item, index) in breadcrumb"
         :key="index"
-        class="flex items-center text-rose-400"
+        class="flex items-center text-primary-400"
       >
         <vue-feather
           v-if="index != 0"
@@ -21,7 +21,7 @@
         ></vue-feather>
         <a
           @click="navigateMenu(item.route)"
-          class="underline cursor-pointer hover:text-rose-300 pr-1"
+          class="underline cursor-pointer hover:text-primary-300 pr-1"
           >{{ item.title }}</a
         >
       </span>

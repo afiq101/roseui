@@ -4,10 +4,10 @@
       v-if="item.header"
       class="text-left font-normal text-xs mx-6 mt-5 mb-2"
     >
-      <span class="uppercase text-rose-500 dark:text-rose-400">
+      <span class="uppercase text-primary-500 dark:text-primary-400">
         {{ item.header ? item.header : "" }}
       </span>
-      <p class="text-gray-500 dark:text-gray-400">
+      <p class="text-gray-500 dark:text-secondary">
         {{ item.description ? item.description : "" }}
       </p>
     </div>
@@ -97,10 +97,10 @@ export default {
     function activeMenu(routeName) {
       return router.currentRoute.value.name == routeName
         ? ` shadow-lg
-            shadow-rose-700/30
-            dark:shadow-rose-500/10
+            shadow-primary-700/30
+            dark:shadow-primary-500/10
             text-white
-            bg-rose-400
+            bg-primary-400
             active-menu`
         : `hover:ml-4`;
     }

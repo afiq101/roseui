@@ -76,7 +76,7 @@
           </template>
         </FormKit>
         <div class="flex">
-          <span class="text-rose-400 font-semibold capitalize">{{
+          <span class="text-primary-400 font-semibold capitalize">{{
             strength
           }}</span>
           <password-meter

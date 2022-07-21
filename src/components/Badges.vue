@@ -12,9 +12,9 @@
     "
     :class="{
       'bg-blue-500': variant === 'info',
-      'bg-rose-400': variant === 'primary',
+      'bg-primary-400': variant === 'primary',
       'bg-green-500': variant === 'success',
-      'bg-orange-400': variant === 'warning',
+      'bg-warning': variant === 'warning',
       'bg-red-500': variant === 'danger',
     }"
   >

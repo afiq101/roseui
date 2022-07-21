@@ -86,10 +86,10 @@ export default [
               params: { sku: "P-1001" },
             },
           },
-          {
-            title: "Wishlist",
-            route: { name: "ecommerce-wishlist" },
-          },
+          // {
+          //   title: "Wishlist",
+          //   route: { name: "ecommerce-wishlist" },
+          // },
           {
             title: "Checkout",
             route: { name: "ecommerce-checkout" },
@@ -167,6 +167,10 @@ export default [
           {
             title: "Tab",
             route: { name: "component-tab" },
+          },
+          {
+            title: "Progress",
+            route: { name: "component-progress-bar" },
           },
         ],
       },

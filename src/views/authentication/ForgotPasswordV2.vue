@@ -18,7 +18,7 @@
           Already have an account?
           <router-link
             :to="{ name: 'auth-loginv2' }"
-            class="text-rose-400 hover:underline"
+            class="text-primary-400 hover:underline"
             >Login</router-link
           >
         </p>

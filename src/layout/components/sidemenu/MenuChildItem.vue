@@ -74,10 +74,10 @@ export default {
     function activeMenu(routeName) {
       return router.currentRoute.value.name == routeName
         ? ` shadow-lg
-            shadow-rose-700/30
-            dark:shadow-rose-500/10
+            shadow-primary-700/30
+            dark:shadow-primary-500/10
             text-white
-            bg-rose-400
+            bg-primary-400
             active-menu`
         : `hover:ml-4`;
     }

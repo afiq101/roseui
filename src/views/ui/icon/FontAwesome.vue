@@ -17,7 +17,7 @@
           <a
             href="https://fontawesome.com/"
             target="_blank"
-            class="hover:underline text-rose-400"
+            class="hover:underline text-primary-400"
             >Font Awesome 6</a
           >
           inside our Vue components, we need to import each icon separately.

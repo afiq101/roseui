@@ -102,6 +102,7 @@
         mr-0
         md:mr-6
         z-50
+        md:z-0
       "
       :class="{
         'filter-wrapper-show': showFilter,
@@ -163,13 +164,19 @@
     </div>
 
     <!-- Products -->
-    <div class="container-wrapper ml-0 md:ml-70">
+    <div
+      class="container-wrapper ml-0 xl:ml-70"
+      :class="{
+        'xl:ml-0': !showFilter,
+      }"
+    >
       <div
         class="
           product-wrapper
           grid grid-cols-1
           md:grid-cols-2
-          lg:grid-cols-3
+          lg:grid-cols-2
+          xl:grid-cols-3
           gap-x-5
         "
       >
@@ -191,7 +198,7 @@
               class="
                 product-discount
                 text-sm
-                bg-rose-500
+                bg-primary-500
                 text-white
                 absolute
                 top-3
@@ -209,7 +216,7 @@
               <span class="block text-base font-semibold line-clamp-1">{{
                 product.name
               }}</span>
-              <span class="text-gray-400 line-clamp-1 text-sm">
+              <span class="text-secondary line-clamp-1 text-sm">
                 {{ product.description }}
               </span>
             </div>
@@ -241,7 +248,7 @@
               </div>
               <div class="product-price flex justify-between">
                 <div class="truncate">
-                  <div class="text-sm text-rose-500">
+                  <div class="text-sm text-primary-500">
                     {{ product.currency
                     }}<span class="text-lg">
                       {{
@@ -253,7 +260,7 @@
                   </div>
                   <span
                     v-if="product.discountedPrice"
-                    class="text-sm line-through text-gray-400 mt-1"
+                    class="text-sm line-through text-secondary mt-1"
                   >
                     {{ product.currency }}{{ formatPrice(product.price) }}
                   </span>
