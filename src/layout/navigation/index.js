@@ -96,12 +96,6 @@ export default [
           },
         ],
       },
-      {
-        title: "Point of Sales",
-        route: { name: "pos" },
-        icon: "tablet",
-        child: [],
-      },
     ],
   },
   {

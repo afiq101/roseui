@@ -123,6 +123,14 @@
           </div>
         </div>
       </div>
+      <hr class="my-4" />
+      <div class="container">
+        <h4 class="mb-5">Customer Reviews</h4>
+        <div class="container-review flex items-center">
+          <div class="customer-rating flex-1">asdads</div>
+          <div class="customer-review flex-grow">asd</div>
+        </div>
+      </div>
     </rs-card>
   </rs-layout>
 </template>

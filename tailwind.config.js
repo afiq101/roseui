@@ -43,7 +43,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       primary: colors.rose[400],
-      secondary: colors.rose[600],
+      secondary: colors.gray[400],
       success: colors.green[400],
       info: colors.cyan[400],
       warning: colors.orange[400],
