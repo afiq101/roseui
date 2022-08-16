@@ -2,27 +2,13 @@
   <Transition name="fade-up">
     <div
       v-if="showComponent"
-      class="
-        visible
-        flex
-        items-center
-        justify-between
-        w-100
-        py-2
-        px-3
-        rounded-md
-      "
+      class="visible flex items-center justify-between w-100 py-2 px-3 rounded-lg"
       :class="{
-        'bg-blue-100 dark:bg-blue-700 text-blue-500 dark:text-blue-100 ':
-          type === 'info',
-        'bg-rose-100 dark:bg-rose-700 text-rose-500 dark:text-rose-100 ':
-          type === 'primary',
-        'bg-green-100 dark:bg-green-700 text-green-500 dark:text-green-100 ':
-          type === 'success',
-        'bg-orange-100 dark:bg-orange-700 text-orange-500 dark:text-orange-100 ':
-          type === 'warning',
-        'bg-red-100 dark:bg-red-700 text-red-500 dark:text-red-100 ':
-          type === 'danger',
+        'bg-blue-100  text-blue-500  ': variant === 'info',
+        'bg-primary-100  text-primary-500 ': variant === 'primary',
+        'bg-green-100  text-green-500  ': variant === 'success',
+        'bg-orange-100  text-orange-500  ': variant === 'warning',
+        'bg-red-100  text-red-500  ': variant === 'danger',
       }"
     >
       <slot />
@@ -34,13 +20,13 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 export default {
   name: "alert-component",
   props: {
-    type: {
+    variant: {
       type: String,
-      default: "info",
+      default: "primary",
     },
     dismissible: {
       type: Boolean,
@@ -50,13 +36,33 @@ export default {
       type: Boolean,
       default: true,
     },
+    autoDismiss: {
+      type: Boolean,
+      default: false,
+    },
+    timer: {
+      type: Number,
+      default: 1000,
+    },
   },
   setup(props) {
     const showComponent = ref(props.show);
+
+    const autoDismiss = () => {
+      setTimeout(() => {
+        showComponent.value = false;
+      }, props.timer);
+    };
+
+    onMounted(() => {
+      if (props.autoDismiss) {
+        autoDismiss();
+      }
+    });
+
     return { showComponent };
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

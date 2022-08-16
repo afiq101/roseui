@@ -29,8 +29,7 @@ $xlarge: 1280px;
 // Layout Vertical CSS
 .v-layout {
   .content-page {
-    padding: 6rem 2rem 0 2rem;
-    height: 100vh;
+    height: 100%;
   }
 
   .w-header-search {
@@ -55,9 +54,11 @@ $xlarge: 1280px;
 
   .content-page {
     margin-left: 256px;
+    padding: 6rem 2rem 10px 2rem;
 
     @media screen and (max-width: $medium) {
       margin-left: 0px;
+      padding: 6rem 1.25rem 0 1.25rem;
     }
   }
 
@@ -75,8 +76,9 @@ $xlarge: 1280px;
     }
   }
 
-  .menu-content {
-    max-height: 500px;
+  .menu-content,
+  .menu-content-child {
+    max-height: 1000px;
     overflow: hidden;
 
     &.hide {
@@ -84,7 +86,18 @@ $xlarge: 1280px;
     }
   }
 
-  .menu-content-max{
-    max-height: 500px;
+  .menu-content-max,
+  .menu-content-child-max {
+    max-height: 100vh;
+  }
+
+  i[data-name="chevron-right"] {
+    transition: 0.25s ease-in-out;
+  }
+
+  .nav-open {
+    i[data-name="chevron-right"] {
+      transform: rotate(90deg);
+    }
   }
 }

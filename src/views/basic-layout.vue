@@ -1,23 +1,21 @@
 <template>
   <rs-layout>
     <rs-breadcrumb />
-    <rs-card></rs-card>
+    <rs-card>
+      <template #header> Header </template>
+      <template #body> Body </template>
+    </rs-card>
   </rs-layout>
 </template>
 
 <script>
-import RsCard from "@/components/Card.vue";
-
 export default {
-  name: "basic-component",
-  components: {
-    RsCard,
-  },
+  name: "",
+
   setup() {
     return {};
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

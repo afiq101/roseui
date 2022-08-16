@@ -1,24 +1,27 @@
 <template>
   <div
     v-if="breadcrumb && title"
-    class="flex items-stretch justify-between pb-5"
+    class="flex flex-col md:flex-row items-stretch justify-between pb-5"
   >
-    <h2 class="text-xl font-medium">{{ title }}</h2>
-    <div v-if="breadcrumb && breadcrumb.length != 0">
+    <span class="text-xl font-semibold">{{ title }}</span>
+    <div
+      class="flex items-center text-sm"
+      v-if="breadcrumb && breadcrumb.length != 0"
+    >
       <span
         v-for="(item, index) in breadcrumb"
         :key="index"
-        class="inline text-rose-400"
+        class="flex items-center text-primary-400"
       >
         <vue-feather
           v-if="index != 0"
           type="chevron-right"
-          size="12"
+          size="14"
           class="pr-1"
         ></vue-feather>
         <a
           @click="navigateMenu(item.route)"
-          class="underline cursor-pointer hover:text-rose-300 pr-1"
+          class="underline cursor-pointer hover:text-primary-300 pr-1"
           >{{ item.title }}</a
         >
       </span>
@@ -52,5 +55,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

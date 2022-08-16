@@ -1,7 +1,7 @@
 <template>
   <rs-header @toggleMenu="toggleMenuOpened"></rs-header>
   <rs-side-menu></rs-side-menu>
-  <div class="content-page transition-all duration-300">
+  <div class="content-page duration-300">
     <slot />
   </div>
   <rs-footer></rs-footer>
@@ -9,9 +9,10 @@
 </template>
 
 <script>
-import store from "@/store";
+import state from "@/store";
 import RsHeader from "@/layout/components/Header.vue";
-import RsSideMenu from "@/layout/components/SideMenu.vue";
+// import RsSideMenu from "@/layout/components/sidemenu/SideMenu.vue";
+import RsSideMenu from "@/layout/components/sidemenu/SideMenu.vue";
 import RsFooter from "@/layout/components/Footer.vue";
 
 export default {
@@ -23,7 +24,7 @@ export default {
     RsFooter,
   },
   setup() {
-    const mobileWidth = store.getters.mobileWidth;
+    const mobileWidth = state.getters.mobileWidth;
 
     function toggleMenuOpened() {
       document.querySelector(".v-layout").classList.toggle("menu-hide");
@@ -32,7 +33,7 @@ export default {
         .classList.toggle("hide");
     }
 
-    store.watch(
+    state.watch(
       (state, getters) => getters.windowWidth,
       (value) => {
         if (value <= mobileWidth) {

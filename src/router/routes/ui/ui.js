@@ -1,18 +1,36 @@
 export default [
   {
-    path: "/ui/text",
-    name: "ui-text",
-    component: () => import("@/views/ui/Text.vue"),
+    path: "/ui/typography",
+    name: "typography",
+    component: () => import("@/views/ui/Typography.vue"),
     meta: {
-      title: "Text",
+      title: "Typography",
       breadcrumb: [
         {
           title: "UI",
           route: { name: "ui" },
         },
         {
-          title: "Text",
-          route: { name: "ui-text" },
+          title: "Typography",
+          route: { name: "typography" },
+        },
+      ],
+    },
+  },
+  {
+    path: "/ui/color",
+    name: "color",
+    component: () => import("@/views/ui/Color.vue"),
+    meta: {
+      title: "Color",
+      breadcrumb: [
+        {
+          title: "Home",
+          route: { name: "dashboard" },
+        },
+        {
+          title: "Color",
+          route: { name: "color" },
         },
       ],
     },

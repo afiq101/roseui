@@ -2,15 +2,14 @@
   <div
     class="
       w-header
+      z-20
       bg-white
       dark:bg-slate-800
       fixed
       top-0
       right-0
-      z-40
       px-5
       py-3
-      transition-all
       duration-300
       shadow-md shadow-slate-200
       dark:shadow-slate-900
@@ -23,13 +22,24 @@
             class="icon-btn h-10 w-10 rounded-full"
             @click="toggleMenuOpened"
           >
-            <vue-feather type="menu" stroke="gray"></vue-feather></button
+            <vue-feather type="menu" mb-2></vue-feather></button
         ></span>
       </div>
       <div class="flex" v-else>
         <div class="flex flex-auto gap-3 justify-center items-center">
-          <img class="h-10 w-10" src="@/assets/images/logo/logo.svg" alt="" />
-          <span v-if="isDesktop" class="text-xl font-semibold text-rose-500"
+          <img
+            class="h-10 w-10 block dark:hidden"
+            src="@/assets/images/logo/logo.png"
+            alt=""
+          />
+          <img
+            class="h-10 w-10 hidden dark:block"
+            src="@/assets/images/logo/logo-white.png"
+            alt=""
+          />
+          <span
+            v-if="isDesktop"
+            class="text-xl font-semibold text-primary-500 dark:text-white"
             >Rose UI</span
           >
         </div>
@@ -89,15 +99,11 @@
           class="icon-btn h-10 w-10 rounded-full"
           @click="dark ? (dark = false) : (dark = true)"
         >
-          <vue-feather v-if="!dark" type="moon" stroke="gray"></vue-feather>
-          <vue-feather v-else type="sun" stroke="gray"></vue-feather>
+          <vue-feather v-if="!dark" type="moon" mb-2></vue-feather>
+          <vue-feather v-else type="sun" mb-2></vue-feather>
         </button>
         <button class="icon-btn h-10 w-10 rounded-full">
-          <vue-feather
-            @click="toggleSearch"
-            type="search"
-            stroke="gray"
-          ></vue-feather>
+          <vue-feather @click="toggleSearch" type="search" mb-2></vue-feather>
         </button>
         <VTooltip>
           <template #popper> 10 unread notification </template>
@@ -106,20 +112,20 @@
             v-s-dropdown-toggle:notification
           >
             <span
-              class="w-3 h-3 absolute top-1 right-2 rounded-full bg-rose-400"
+              class="w-3 h-3 absolute top-1 right-2 rounded-full bg-primary-400"
             ></span>
-            <vue-feather type="bell" stroke="gray"></vue-feather>
+            <vue-feather type="bell" mb-2></vue-feather>
           </button>
         </VTooltip>
         <SDropdown align="left" name="notification">
           <ul class="header-dropdown w-full md:w-80">
             <li class="d-head flex items-center justify-between py-2 px-4">
-              <h3 class="font-semibold">Notification</h3>
+              <span class="font-semibold">Notification</span>
               <div
                 class="
                   flex
                   items-center
-                  text-rose-400
+                  text-primary-400
                   cursor-pointer
                   hover:underline
                 "
@@ -129,13 +135,15 @@
             </li>
             <perfect-scrollbar>
               <li>
-                <h3 class="bg-slate-100 dark:bg-slate-700 py-2 px-4">Today</h3>
+                <div class="bg-slate-100 dark:bg-slate-700 py-2 px-4">
+                  Today
+                </div>
                 <a class="py-2 px-4 block">
                   <div class="flex items-center">
                     <vue-feather
                       type="circle"
                       size="12"
-                      class="text-rose-400 flex-none"
+                      class="text-primary-400 flex-none"
                       fill="pink"
                     ></vue-feather>
                     <span class="mx-2"
@@ -145,7 +153,28 @@
                     <div class="w-12 h-12 rounded-full ml-auto flex-none">
                       <img
                         class="rounded-full"
-                        src="@/assets/images/user/profile-1.jpg"
+                        src="https://ui-avatars.com/api/?name=Raziq Danish"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </a>
+                <a class="py-2 px-4 block">
+                  <div class="flex items-center">
+                    <vue-feather
+                      type="circle"
+                      size="12"
+                      class="text-primary-400 flex-none"
+                      fill="pink"
+                    ></vue-feather>
+                    <span class="mx-2"
+                      >Terdapat Satu Pembayaran yang berlaku menggunakan bil
+                      Mercun</span
+                    >
+                    <div class="w-12 h-12 rounded-full ml-auto flex-none">
+                      <img
+                        class="rounded-full"
+                        src="https://ui-avatars.com/api/?name=Iqmal Rizal"
                         alt=""
                       />
                     </div>
@@ -159,7 +188,7 @@
           class="
             icon-btn
             px-2
-            rounded-md
+            rounded-lg
             border border-white
             md:border-gray-200
             dark:border-gray-700
@@ -168,23 +197,20 @@
         >
           <img
             class="w-8 h-8 object-cover rounded-full"
-            src="@/assets/images/user/profile-1.jpg"
-            alt=""
+            src="https://ui-avatars.com/api/?name=John Doe"
           />
           <div
             v-if="isDesktop"
             class="grid grid-cols-1 text-left ml-3 flex-none"
           >
-            <h3 class="font-semibold text-sm truncate w-24">
-              afiqiskandar2022
-            </h3>
-            <p class="font-medium text-xs truncate w-24">RM 10,000.00</p>
+            <p class="font-semibold text-sm truncate w-24 mb-0">John Doe</p>
+            <span class="font-medium text-xs truncate w-24">RM 10,000.00</span>
           </div>
           <vue-feather
             v-if="isDesktop"
             class="ml-3"
             type="chevron-down"
-            stroke="gray"
+            mb-2
             size="18"
           ></vue-feather>
         </button>
@@ -278,7 +304,6 @@
       dark:bg-slate-800
       px-4
       z-40
-      transition-all
       duration-300
       shadow-md shadow-slate-200
       dark:shadow-slate-900
@@ -287,7 +312,7 @@
       right-0
     "
   >
-    <vue-feather type="search" stroke="gray" size="18"></vue-feather>
+    <vue-feather type="search" mb-2 size="18"></vue-feather>
     <input
       id="header-search"
       type="text"
@@ -300,6 +325,7 @@
         text-md
         rounded-lg
         focus:outline-none
+        dark:bg-slate-800
       "
       name="Search"
       placeholder="Search..."
@@ -317,12 +343,14 @@ export default {
     const dark = ref(false);
 
     // Get darkmode from localstorage and toggle dark mode
-    dark.value = localStorage.getItem("dark") === "true";
+    dark.value = state.getters.darkMode;
 
     // Watch for changes in Dark mode
     watch(dark, (value) => {
-      localStorage.setItem("dark", value);
-      toggleDarkMode(value);
+      state.commit("CHANGE_DARK_MODE", {
+        value,
+      });
+      state.dispatch("toggleDarkMode");
     });
 
     // Computed for change window width
@@ -339,18 +367,10 @@ export default {
 
     // Toggle default setting after component mounted
     onMounted(() => {
-      toggleDarkMode();
       if (!isDesktop.value) {
         toggleMenuOpened();
       }
     });
-
-    // Toggle Dark mode
-    function toggleDarkMode() {
-      const html = document.documentElement;
-      if (dark.value) html.classList.add("dark");
-      else html.classList.remove("dark");
-    }
 
     // Change Layout Type
     function changeLayout() {

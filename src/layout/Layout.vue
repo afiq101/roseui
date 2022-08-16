@@ -1,10 +1,10 @@
 <template>
-  <div v-if="layoutType === 'vertical'" class="v-layout h-100">
+  <div v-if="layoutType === 'vertical'" class="layout-wrapper v-layout h-100">
     <Vertical>
       <slot />
     </Vertical>
   </div>
-  <div v-if="layoutType === 'horizontal'" class="h-layout h-100">
+  <div v-if="layoutType === 'horizontal'" class="layout-wrapper h-layout h-100">
     <Horizontal>
       <slot />
     </Horizontal>

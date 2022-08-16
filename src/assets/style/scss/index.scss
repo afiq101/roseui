@@ -13,12 +13,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 code {
   color: rgb(233, 74, 74);
+  background-color: rgba(146, 146, 146, 0.1);
 }
+
+// Custom Form SCSS
+@import "./custom/form";
+
+// Custom App SCSS
+@import "./custom/apps/products";
+
+// Custom Component SCSS
+@import "./custom/component/button";
+@import "./custom/component/collapse";
+@import "./custom/component/modal";
+@import "./custom/component/tableAdvanced";
 
 // Custom Layout SCSS
 @import "./custom/layout/vertical";
@@ -27,6 +40,19 @@ code {
 // Transition SCSS
 @import "./custom/transition/fade";
 @import "./custom/transition/fade-up";
+@import "./custom/transition/slide";
+@import "./custom/transition/slide-fade";
+
+// Scrollbar SCSS
+@import "./custom/scrollbar/scrollbar";
 
 // Custom SCSS library
+@import "./custom/library/apexchart";
 @import "./custom/library/dropdown";
+@import "./custom/library/nprogress";
+@import "./custom/library/simplepasswordmeter";
+@import "./custom/library/vueselect";
+@import "./custom/library/formkit";
+@import "./custom/library/vuetoastification";
+@import "./custom/library/swiper";
+@import "./custom/library/fullcalendar";

@@ -4,8 +4,13 @@ export default [
     name: "dashboard",
     component: () => import("@/views/dashboard/Dashboard.vue"),
     meta: {
-      auth: true,
-      role: ["admin", "user"],
+      title: "Dashboard",
+      breadcrumb: [
+        {
+          title: "Dashboard",
+          route: { name: "dashboard" },
+        },
+      ],
     },
   },
 ];
