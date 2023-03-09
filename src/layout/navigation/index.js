@@ -1,13 +1,13 @@
 export default [
   {
-    child: [
-      {
-        title: "Dashboard",
-        route: { name: "dashboard" },
-        icon: "home",
-        child: [],
-      },
-    ],
+      child: [
+        {
+          title: "Dashboard",
+          route: { name: "dashboard" },
+          icon: "home",
+          child: [],
+        },
+      ],
   },
   {
     header: "Apps & Pages",
